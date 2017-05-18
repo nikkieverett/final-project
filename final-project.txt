@@ -1,0 +1,14 @@
+calling postgress from node
+-how to install
+-how to create a table
+-how to insert into a table
+-how to select from a table
+-how to delete from a table
+-how to update a table
+-how to connect to postgress from node
+
+
+npm pg brianc
+
+
+storing images in s3?
