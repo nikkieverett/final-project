@@ -6,12 +6,11 @@
 import $ from 'jquery';
 // import React from 'react';
 
-const URL = 'http://localhost:5003';
 
 let UserData = {
   loadRecipes(cb){
     $.ajax ({
-      url: `${URL}/api/recipes`
+      url: `/api/recipes`
     })
     .done((data) => {
       // console.log('im in load recipes with the data', data);
@@ -20,7 +19,7 @@ let UserData = {
   },
   createRecipe(input, cb) {
     $.ajax({
-      url: `${URL}/api/recipes`,
+      url: `/api/recipes`,
       method: 'POST',
       data: input
     })
@@ -32,7 +31,7 @@ let UserData = {
   },
   deleteRecipe(recipeId, cb){
     $.ajax({
-      url: `${URL}/api/recipes/${recipeId}`,
+      url: `/api/recipes/${recipeId}`,
       method: 'DELETE'
     })
     .done(() => {
