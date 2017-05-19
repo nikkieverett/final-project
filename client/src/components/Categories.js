@@ -1,5 +1,5 @@
 import React from 'react';
-import UserData from '../UserData.js';
+// import UserData from '../UserData.js';
 
 class Categories extends React.Component {
   render(){

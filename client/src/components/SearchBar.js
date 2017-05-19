@@ -1,6 +1,7 @@
 import React from 'react';
-import UserData from '../UserData.js';
+// import UserData from '../UserData.js';
 import { store, actions } from '../store/store.js';
+import { Link } from 'react-router-dom';
 
 class SearchBar extends React.Component {
   constructor(){
@@ -24,7 +25,7 @@ class SearchBar extends React.Component {
   render(){
     return(
       <div className="nav">
-        <div>Logo</div>
+        <Link to="/">Logo</Link>
         <div onClick={() => this.handleClick()}>See all recipes</div>
         <input
           onKeyUp={(evt) => this.handleKeyUp(evt)}

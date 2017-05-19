@@ -37,20 +37,21 @@ class RecipeSearch extends React.Component {
     if(searchResult !== ''){
       var recipeList = recipes.map((recipe) => {
         if(recipe.title.includes(searchResult)){
-          return
+          return(
           <li key={recipe._id}>
             {recipe.title}
             <button onClick={() => this.handleDelete(recipe._id)}>Delete</button>
-          </li>
+          </li>)
         }
       })
     } else {
       recipeList = recipes.map((recipe) => {
-        return
-        <li key={recipe._id}>
-          {recipe.title}
-          <button onClick={() => this.handleDelete(recipe._id)}>Delete</button>
-        </li>
+        return(
+          <li key={recipe._id}>
+            {recipe.title}
+            <button onClick={() => this.handleDelete(recipe._id)}>Delete</button>
+          </li>
+        )
       })
     }
     return(

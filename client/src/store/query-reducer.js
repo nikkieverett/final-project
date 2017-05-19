@@ -17,8 +17,9 @@ const queryReducer = (state = initialState, action) => {
       return Object.assign({}, state, {
         queryInput: action.queryInput
       });
+    default:
+      return(state);
   }
-  return(state);
 };
 
 module.exports = queryReducer;

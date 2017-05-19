@@ -4,7 +4,7 @@
 //delet recipe -- delete
 //edit recipe -- put
 import $ from 'jquery';
-import React from 'react';
+// import React from 'react';
 
 const URL = 'http://localhost:5003';
 
@@ -14,19 +14,20 @@ let UserData = {
       url: `${URL}/api/recipes`
     })
     .done((data) => {
+      // console.log('im in load recipes with the data', data);
       cb(data);
     });
   },
-  createRecipe() {
+  createRecipe(input, cb) {
     $.ajax({
       url: `${URL}/api/recipes`,
       method: 'POST',
-      data: {
-
-      }
+      data: input
     })
     .done(() => {
-      this.loadRecipes();
+      console.log('im inside the ajax call creating the recipe', input)
+      cb();
+      // this.loadRecipes(cb);
     });
   },
   deleteRecipe(recipeId, cb){
