@@ -9,7 +9,7 @@ const app = express();
 const port = process.env.PORT || 5003;
 
 
-app.use(express.static(path.resolve(__dirname, '../client/build'));
+app.use(express.static(path.resolve(__dirname, '../client/build')));
 
 // console.log('connecting to mongoose');
 mongoose.connect(process.env.MONGODB_URI);
@@ -27,9 +27,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(require("./api_routes.js"));
 
 // All remaining requests return the React app, so it can handle routing.
-// app.get('*', function(request, response) {
-//   response.sendFile(path.resolve(__dirname, '../react-ui/build', 'index.html'));
-// });
+app.get('*', function(request, response) {
+  response.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
+});
 
 app.listen(port, function(){
   console.log('listening on port', port);
