@@ -10,12 +10,12 @@ const recipeSchema = Schema({
   category: { type: String },
   img: { type: String }, //url
   ease: { type: String },
-  rating: { type: Number },
+  rating: { type: String },
   ingredients: { type: String },
   directions: { type: String },
   notes: { type: String },
   servings: { type: String },
-  tried: { type: Boolean }
+  tried: { type: String }
 });
 
 const Recipe = mongoose.model('Recipe', recipeSchema);
