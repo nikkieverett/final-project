@@ -9,7 +9,7 @@ const app = express();
 const port = process.env.PORT || 5003;
 
 
-app.use(express.static('public'));
+app.use(express.static(path.resolve(__dirname, '../client/build'));
 
 // console.log('connecting to mongoose');
 mongoose.connect(process.env.MONGODB_URI);
