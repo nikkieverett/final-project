@@ -1,13 +1,19 @@
 import React from 'react';
 import UserData from './../UserData.js';
 import { store, actions } from './../store/store.js';
-import $ from 'jquery';
 
 class RecipeForm extends React.Component {
   constructor(){
     super();
     this.state = store.getState();
   }
+  componentDidMount(){
+    this.unsub = store.subscribe(() => this.setState(store.getState()));
+  }
+  componentWillUnmount(){
+    this.ubsub();
+  }
+
   handleSubmit(evt){
     evt.preventDefault();
     const cb = () => {
@@ -15,9 +21,6 @@ class RecipeForm extends React.Component {
     };
     // const cb = this.props.history.goBack();
     UserData.createRecipe(this.state.recipe.formValues, cb)
-  }
-  componentDidMount(){
-    this.unsub = store.subscribe(() => this.setState(store.getState()));
   }
 
   setValue(field, evt){

@@ -1,21 +1,26 @@
 import constants from './constants.js';
 
 const initialState = {
+  allRecipes: [],
   queryInput: '',
-  recipes: [],
   category: '',
-  ingredients: []
+  ingredients: [],
+  filteredRecipes: []
 };
 
 const queryReducer = (state = initialState, action) => {
   switch(action.type){
-    case constants.LOAD_RECIPES:
+    case constants.LOAD_ALL_RECIPES:
       return Object.assign({}, state, {
-        recipes: action.recipes
+        allRecipes: action.allRecipes
       });
     case constants.QUERY_INPUT:
       return Object.assign({}, state, {
-        queryInput: action.queryInput
+        queryInput: action.queryInput.toUpperCase()
+      });
+    case constants.FILTER_RECIPES:
+      return Object.assign({}, state, {
+        filteredRecipes: action.filteredRecipes
       });
     default:
       return(state);
