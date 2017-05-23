@@ -1,6 +1,7 @@
 import React from 'react';
 import { store, actions } from '../store/store.js';
 import UserData from './../UserData.js';
+import { withRouter } from 'react-router-dom';
 
 class SearchBar extends React.Component {
   constructor(){
@@ -9,7 +10,9 @@ class SearchBar extends React.Component {
   }
   componentDidMount(){
     this.unsub = store.subscribe(() => this.setState(store.getState()));
-    this.loadRecipes();
+    if(this.state.query.allRecipes === []){
+      this.loadRecipes();
+    }
   }
   componentWillUnmount(){
     this.unsub();
@@ -26,6 +29,7 @@ class SearchBar extends React.Component {
   }
   handleKeyUp(evt){
     if(evt.keyCode === 13){
+      console.log(this.state.query);
       evt.target.value = '';
 
       let searchResult = this.state.query.queryInput;
@@ -56,4 +60,4 @@ class SearchBar extends React.Component {
   }
 }
 
-module.exports = SearchBar;
+module.exports = withRouter(SearchBar);

@@ -1,6 +1,7 @@
 import React from 'react';
 import Categories from './Categories.js';
 import SearchBar from './SearchBar.js';
+import { withRouter } from 'react-router-dom';
 import { store } from './../store/store.js';
 
 
@@ -26,4 +27,4 @@ class Home extends React.Component {
   }
 }
 
-module.exports = Home;
+module.exports = withRouter(Home);

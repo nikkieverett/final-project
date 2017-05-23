@@ -2,6 +2,7 @@ import React from 'react';
 import UserData from './../UserData.js';
 import { store } from './../store/store.js';
 import actions from './../store/actions.js';
+import { withRouter } from 'react-router-dom';
 import NavMenu from './NavMenu.js';
 import SearchBar from './SearchBar';
 
@@ -45,4 +46,4 @@ class RecipeList extends React.Component {
   }
 }
 
-module.exports = RecipeList;
+module.exports = withRouter(RecipeList);

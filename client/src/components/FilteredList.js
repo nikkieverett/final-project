@@ -1,5 +1,6 @@
 import React from 'react';
 import UserData from './../UserData.js';
+import { withRouter } from 'react-router-dom';
 import { store, actions } from './../store/store.js';
 import NavMenu from './NavMenu.js';
 import SearchBar from './SearchBar';
@@ -38,4 +39,4 @@ class FilteredList extends React.Component {
   }
 }
 
-module.exports = FilteredList;
+module.exports = withRouter(FilteredList);

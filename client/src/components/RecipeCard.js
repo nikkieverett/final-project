@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 import { store } from './../store/store.js';
 
 
@@ -24,4 +25,4 @@ class RecipeCard extends React.Component {
   }
 }
 
-module.exports = RecipeCard;
+module.exports = withRouter(RecipeCard);

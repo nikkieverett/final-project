@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 import UserData from './../UserData.js';
 import { store, actions } from './../store/store.js';
 
@@ -59,4 +60,4 @@ class RecipeForm extends React.Component {
   }
 }
 
-module.exports = RecipeForm;
+module.exports = withRouter(RecipeForm);

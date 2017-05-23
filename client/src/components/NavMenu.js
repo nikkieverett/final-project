@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 class NavMenu extends React.Component {
@@ -27,4 +28,4 @@ class NavMenu extends React.Component {
   }
 }
 
-module.exports = NavMenu;
+module.exports = withRouter(NavMenu);
