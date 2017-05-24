@@ -87,9 +87,8 @@ table {
   text-align: center;
   line-height: 100px;
   transition: all 0.3s ease; }
-
-.category:hover {
-  background-color: #69b1a9; }
+  .category :hover {
+    background-color: #69b1a9; }
 
 .nav-menu {
   color: #fff0f0;
@@ -174,6 +173,23 @@ table {
       background-image: url(../public/ic_star_white_24px.svg); }
     .recipes .buttons .not-favorite {
       background-image: url(../public/ic_star_border_white_24px.svg); }
+
+.form-container {
+  width: 960px;
+  margin: 0 auto; }
+
+.recipe-form input {
+  display: inline-block;
+  width: 100%;
+  margin: 10px;
+  height: 50px;
+  text-align: center;
+  border: none;
+  background-color: #fff0f0;
+  color: #333333; }
+
+.recipe-form :focus {
+  border: none; }
 
 body {
   margin: 0;

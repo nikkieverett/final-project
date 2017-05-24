@@ -10,18 +10,10 @@ class SearchBar extends React.Component {
   }
   componentDidMount(){
     this.unsub = store.subscribe(() => this.setState(store.getState()));
-    if(this.state.query.allRecipes === []){
-      this.loadRecipes();
-    }
+    UserData.loadRecipes();
   }
   componentWillUnmount(){
     this.unsub();
-  }
-  loadRecipes(){
-    const cb = (data) => {
-      store.dispatch(actions.LOAD_ALL_RECIPES, {allRecipes: data});
-    }
-    UserData.loadRecipes(cb);
   }
   handleChange(evt){
     const action = Object.assign({}, actions.QUERY_INPUT, { queryInput: evt.target.value });
@@ -29,22 +21,11 @@ class SearchBar extends React.Component {
   }
   handleKeyUp(evt){
     if(evt.keyCode === 13){
-      console.log(this.state.query);
-      evt.target.value = '';
-
-      let searchResult = this.state.query.queryInput;
-      let recipes = this.state.query.allRecipes.slice(0);
-
-      let filteredRecipes = recipes.filter((recipe) => {
-        return recipe.title.includes(searchResult);
-      });
-
-      const action = Object.assign({}, actions.FILTER_RECIPES, {filteredRecipes: filteredRecipes})
-      store.dispatch(action);
+      evt.target.value = ''
+      store.dispatch(actions.FILTER_RECIPES);
       this.props.history.push('./filtered-list')
     }
   }
-
   render(){
     return(
       <div className={this.props.className}>

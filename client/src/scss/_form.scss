@@ -1,0 +1,22 @@
+@import './variables.scss';
+
+.form-container{
+  width: 960px;
+  margin: 0 auto;
+}
+
+.recipe-form{
+  input{
+    display: inline-block;
+    width: 100%;
+    margin: 10px;
+    height: 50px;
+    text-align: center;
+    border: none;
+    background-color: $primary-font-color;
+    color: $focus-font-color;
+  }
+  :focus{
+    border: none;
+  }
+}

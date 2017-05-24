@@ -2,8 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import Home from './components/Home.js';
-import RecipeList from './components/RecipeList.js';
-import FilteredList from './components/FilteredList.js';
+import AllRecipes from './components/AllRecipes.js';
+import FilteredRecipes from './components/FilteredRecipes.js';
 import RecipeForm from './components/RecipeForm.js';
 import RecipeCard from './components/RecipeCard.js';
 
@@ -13,10 +13,10 @@ class App extends React.Component {
       <Router>
         <div className="main-content">
           <Route exact path="/" component={Home}/>
-          <Route exact path="/all-recipes" component={RecipeList}/>
-          <Route exact path="/filtered-list" component={FilteredList}/>
-          <Route exact path="/create-new" component={RecipeForm}/>
-          <Route exact path="/recipes/:recipeId" render={(props) => <RecipeCard history={props.history} recipeId={props.match.params.recipeId}/>}/>
+          <Route path="/all-recipes" component={AllRecipes}/>
+          <Route path="/filtered-list" component={FilteredRecipes}/>
+          <Route path="/create-new" component={RecipeForm}/>
+          <Route path="/recipes/:recipeId" render={(props) => <RecipeCard history={props.history} recipeId={props.match.params.recipeId}/>}/>
         </div>
       </Router>
     )

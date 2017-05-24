@@ -18,9 +18,20 @@ const queryReducer = (state = initialState, action) => {
       return Object.assign({}, state, {
         queryInput: action.queryInput.toUpperCase()
       });
-    case constants.FILTER_RECIPES:
+    case constants.SORT_BY_CATEGORY:
+      let catFiltered = state.allRecipes.filter((recipe) => {
+        return recipe.category === action.category.toUpperCase()
+      });
       return Object.assign({}, state, {
-        filteredRecipes: action.filteredRecipes
+        category: action.category,
+        filteredRecipes: catFiltered
+      })
+    case constants.FILTER_RECIPES:
+      let queryFiltered = state.allRecipes.filter((recipe) => {
+        return recipe.title.includes(state.queryInput);
+      });
+      return Object.assign({}, state, {
+        filteredRecipes: queryFiltered
       });
     default:
       return(state);

@@ -13,24 +13,14 @@ class NavMenu extends React.Component {
   }
   componentDidMount(){
     this.unsub = store.subscribe(() => this.setState(store.getState()));
-    this.getRecipes();
+    UserData.loadRecipes();
   }
   componentWillUnmount(){
     this.unsub();
   }
-  getRecipes(){
-    const cb = (data) => {
-      const action = Object.assign({}, actions.LOAD_ALL_RECIPES, {allRecipes: data});
-      store.dispatch(action);
-    }
-    UserData.loadRecipes(cb);
-  }
   filter(category){
-    let filteredRecipes = this.state.query.allRecipes.filter((recipe) => {
-      return recipe.category === category.toUpperCase()
-    })
-    const action = Object.assign({}, actions.FILTER_RECIPES, {
-      filteredRecipes: filteredRecipes
+    const action = Object.assign({}, actions.SORT_BY_CATEGORY, {
+      category: category
     });
     store.dispatch(action);
     this.props.history.push('./filtered-list');
@@ -40,7 +30,6 @@ class NavMenu extends React.Component {
   }
   render(){
     let showHide = this.state.style.catDropDownVisible ? "sub-menu-visible" : "sub-menu-hide";
-    console.log(this.state.style.catDropDownVisible)
     return(
       <div >
         <ul className="nav-menu">

@@ -1,12 +1,14 @@
 import $ from 'jquery';
+import { store, actions } from './store/store.js';
 
 let UserData = {
-  loadRecipes(cb){
+  loadRecipes(){
     $.ajax ({
       url: `/api/recipes`
     })
     .done((data) => {
-      cb(data);
+      const action = Object.assign({}, actions.LOAD_ALL_RECIPES, {allRecipes: data});
+      store.dispatch(action);
     });
   },
   createRecipe(input, cb) {

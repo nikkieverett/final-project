@@ -1,21 +1,7 @@
 import React from 'react';
 import UserData from './../UserData.js';
-import { withRouter } from 'react-router-dom';
-import { store } from './../store/store.js';
-import NavMenu from './NavMenu.js';
-import SearchBar from './SearchBar';
 
-class FilteredList extends React.Component {
-  constructor(){
-    super();
-    this.state = store.getState();
-  }
-  componentDidMount(){
-    this.unsub = store.subscribe(() => this.setState(store.getState()));
-  }
-  componentWillUnmount(){
-    this.unsub();
-  }
+class ListCreator extends React.Component {
   handleDelete(id){
     const cb = () => {
       this.props.history.goBack();
@@ -24,10 +10,11 @@ class FilteredList extends React.Component {
     }
     UserData.deleteRecipe(id, cb);
   }
+  handleFave(evt){
 
+  }
   render(){
-    let recipes = this.state.query.filteredRecipes.map((recipe) =>
-    {
+    let recipes = this.props.recipes.map((recipe) => {
       return(
         <div className="list-items" key={recipe._id}>
           <h1>{recipe.title}</h1>
@@ -42,16 +29,9 @@ class FilteredList extends React.Component {
           </div>
         </div>
       )
-    })
-    return(
-      <div className="list-container">
-        <NavMenu />
-        <div className="recipes">
-          {recipes}
-        </div>
-      </div>
-    )
+    });
+    return <div>{recipes}</div>
   }
 }
 
-module.exports = withRouter(FilteredList);
+module.exports = ListCreator;
