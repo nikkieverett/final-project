@@ -22,7 +22,7 @@ const initialState = {
 const recipeReducer = (state = initialState, action) => {
   switch(action.type){
     case constants.ADD_RECIPE_INPUT:
-      const newFormValues = Object.assign({}, state.formValues, { [action.object.key]: action.object.value} )
+      const newFormValues = Object.assign({}, state.formValues, { [action.data.key]: action.data.value} )
       return Object.assign({}, state, { formValues: newFormValues }
       );
     default:

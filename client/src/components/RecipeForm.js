@@ -15,43 +15,138 @@ class RecipeForm extends React.Component {
   componentWillUnmount(){
     this.unsub();
   }
-
   handleSubmit(evt){
     evt.preventDefault();
-    const cb = () => {
-      console.log('im the callback, done creating recipe')
-    };
-    // const cb = this.props.history.goBack();
-    UserData.createRecipe(this.state.recipe.formValues, cb)
+    alert('Recipe created successfully!');
+    const cb = () => this.props.history.push('/all-recipes');
+    UserData.createRecipe(this.state.recipe.formValues, cb);
   }
   setValue(field, evt){
     let data = {
       key: field,
-      value: evt.target.value
+      value: evt.target.value.toUpperCase()
     };
-    let action = Object.assign({}, actions.ADD_RECIPE_INPUT, { data });
+    let action = Object.assign({},
+      actions.ADD_RECIPE_INPUT, { data });
     store.dispatch(action);
   }
 
   render(){
     return(
       <div className="form-container">
-        <form className="recipe-form" id="form" onSubmit={(evt) => this.handleSubmit(evt)}>
-          <input type="text" placeholder="title" onChange={(evt) => this.setValue('title', evt)}/>
-          <input type="text" placeholder="prepTime" onChange={(evt) => this.setValue('prepTime', evt)}/>
-          <input type="text" placeholder="cookTime" onChange={(evt) => this.setValue('cookTime', evt)}/>
-          <input type="text" placeholder="totalTime" onChange={(evt) => this.setValue('totalTime', evt)}/>
-          <input type="text" placeholder="href" onChange={(evt) => this.setValue('href', evt)}/>
-          <input type="text" placeholder="category" onChange={(evt) => this.setValue('category', evt)}/>
-          <input type="text" placeholder="img" onChange={(evt) => this.setValue('img', evt)}/>
-          <input type="text" placeholder="ease" onChange={(evt) => this.setValue('ease', evt)}/>
-          <input type="text" placeholder="rating" onChange={(evt) => this.setValue('rating', evt)}/>
-          <input type="text" placeholder="ingredients" onChange={(evt) => this.setValue('ingredients', evt)}/>
-          <input type="text" placeholder="directions" onChange={(evt) => this.setValue('directions', evt)}/>
-          <input type="text" placeholder="notes" onChange={(evt) => this.setValue('notes', evt)}/>
-          <input type="text" placeholder="servings" onChange={(evt) => this.setValue('servings', evt)}/>
-          <input type="text" placeholder="tried" onChange={(evt) => this.setValue('tried', evt)}/>
-          <input type="submit" />
+        <NavMenu />
+        <form
+          className="recipe-form"
+          onSubmit={(evt) => this.handleSubmit(evt)}>
+
+          <div className="page-title">Create a new recipe</div>
+
+          <div className="left-entry">
+            <input
+              id="name"
+              placeholder="Recipe Name"
+              className="input"
+              type="text"
+              onChange={(evt) => this.setValue('title', evt)}/>
+            <input
+              id="link"
+              placeholder="Source (optional)"
+              className="input"
+              type="text"
+              onChange={(evt) => this.setValue('href', evt)}/>
+
+            <div className="time">
+              <input
+                id="prep"
+                placeholder="Prep"
+                className="input"
+                type="text"
+                onChange={(evt) => this.setValue('prepTime', evt)}/>
+              <input
+                placeholder="Cook"
+                className="input"
+                id="cook"
+                type="text"
+                onChange={(evt) => this.setValue('cookTime', evt)}/>
+              <input
+                placeholder="Total"
+                className="input"
+                id="total"
+                type="text"
+                onChange={(evt) => this.setValue('totalTime', evt)}/>
+            </div>
+
+            <input
+              id="servings"
+              placeholder="Number of Servings"
+              className="input"
+              type="text"
+              onChange={(evt) => this.setValue('servings', evt)}/>
+          </div>
+
+          <div className="right-entry">
+            <h1>Category</h1>
+            <select
+              id="category"
+              className="input"
+              type="text"
+              onChange={(evt) => this.setValue('category', evt)}>
+              <option>Breakfast</option>
+              <option>Main Course</option>
+              <option>Dessert</option>
+              <option>Side Dish</option>
+              <option>Appetizer</option>
+            </select>
+            <h1>Difficulty:</h1>
+            <select
+              id="difficulty"
+              className="input"
+              type="text"
+              onChange={(evt) => this.setValue('ease', evt)}>
+              <option>Easy</option>
+              <option>Intermediate</option>
+              <option>Difficult</option>
+              <option>Time Consuming</option>
+            </select>
+            <h1>Tried yet:</h1>
+            <input
+              id="tried"
+              className="input"
+              type="checkbox"
+              onChange={(evt) => this.setValue('tried', evt)}/>
+            <h1>Rating:</h1>
+            <select
+              id="rating"
+              className="input"
+              onChange={(evt) => this.setValue('rating', evt)}>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </div>
+
+          <div className="main-entry">
+            <h1>Ingredients:</h1>
+            <textarea
+              className="input"
+              onChange={(evt) => this.setValue('ingredients', evt)}/>
+            <h1>Directions:</h1>
+            <textarea
+              className="input"
+              onChange={(evt) => this.setValue('directions', evt)}/>
+          </div>
+
+          <div className="sub-entry">
+            <h1>Notes:</h1>
+            <textarea
+              className="input"
+              onChange={(evt) => this.setValue('notes', evt)} />
+          </div>
+
+          <input className="input" type="submit" />
+
         </form>
       </div>
     )

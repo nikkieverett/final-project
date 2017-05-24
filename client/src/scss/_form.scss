@@ -1,22 +1,76 @@
 @import './variables.scss';
 
-.form-container{
-  width: 960px;
+.recipe-form{
+  width: 80%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.page-title {
+  font-size: 40px;
+  color: $primary-font-color;
+  text-transform: uppercase;
+  margin: 10px;
+}
+.input{
+  display: inline-block;
+  margin: 10px;
+  border: none;
+  background-color: $primary-color;
+  border-bottom: $secondary-font-color 2px solid;
+  color: $focus-font-color;
+
+}
+.left-entry, .right-entry {
+  float: left;
+  width: 46%;
+  margin: 2%;
+  input{
+    height: 30px;
+    margin: 10px;
+    font-size: 18px;
+  }
+  input:focus{
+    outline: none;
+  }
+}
+#name, #link {
+  width: 100%;
+}
+#prep, #cook, #total{
+  font-size: 12px;
+  float: left;
+  width: 10.333%;
+}
+#servings {
+  font-size: 12px;
+  clear: both;
+}
+.right-entry{
+  h1{
+    font-size: 18px;
+    display: inline;
+  }
+}
+#category, {
+  width: 100%;
+}
+#tried, #rating, #difficulty{
+  display: inline;
+}
+.main-entry, .sub-entry{
+  width: 90%;
   margin: 0 auto;
+  textarea{
+    width: 100%;
+    background-color: $tertiary-color;
+    height: 100px;
+  }
 }
 
-.recipe-form{
-  input{
-    display: inline-block;
-    width: 100%;
-    margin: 10px;
-    height: 50px;
-    text-align: center;
-    border: none;
-    background-color: $primary-font-color;
-    color: $focus-font-color;
-  }
-  :focus{
-    border: none;
-  }
+.main-entry{
+  clear: both;
+}
+.sub-entry{
+  clear: both;
 }

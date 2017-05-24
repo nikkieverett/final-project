@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 import { store } from './../store/store.js';
 
 //components
@@ -20,6 +20,8 @@ class Home extends React.Component {
   render(){
     return(
       <div className="home-container">
+        <div className="add-button"><Link to="/create-new">+<span>add new</span></Link></div>
+        <div className="view-all"><Link to="/all-recipes">all <span>recipes</span></Link></div>
         <div className="main-header">What would you like to make?</div>
         <SearchBar className="home-search"/>
         <Categories className="home-categories"/>

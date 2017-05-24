@@ -35,7 +35,6 @@ class NavMenu extends React.Component {
         <ul className="nav-menu">
           <li className="link"><Link to="/">Home</Link></li>
           <li className="link"><Link to="/all-recipes">View All Recipes</Link></li>
-          <li className="link"><Link to="/create-new">Create New Recipe</Link></li>
           <li className="link" onClick={() => this.dropDownCategories()}>Categories
             <ul className={showHide}>
               <li className="sub-cat" onClick={() => this.filter("main course")}>Main Course</li>
@@ -45,6 +44,9 @@ class NavMenu extends React.Component {
             </ul>
           </li>
           <SearchBar className="nav-search" />
+          
+          <li className="add"><Link to="/create-new">+<span>add new</span></Link></li>
+
         </ul>
       </div>
     )

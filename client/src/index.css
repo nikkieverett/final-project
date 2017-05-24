@@ -49,9 +49,39 @@ table {
   width: 960px;
   margin: 0 auto; }
 
+.add-button, .view-all {
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+  background-color: #73c3bd;
+  position: absolute;
+  text-align: center;
+  line-height: 50px;
+  font-size: 30px;
+  overflow: hidden;
+  color: #fff0f0;
+  transition: all ease 1s;
+  right: 30px; }
+  .add-button span, .view-all span {
+    display: none; }
+  .add-button a, .view-all a {
+    color: #fff0f0;
+    text-decoration: none; }
+
+.add-button {
+  top: 10px; }
+
+.view-all {
+  top: 70px; }
+
+.add-button:hover, .view-all:hover {
+  width: 200px; }
+  .add-button:hover span, .view-all:hover span {
+    display: inline; }
+
 .main-header {
   font-size: 3em;
-  margin-top: 100px;
+  margin-top: 150px;
   text-align: center;
   color: #fff0f0; }
 
@@ -60,15 +90,17 @@ table {
   margin: 20px auto;
   border: none;
   background-color: #f2a8a3;
-  width: 300px;
+  width: 70px;
   height: 70px;
   border-radius: 80px;
   text-align: center;
   font-size: 1em;
-  color: #b2473f; }
+  color: #b2473f;
+  transition: all ease 1s; }
 
 .home-search input:focus {
-  outline: none; }
+  outline: none;
+  width: 300px; }
 
 .home-search input::placeholder {
   color: #b2473f; }
@@ -123,6 +155,46 @@ table {
     text-transform: lowercase;
     color: #333333; }
 
+.add {
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+  background-color: #eb6c62;
+  text-align: center;
+  line-height: 50px;
+  font-size: 30px;
+  position: absolute;
+  bottom: 10px;
+  left: 40%;
+  overflow: hidden;
+  color: #f2a8a3;
+  transition: all ease 1s; }
+  .add span {
+    display: none; }
+  .add a {
+    color: #f2a8a3;
+    text-decoration: none; }
+
+.add:hover {
+  width: 200px;
+  left: 10%; }
+  .add:hover span {
+    display: inline; }
+
+.nav-search input {
+  width: 200px;
+  height: 40px;
+  margin-top: 5px;
+  margin-left: 15px;
+  border: none;
+  border-radius: 10px;
+  font-size: 12px;
+  color: #333333;
+  padding-left: 10px; }
+
+.nav-search input:focus {
+  border: none; }
+
 .list-container {
   width: 80%;
   margin: 0 auto;
@@ -174,22 +246,72 @@ table {
     .recipes .buttons .not-favorite {
       background-image: url(../public/ic_star_border_white_24px.svg); }
 
-.form-container {
-  width: 960px;
-  margin: 0 auto; }
+.recipe-form {
+  width: 80%;
+  position: absolute;
+  top: 0;
+  right: 0; }
 
-.recipe-form input {
+.page-title {
+  font-size: 40px;
+  color: #fff0f0;
+  text-transform: uppercase;
+  margin: 10px; }
+
+.input {
   display: inline-block;
-  width: 100%;
   margin: 10px;
-  height: 50px;
-  text-align: center;
   border: none;
-  background-color: #fff0f0;
+  background-color: #eb6c62;
+  border-bottom: #b2473f 2px solid;
   color: #333333; }
 
-.recipe-form :focus {
-  border: none; }
+.left-entry, .right-entry {
+  float: left;
+  width: 46%;
+  margin: 2%; }
+  .left-entry input, .right-entry input {
+    height: 30px;
+    margin: 10px;
+    font-size: 18px; }
+  .left-entry input:focus, .right-entry input:focus {
+    outline: none; }
+
+#name, #link {
+  width: 100%; }
+
+#prep, #cook, #total {
+  font-size: 12px;
+  float: left;
+  width: 10.333%; }
+
+#servings {
+  font-size: 12px;
+  clear: both; }
+
+.right-entry h1 {
+  font-size: 18px;
+  display: inline; }
+
+#category {
+  width: 100%; }
+
+#tried, #rating, #difficulty {
+  display: inline; }
+
+.main-entry, .sub-entry {
+  width: 90%;
+  margin: 0 auto; }
+  .main-entry textarea, .sub-entry textarea {
+    width: 100%;
+    background-color: #f2a8a3;
+    height: 100px; }
+
+.main-entry {
+  clear: both; }
+
+.sub-entry {
+  clear: both; }
 
 body {
   margin: 0;

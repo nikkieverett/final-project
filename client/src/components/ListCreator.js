@@ -4,9 +4,8 @@ import UserData from './../UserData.js';
 class ListCreator extends React.Component {
   handleDelete(id){
     const cb = () => {
+      alert("Recipe has been successfully deleted!")
       this.props.history.goBack();
-      // add succesfully deleted message page?
-      // this.getRecipes();
     }
     UserData.deleteRecipe(id, cb);
   }
@@ -20,7 +19,7 @@ class ListCreator extends React.Component {
           <h1>{recipe.title}</h1>
           <h2>{recipe.category}: {recipe.ease}</h2>
           <div className="buttons">
-            <div onClick={() => this.handleDelete()}
+            <div onClick={() => this.handleDelete(recipe._id)}
               className="delete"></div>
             <div onClick={() => this.handleEdit()}
               className="edit"></div>
