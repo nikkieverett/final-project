@@ -47,14 +47,12 @@ class SearchBar extends React.Component {
 
   render(){
     return(
-      <div>
-        <div className="search-bar">
-          <input
-            placeholder="Search..."
-            onKeyUp={(evt) => this.handleKeyUp(evt)}
-            onChange={(evt) => this.handleChange(evt)}
-          />
-        </div>
+      <div className={this.props.className}>
+        <input
+          placeholder="Search..."
+          onKeyUp={(evt) => this.handleKeyUp(evt)}
+          onChange={(evt) => this.handleChange(evt)}
+        />
       </div>
     )
   }

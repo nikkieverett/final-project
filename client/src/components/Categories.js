@@ -19,7 +19,6 @@ class Categories extends React.Component {
     const cb = (data) => {
       const action = Object.assign({}, actions.LOAD_ALL_RECIPES, {allRecipes: data});
       store.dispatch(action);
-
     }
     UserData.loadRecipes(cb);
   }
@@ -32,21 +31,16 @@ class Categories extends React.Component {
       filteredRecipes: filteredRecipes
     });
     store.dispatch(action);
-
     this.props.history.push('./filtered-list');
   }
   render(){
     return(
-      <ul className="categories">
-        <li className="category" onClick={() => this.filter("main course")}>Main Course</li>
-        <li className="category" onClick={() => this.filter("breakfast")}>Breakfast</li>
-        <li className="category" onClick={() => this.filter("dessert")}>Dessert</li>
-        <li className="category" onClick={() => this.filter("appetizer")}>Appetizer</li>
-        <li className="category" onClick={() => this.filter("beverage")}>Beverage</li>
-        <li className="category" onClick={() => this.filter("side dish")}>Side Dish</li>
-        <li className="category" onClick={() => this.filter("condiment")}>Condiment</li>
-        <li className="category" onClick={() => this.filter("bread")}>Bread</li>
-      </ul>
+      <div className="categories">
+        <div className="category" onClick={() => this.filter("main course")}>Main Course</div>
+        <div className="category" onClick={() => this.filter("breakfast")}>Breakfast</div>
+        <div className="category" onClick={() => this.filter("dessert")}>Dessert</div>
+        <div className="category" onClick={() => this.filter("side dish")}>Side Dish</div>
+      </div>
     )
   }
 }

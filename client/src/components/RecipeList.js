@@ -1,7 +1,6 @@
 import React from 'react';
 import UserData from './../UserData.js';
-import { store } from './../store/store.js';
-import actions from './../store/actions.js';
+import { store, actions } from './../store/store.js';
 import { withRouter } from 'react-router-dom';
 import NavMenu from './NavMenu.js';
 import SearchBar from './SearchBar';
@@ -18,13 +17,6 @@ class RecipeList extends React.Component {
   componentWillUnmount(){
     this.unsub();
   }
-  handleDelete(id){
-    const cb = () => {
-      // add succesfully deleted message page?
-      // this.getRecipes();
-    }
-    UserData.deleteRecipe(id, cb);
-  }
   getAllRecipes(){
     const cb = (data) => {
       const action = Object.assign({}, actions.LOAD_ALL_RECIPES, {allRecipes: data});
@@ -32,15 +24,40 @@ class RecipeList extends React.Component {
     }
     UserData.loadRecipes(cb);
   }
+  handleDelete(id){
+    const cb = () => {
+      this.props.history.goBack();
+      // add succesfully deleted message page?
+      // this.getRecipes();
+    }
+    UserData.deleteRecipe(id, cb);
+  }
+  handleFave(evt){
 
+  }
   render(){
-    let recipes = this.state.query.allRecipes.map((recipe) =>
-    <li key={recipe._id}>{recipe.title}</li>)
+    let recipes = this.state.query.allRecipes.map((recipe) => {
+      return(
+        <div className="list-items" key={recipe._id}>
+          <h1>{recipe.title}</h1>
+          <h2>{recipe.category}: {recipe.ease}</h2>
+          <div className="buttons">
+            <div onClick={() => this.handleDelete()}
+              className="delete"></div>
+            <div onClick={() => this.handleEdit()}
+              className="edit"></div>
+            <div onClick={(evt) => this.handleFave(evt)}
+              className="not-favorite"></div>
+          </div>
+        </div>
+      )
+    })
     return(
-      <div>
+      <div className="list-container">
         <NavMenu />
-        <SearchBar />
-        <ul>{recipes}</ul>
+        <div className="recipes">
+          {recipes}
+        </div>
       </div>
     )
   }

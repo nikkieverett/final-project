@@ -1,0 +1,64 @@
+@import './variables.scss';
+
+.list-container{
+  width: 80%;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.recipes{
+  overflow: none;
+  .list-items{
+    background-color: $tertiary-color;
+    color: $primary-font-color;
+    height: 100%;
+    margin: 10px 20px 10px 100px;
+    width: 840px;
+    text-transform: lowercase;;
+    padding: 10px;
+    position: relative;
+    h1 {
+      font-size: 3em;
+      padding-bottom: 10px;
+    }
+    h2{
+      font-size: 1em;
+      text-transform: uppercase;
+      color: $secondary-font-color;
+    }
+    h1:hover{
+      color: $focus-font-color;
+    }
+  }
+  .buttons{
+    right: 10px;
+    top: 10px;
+    overflow: auto;
+    position: absolute;
+
+    .delete, .edit, .favorite, .not-favorite {
+      background-repeat: none;
+      width: 25px;
+      height: 25px;
+      background-color: $secondary-color;
+      float: left;
+      border-radius: 5px;
+      border: 1px solid $tertiary-color2;
+    }
+    .delete {
+      background-image: url(../public/ic_delete_white_24px.svg);
+      margin-right: 10px;
+    }
+    .edit {
+      background-image: url(../public/ic_edit_white_24px.svg);
+      margin-right: 10px;
+    }
+    .favorite {
+      background-image: url(../public/ic_star_white_24px.svg);
+    }
+    .not-favorite {
+      background-image: url(../public/ic_star_border_white_24px.svg);
+    }
+  }
+}

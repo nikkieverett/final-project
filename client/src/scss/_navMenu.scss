@@ -1,0 +1,40 @@
+@import './variables.scss';
+
+.nav-menu {
+  color: $primary-font-color;
+  height: 100%;
+  width: 20%;
+  display: inline-block;
+  position:fixed;
+  left: 0;
+  top: 0;
+  background-color: $tertiary-color2;
+  transition: all ease .5s;
+
+  .link {
+    color: $primary-font-color;
+    font-size: 30px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 10px;
+    
+    a {
+      text-decoration: none;
+      color: $primary-font-color;
+    }
+  }
+}
+.sub-menu-hide {
+  display: none;
+}
+.sub-menu-visible {
+  display: inline-block;
+  margin-left: 10px;
+  .sub-cat {
+    padding: 5px;
+    font-size: 20px;
+    text-transform: lowercase;
+    color: $focus-font-color;
+  }
+}
