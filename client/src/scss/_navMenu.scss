@@ -8,7 +8,7 @@
   position:fixed;
   left: 0;
   top: 0;
-  background-color: $tertiary-color2;
+  background-color: $secondary-color;
   transition: all ease .5s;
   .link {
     color: $primary-font-color;
@@ -17,11 +17,15 @@
     text-transform: uppercase;
     font-weight: bold;
     padding: 10px;
+    transition: all ease 1s;
     a {
       text-decoration: none;
       color: $primary-font-color;
     }
   }
+}
+.link:hover{
+  background-color: $tertiary-color2;
 }
 .sub-menu-hide {
   display: none;
@@ -34,50 +38,9 @@
     font-size: 20px;
     text-transform: lowercase;
     color: $focus-font-color;
+    transition: all ease 1s;
   }
-}
-.add{
-  width: 50px;
-  height: 50px;
-  border-radius: 100px;
-  background-color: $primary-color;
-  text-align: center;
-  line-height: 50px;
-  font-size: 30px;
-  position: absolute;
-  bottom: 10px;
-  left: 40%;
-  overflow: hidden;
-  color: $tertiary-color;
-  transition: all ease 1s;
-  span{
-    display: none;
-  }
-  a {
-    color: $tertiary-color;
-    text-decoration: none;
-  }
-}
-.add:hover{
-  span{
-    display: inline;
-  }
-  width: 200px;
-  left: 10%;
-}
-.nav-search {
-  input{
-    width: 200px;
-    height: 40px;
-    margin-top: 5px;
-    margin-left: 15px;
-    border: none;
-    border-radius: 10px;
-    font-size: 12px;
-    color: $focus-font-color;
-    padding-left: 10px;
-  }
-  input:focus{
-    border: none;
+  .sub-cat:hover {
+    color: $primary-color;
   }
 }

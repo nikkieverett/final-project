@@ -62,11 +62,13 @@ table {
   color: #fff0f0;
   transition: all ease 1s;
   right: 30px; }
-  .add-button span, .view-all span {
-    display: none; }
-  .add-button a, .view-all a {
-    color: #fff0f0;
-    text-decoration: none; }
+
+.add-button span, .view-all span {
+  display: none; }
+
+.add-button a, .view-all a {
+  color: #fff0f0;
+  text-decoration: none; }
 
 .add-button {
   top: 10px; }
@@ -76,8 +78,9 @@ table {
 
 .add-button:hover, .view-all:hover {
   width: 200px; }
-  .add-button:hover span, .view-all:hover span {
-    display: inline; }
+
+.add-button:hover span, .view-all:hover span {
+  display: inline; }
 
 .main-header {
   font-size: 3em;
@@ -119,8 +122,9 @@ table {
   text-align: center;
   line-height: 100px;
   transition: all 0.3s ease; }
-  .category :hover {
-    background-color: #69b1a9; }
+
+.category:hover {
+  background-color: #69b1a9; }
 
 .nav-menu {
   color: #fff0f0;
@@ -130,18 +134,24 @@ table {
   position: fixed;
   left: 0;
   top: 0;
-  background-color: #69b1a9;
+  background-color: #73c3bd;
   transition: all ease .5s; }
-  .nav-menu .link {
-    color: #fff0f0;
-    font-size: 30px;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    font-weight: bold;
-    padding: 10px; }
-    .nav-menu .link a {
-      text-decoration: none;
-      color: #fff0f0; }
+
+.nav-menu .link {
+  color: #fff0f0;
+  font-size: 30px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 10px;
+  transition: all ease 1s; }
+
+.nav-menu .link a {
+  text-decoration: none;
+  color: #fff0f0; }
+
+.link:hover {
+  background-color: #69b1a9; }
 
 .sub-menu-hide {
   display: none; }
@@ -149,51 +159,16 @@ table {
 .sub-menu-visible {
   display: inline-block;
   margin-left: 10px; }
-  .sub-menu-visible .sub-cat {
-    padding: 5px;
-    font-size: 20px;
-    text-transform: lowercase;
-    color: #333333; }
 
-.add {
-  width: 50px;
-  height: 50px;
-  border-radius: 100px;
-  background-color: #eb6c62;
-  text-align: center;
-  line-height: 50px;
-  font-size: 30px;
-  position: absolute;
-  bottom: 10px;
-  left: 40%;
-  overflow: hidden;
-  color: #f2a8a3;
-  transition: all ease 1s; }
-  .add span {
-    display: none; }
-  .add a {
-    color: #f2a8a3;
-    text-decoration: none; }
-
-.add:hover {
-  width: 200px;
-  left: 10%; }
-  .add:hover span {
-    display: inline; }
-
-.nav-search input {
-  width: 200px;
-  height: 40px;
-  margin-top: 5px;
-  margin-left: 15px;
-  border: none;
-  border-radius: 10px;
-  font-size: 12px;
+.sub-menu-visible .sub-cat {
+  padding: 5px;
+  font-size: 20px;
+  text-transform: lowercase;
   color: #333333;
-  padding-left: 10px; }
+  transition: all ease 1s; }
 
-.nav-search input:focus {
-  border: none; }
+.sub-menu-visible .sub-cat:hover {
+  color: #eb6c62; }
 
 .list-container {
   width: 80%;
@@ -204,59 +179,63 @@ table {
 
 .recipes {
   overflow: none; }
-  .recipes .list-items {
-    background-color: #f2a8a3;
-    color: #fff0f0;
-    height: 100%;
-    margin: 10px 20px 10px 100px;
-    width: 840px;
-    text-transform: lowercase;
-    padding: 10px;
-    position: relative; }
-    .recipes .list-items h1 {
-      font-size: 3em;
-      padding-bottom: 10px; }
-    .recipes .list-items h2 {
-      font-size: 1em;
-      text-transform: uppercase;
-      color: #b2473f; }
-    .recipes .list-items h1:hover {
-      color: #333333; }
-  .recipes .buttons {
-    right: 10px;
-    top: 10px;
-    overflow: auto;
-    position: absolute; }
-    .recipes .buttons .delete, .recipes .buttons .edit, .recipes .buttons .favorite, .recipes .buttons .not-favorite {
-      background-repeat: none;
-      width: 25px;
-      height: 25px;
-      background-color: #73c3bd;
-      float: left;
-      border-radius: 5px;
-      border: 1px solid #69b1a9; }
-    .recipes .buttons .delete {
-      background-image: url(../public/ic_delete_white_24px.svg);
-      margin-right: 10px; }
-    .recipes .buttons .edit {
-      background-image: url(../public/ic_edit_white_24px.svg);
-      margin-right: 10px; }
-    .recipes .buttons .favorite {
-      background-image: url(../public/ic_star_white_24px.svg); }
-    .recipes .buttons .not-favorite {
-      background-image: url(../public/ic_star_border_white_24px.svg); }
+
+.recipes .list-items {
+  background-color: #f2a8a3;
+  color: #fff0f0;
+  height: 100%;
+  margin: 10px 20px 10px 100px;
+  width: 840px;
+  text-transform: lowercase;
+  padding: 10px;
+  position: relative; }
+
+.recipes .list-items h1 {
+  font-size: 3em;
+  padding-bottom: 10px; }
+
+.recipes .list-items h2 {
+  font-size: 1em;
+  text-transform: uppercase;
+  color: #b2473f; }
+
+.recipes .list-items h1:hover {
+  color: #333333; }
+
+.recipes .buttons {
+  right: 10px;
+  top: 10px;
+  overflow: auto;
+  position: absolute; }
+
+.recipes .buttons .delete, .recipes .buttons .edit, .recipes .buttons .favorite, .recipes .buttons .not-favorite {
+  background-repeat: none;
+  width: 25px;
+  height: 25px;
+  background-color: #73c3bd;
+  float: left;
+  border-radius: 5px;
+  border: 1px solid #69b1a9; }
+
+.recipes .buttons .delete {
+  background-image: url(../public/ic_delete_white_24px.svg);
+  margin-right: 10px; }
+
+.recipes .buttons .edit {
+  background-image: url(../public/ic_edit_white_24px.svg);
+  margin-right: 10px; }
+
+.recipes .buttons .favorite {
+  background-image: url(../public/ic_star_white_24px.svg); }
+
+.recipes .buttons .not-favorite {
+  background-image: url(../public/ic_star_border_white_24px.svg); }
 
 .recipe-form {
   width: 80%;
   position: absolute;
   top: 0;
   right: 0; }
-
-.page-title {
-  font-size: 40px;
-  color: #fff0f0;
-  text-transform: uppercase;
-  margin: 10px; }
 
 .input {
   display: inline-block;
@@ -270,12 +249,14 @@ table {
   float: left;
   width: 46%;
   margin: 2%; }
-  .left-entry input, .right-entry input {
-    height: 30px;
-    margin: 10px;
-    font-size: 18px; }
-  .left-entry input:focus, .right-entry input:focus {
-    outline: none; }
+
+.left-entry input, .right-entry input {
+  height: 30px;
+  margin: 10px;
+  font-size: 18px; }
+
+.left-entry input:focus, .right-entry input:focus {
+  outline: none; }
 
 #name, #link {
   width: 100%; }
@@ -302,10 +283,11 @@ table {
 .main-entry, .sub-entry {
   width: 90%;
   margin: 0 auto; }
-  .main-entry textarea, .sub-entry textarea {
-    width: 100%;
-    background-color: #f2a8a3;
-    height: 100px; }
+
+.main-entry textarea, .sub-entry textarea {
+  width: 100%;
+  background-color: #f2a8a3;
+  height: 100px; }
 
 .main-entry {
   clear: both; }
@@ -319,3 +301,53 @@ body {
   font-family: "Lato", sans-serif;
   font-weight: 300;
   background-color: #eb6c62; }
+
+.page-title {
+  font-size: 40px;
+  color: #b2473f;
+  text-transform: uppercase;
+  margin: 20px 20px 20px 100px;
+  display: inline-block; }
+
+.list-search {
+  display: inline-block; }
+
+.list-search input {
+  width: 200px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  font-size: 12px;
+  color: #333333;
+  padding-left: 20px; }
+
+.list-search input:focus {
+  border: none; }
+
+.add {
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+  background-color: #73c3bd;
+  text-align: center;
+  line-height: 50px;
+  font-size: 30px;
+  position: absolute;
+  top: 10px;
+  right: 70px;
+  overflow: hidden;
+  color: #fff0f0;
+  transition: all ease 1s; }
+
+.add span {
+  display: none; }
+
+.add a {
+  color: #fff0f0;
+  text-decoration: none; }
+
+.add:hover {
+  width: 200px; }
+
+.add:hover span {
+  display: inline; }

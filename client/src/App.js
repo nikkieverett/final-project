@@ -16,7 +16,7 @@ class App extends React.Component {
           <Route path="/all-recipes" component={AllRecipes}/>
           <Route path="/filtered-list" component={FilteredRecipes}/>
           <Route path="/create-new" component={RecipeForm}/>
-          <Route path="/recipes/:recipeId" render={(props) => <RecipeCard history={props.history} recipeId={props.match.params.recipeId}/>}/>
+          <Route path="/recipes/:recipeId" component={RecipeCard}/>
         </div>
       </Router>
     )

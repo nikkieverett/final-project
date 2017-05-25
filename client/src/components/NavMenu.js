@@ -43,10 +43,6 @@ class NavMenu extends React.Component {
               <li className="sub-cat" onClick={() => this.filter("side dish")}>Side Dish</li>
             </ul>
           </li>
-          <SearchBar className="nav-search" />
-          
-          <li className="add"><Link to="/create-new">+<span>add new</span></Link></li>
-
         </ul>
       </div>
     )
