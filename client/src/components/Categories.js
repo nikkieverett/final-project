@@ -1,7 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { store, actions } from '../store/store.js';
-import UserData from '../UserData.js';
 
 class Categories extends React.Component {
   constructor(){
@@ -10,7 +9,6 @@ class Categories extends React.Component {
   }
   componentDidMount(){
     this.unsub = store.subscribe(() => this.setState(store.getState()));
-    UserData.loadRecipes();
   }
   componentWillUnmount(){
     this.unsub();

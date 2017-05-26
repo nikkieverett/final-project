@@ -1,6 +1,8 @@
 import React from 'react';
 import { withRouter, Link } from 'react-router-dom';
 import { store } from './../store/store.js';
+import UserData from '../UserData.js';
+
 
 //components
 import Categories from './Categories.js';
@@ -13,6 +15,8 @@ class Home extends React.Component {
   }
   componentDidMount(){
     this.unsub = store.subscribe(() => this.setState(store.getState()));
+    UserData.loadRecipes();
+
   }
   componentWillUnmount(){
     this.unsub();

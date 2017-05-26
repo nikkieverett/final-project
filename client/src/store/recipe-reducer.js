@@ -25,6 +25,8 @@ const recipeReducer = (state = initialState, action) => {
       const newFormValues = Object.assign({}, state.formValues, { [action.data.key]: action.data.value} )
       return Object.assign({}, state, { formValues: newFormValues }
       );
+
+
     default:
       return(state);
   }

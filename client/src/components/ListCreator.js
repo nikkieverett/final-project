@@ -1,5 +1,6 @@
 import React from 'react';
 import UserData from './../UserData.js';
+import { withRouter } from 'react-router-dom';
 
 class ListCreator extends React.Component {
   handleDelete(id){
@@ -9,13 +10,13 @@ class ListCreator extends React.Component {
     }
     UserData.deleteRecipe(id, cb);
   }
-  handleFave(evt){
-
+  handleClick(id){
+    this.props.history.push(`/recipes/${id}`);
   }
   render(){
     let recipes = this.props.recipes.map((recipe) => {
       return(
-        <div className="list-items" key={recipe._id}>
+        <div onClick={() => this.handleClick(recipe._id)} className="list-items" key={recipe._id}>
           <h1>{recipe.title}</h1>
           <h2>{recipe.category}: {recipe.ease}</h2>
           <div className="buttons">
@@ -33,4 +34,4 @@ class ListCreator extends React.Component {
   }
 }
 
-module.exports = ListCreator;
+module.exports = withRouter(ListCreator);
