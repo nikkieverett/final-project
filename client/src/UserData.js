@@ -7,11 +7,8 @@ let UserData = {
       url: `/api/recipes`
     })
     .done((data) => {
-      console.log('ajax is done');
       const action = Object.assign({}, actions.LOAD_ALL_RECIPES, {allRecipes: data});
       store.dispatch(action);
-      console.log(store.getState());
-
     });
   },
   createRecipe(input, cb) {
@@ -31,6 +28,14 @@ let UserData = {
     })
     .done(() => {
       cb();
+    })
+  },
+  viewRecipe(recipeId, cb){
+    $.ajax({
+      url: `/api/recipes/${recipeId}`
+    })
+    .done((data) => {
+      cb(data);
     })
   }
 };

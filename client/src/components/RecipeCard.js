@@ -10,23 +10,23 @@ class RecipeCard extends React.Component {
   }
   componentDidMount(){
     this.unsub = store.subscribe(() => this.setState(store.getState()));
-    this.getRecipeCard()
   }
   componentWillUnmount(){
     this.unsub();
   }
-  getRecipeCard(){
-    const id = this.props.match.params.recipeId;
-    store.dispatch(Object.assign({}, actions.CURRENT_RECIPE,{
-      currentId: id
-    }));
-  }
   render(){
+    let current = this.state.query.currentRecipe;
+
+
     return(
       <div>
         <Link to="/">Home</Link>
-        <div>I'm the recipe card</div>
-        <div>I need to make a GET request using the recipe card Id</div>
+        <div>{current.title}</div>
+        <div>{current.category}</div>
+        <div>{current.ingredients}</div>
+        <div>{current.directions}</div>
+        <div>{current.notes}</div>
+
       </div>
     )
   }

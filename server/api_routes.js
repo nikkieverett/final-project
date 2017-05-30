@@ -14,9 +14,7 @@ router.get('/api/recipes', (req, res) => {
 
 //POST request to add a new recipe
 router.post('/api/recipes', (req, res) => {
-  console.log('im creating the recipe')
   var cb = (data) => {
-    console.log('im the data in the api post route', data);
     res.send(data);
   };
   var recipe = new Recipe();
@@ -35,12 +33,14 @@ router.post('/api/recipes', (req, res) => {
   recipe.servings = req.body.servings,
   recipe.tried = req.body.tried,
   recipe.save(cb);
-  console.log('im the recipe', recipe);
 });
 
 //GET request for specific recipe
 router.get('/api/recipes/:recipeId', (req, res) => {
-
+  var cb = (err, data) => {
+    res.send(data);
+  }
+  Recipe.findById(req.params.recipeId, cb);
 });
 
 //PUT request to update recipes

@@ -1,5 +1,6 @@
 import React from 'react';
 import UserData from './../UserData.js';
+import { store, actions } from './../store/store.js';
 import { withRouter } from 'react-router-dom';
 
 class ListCreator extends React.Component {
@@ -11,7 +12,13 @@ class ListCreator extends React.Component {
     UserData.deleteRecipe(id, cb);
   }
   handleClick(id){
-    this.props.history.push(`/recipes/${id}`);
+    const cb = (data) => {
+      store.dispatch(Object.assign({}, actions.CURRENT_RECIPE,{
+        currentRecipe: data
+      }));
+      this.props.history.push(`/recipes/${id}`);
+    }
+    UserData.viewRecipe(id, cb);
   }
   render(){
     let recipes = this.props.recipes.map((recipe) => {

@@ -36,11 +36,8 @@ const queryReducer = (state = initialState, action) => {
         filteredRecipes: queryFiltered
       });
     case constants.CURRENT_RECIPE:
-      let current = state.allRecipes.filter((recipe) => {
-        return recipe._id === state.currentId
-      });
       return Object.assign({}, state,{
-        currentRecipe: current
+        currentRecipe: action.currentRecipe
       });
     default:
       return(state);
