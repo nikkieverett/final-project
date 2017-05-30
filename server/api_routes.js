@@ -35,7 +35,7 @@ router.post('/api/recipes', (req, res) => {
   recipe.save(cb);
 });
 
-//GET request for specific recipe
+//READ request for specific recipe
 router.get('/api/recipes/:recipeId', (req, res) => {
   var cb = (err, data) => {
     res.send(data);
@@ -43,13 +43,17 @@ router.get('/api/recipes/:recipeId', (req, res) => {
   Recipe.findById(req.params.recipeId, cb);
 });
 
-//PUT request to update recipes
-router.put('/api/recipes/:recipeId', (req, res) => {
-
+//UPDATE request to update recipes
+router.post('/api/recipes/:recipeId', (req, res) => {
+  var cb = (err, data) => {
+    console.log(data)
+  }
+  Recipe.findByIdAndUpdate(req.params.recipeId, cb);
 });
 
 //DELETE request to delete recipes
 router.delete('/api/recipes/:recipeId', (req, res) => {
+  console.log('im deleting the recipe in the db')
   var cb = (err, data) => {
     res.sendStatus(204);
   };
