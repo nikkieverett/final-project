@@ -2,6 +2,7 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { store, actions } from '../store/store.js';
+import Categories from './Categories.js';
 
 class NavMenu extends React.Component {
   constructor(){
@@ -17,13 +18,6 @@ class NavMenu extends React.Component {
   viewAll(){
     store.dispatch(actions.REMOVE_FILTERED_RECIPES)
   }
-  filter(category){
-    const action = Object.assign({}, actions.SORT_BY_CATEGORY, {
-      category: category
-    });
-    store.dispatch(action);
-    this.props.history.push('./all-recipes');
-  }
   dropDownCategories(){
     store.dispatch(actions.SHOW_HIDE_DROPDOWN);
   }
@@ -36,10 +30,7 @@ class NavMenu extends React.Component {
           <li className="link" onClick={() => this.viewAll()}>View All Recipes</li>
           <li className="link" onClick={() => this.dropDownCategories()}>Categories</li>
           <ul className={showHide}>
-            <li className="sub-cat" onClick={() => this.filter("main course")}>Main Course</li>
-            <li className="sub-cat" onClick={() => this.filter("breakfast")}>Breakfast</li>
-            <li className="sub-cat" onClick={() => this.filter("dessert")}>Dessert</li>
-            <li className="sub-cat" onClick={() => this.filter("side dish")}>Side Dish</li>
+            <Categories className="sub-cat" />
           </ul>
         </ul>
       </div>

@@ -3,7 +3,6 @@ import { withRouter, Link } from 'react-router-dom';
 import { store } from './../store/store.js';
 import UserData from '../UserData.js';
 
-
 //components
 import Categories from './Categories.js';
 import SearchBar from './SearchBar.js';
@@ -16,7 +15,6 @@ class Home extends React.Component {
   componentDidMount(){
     this.unsub = store.subscribe(() => this.setState(store.getState()));
     UserData.loadRecipes();
-
   }
   componentWillUnmount(){
     this.unsub();
@@ -28,7 +26,7 @@ class Home extends React.Component {
         <div className="view-all"><Link to="/all-recipes">all <span>recipes</span></Link></div>
         <div className="main-header">What would you like to make?</div>
         <SearchBar className="home-search"/>
-        <Categories className="home-categories"/>
+        <Categories className="category"/>
       </div>
     )
   }

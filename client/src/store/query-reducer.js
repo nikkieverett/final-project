@@ -34,7 +34,6 @@ const queryReducer = (state = initialState, action) => {
         filteredRecipes: queryFiltered
       });
     case constants.REMOVE_FILTERED_RECIPES:
-      console.log('im the remove filter action');
       return Object.assign({}, state, {
         filteredRecipes: [],
         category: ''

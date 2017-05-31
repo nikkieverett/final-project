@@ -18,15 +18,15 @@ class Categories extends React.Component {
       category: category
     });
     store.dispatch(action);
-    this.props.history.push('./all-recipes');
+    this.props.history.push('./recipes');
   }
   render(){
     return(
       <div className="categories">
-        <div className="category" onClick={() => this.filter("main course")}>Main Course</div>
-        <div className="category" onClick={() => this.filter("breakfast")}>Breakfast</div>
-        <div className="category" onClick={() => this.filter("dessert")}>Dessert</div>
-        <div className="category" onClick={() => this.filter("side dish")}>Side Dish</div>
+        <div className={this.props.className} onClick={() => this.filter("main course")}>Main Course</div>
+        <div className={this.props.className} onClick={() => this.filter("breakfast")}>Breakfast</div>
+        <div className={this.props.className} onClick={() => this.filter("dessert")}>Dessert</div>
+        <div className={this.props.className} onClick={() => this.filter("side dish")}>Side Dish</div>
       </div>
     )
   }
