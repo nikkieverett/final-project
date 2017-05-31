@@ -10,6 +10,7 @@ class AddRecipe extends React.Component{
   }
   componentDidMount(){
     this.unsub = store.subscribe(() => this.setState(store.getState()));
+    store.dispatch(actions.CLEAR_RECIPE_INPUT);
   }
   componentWillUnmount(){
     this.unsub();
@@ -25,7 +26,7 @@ class AddRecipe extends React.Component{
   render(){
     return(
       <div>
-        <RecipeForm {...this.state.recipe.formValues} onSave={(data) => this.handleSaveClick(data)} />
+        <RecipeForm onSave={(data) => this.handleSaveClick(data)} />
       </div>
     )
   }

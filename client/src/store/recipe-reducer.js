@@ -28,18 +28,19 @@ const recipeReducer = (state = initialState, action) => {
         currentRecipe: action.currentRecipe
       });
     case constants.ONCHANGE_RECIPE_INPUT:
-    console.log(state.formValues);
       const newFormValues = Object.assign({}, state.formValues, { [action.data.key]: action.data.value} )
       return Object.assign({}, state, { formValues: newFormValues });
     case constants.SET_EDIT_RECIPE_INPUT:
       const copyFormValues = Object.assign({}, state.formValues);
       const copyCurrentRecipe = Object.assign({}, state.currentRecipe);
-      for(var propName in state.formValues){
+      for(let propName in state.formValues){
         if(copyCurrentRecipe[propName] !== undefined){
           copyFormValues[propName] = copyCurrentRecipe[propName];
         }
       };
       return Object.assign({}, state, { formValues: copyFormValues });
+    case constants.CLEAR_RECIPE_INPUT:
+      return Object.assign({}, state, { state: initialState })
     default:
       return(state);
   }

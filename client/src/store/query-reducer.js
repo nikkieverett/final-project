@@ -12,6 +12,7 @@ const queryReducer = (state = initialState, action) => {
   switch(action.type){
     case constants.LOAD_ALL_RECIPES:
       return Object.assign({}, state, {
+        category: '',
         allRecipes: action.allRecipes
       });
     case constants.QUERY_INPUT:
@@ -31,6 +32,7 @@ const queryReducer = (state = initialState, action) => {
         return recipe.title.includes(state.queryInput);
       });
       return Object.assign({}, state, {
+        category: '',
         filteredRecipes: queryFiltered
       });
     case constants.REMOVE_FILTERED_RECIPES:
