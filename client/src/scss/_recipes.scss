@@ -38,7 +38,7 @@
     overflow: auto;
     position: absolute;
 
-    .delete, .edit, .favorite, .not-favorite {
+    .favorite, .not-favorite {
       background-repeat: none;
       width: 25px;
       height: 25px;
@@ -46,14 +46,6 @@
       float: left;
       border-radius: 5px;
       border: 1px solid $tertiary-color2;
-    }
-    .delete {
-      background-image: url(../public/ic_delete_white_24px.svg);
-      margin-right: 10px;
-    }
-    .edit {
-      background-image: url(../public/ic_edit_white_24px.svg);
-      margin-right: 10px;
     }
     .favorite {
       background-image: url(../public/ic_star_white_24px.svg);

@@ -44,10 +44,11 @@ class RecipeCard extends React.Component {
     let current = this.state.query.currentRecipe;
     return(
       <div className="recipe-card">
+        <div className="back-button" onClick={() => this.props.history.goBack()}></div>
+        
         <div className="buttons">
           <div className="delete" onClick={() => this.handleDelete(id)}></div>
           <div className="edit" onClick={() => this.handleEdit(id)}></div>
-          <div className="back-button" onClick={() => this.props.history.goBack()}></div>
         </div>
         <h1>{current.title}</h1>
         <div className="details">
