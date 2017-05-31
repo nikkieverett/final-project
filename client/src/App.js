@@ -6,7 +6,7 @@ import Home from './components/Home.js';
 import AllRecipes from './components/AllRecipes.js';
 import FilteredRecipes from './components/FilteredRecipes.js';
 import RecipeForm from './components/RecipeForm.js';
-import EditCard from './components/EditCard.js';
+import EditRecipe from './components/EditRecipe.js';
 import RecipeCard from './components/RecipeCard.js';
 
 class App extends React.Component {

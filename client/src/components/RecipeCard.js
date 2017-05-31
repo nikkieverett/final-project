@@ -18,22 +18,37 @@ class RecipeCard extends React.Component {
   getRecipe(){
     let id = this.props.match.params.recipeId;
     const cb = (data) => {
-      store.dispatch(Object.assign({}, actions.CURRENT_RECIPE,{
+      store.dispatch(Object.assign({}, actions.CURRENT_RECIPE, {
         currentRecipe: data
       }));
     }
     UserData.viewRecipe(id, cb);
   }
-
-  handleClick(){
-    this.props.history.goBack();
+  handleDelete(id){
+    const cb = () => {
+      store.dispatch(actions.REMOVE_FILTERED_RECIPES);
+      this.props.history.push('/all-recipes');
+      alert("Recipe has been successfully deleted!");
+    }
+    UserData.deleteRecipe(id, cb);
+  }
+  handleEdit(id){
+    const cb = (data)=> {
+      console.log('got the data', data);
+      this.props.history.push(`/edit/${id}`);
+    }
+    UserData.editRecipe(id, cb);
   }
   render(){
-    // console.log(this.state.query);
+    let id = this.props.match.params.recipeId;
     let current = this.state.query.currentRecipe;
     return(
       <div className="recipe-card">
-        <div className="back-button" onClick={() => this.handleClick()}></div>
+        <div className="buttons">
+          <div className="delete" onClick={() => this.handleDelete(id)}></div>
+          <div className="edit" onClick={() => this.handleEdit(id)}></div>
+          <div className="back-button" onClick={() => this.props.history.goBack()}></div>
+        </div>
         <h1>{current.title}</h1>
         <div className="details">
           <h3 className="detail"><span>Yield </span>{current.servings}</h3>

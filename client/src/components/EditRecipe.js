@@ -20,7 +20,7 @@ class EditRecipe extends React.Component{
   render(){
     return(
       <div>
-        <BookForm {...this.state} onSave={(data) => this.handleSaveClick(data)} />
+        <RecipeForm {...this.state} onSave={(data) => this.handleSaveClick(data)} />
       </div>
     )
   }
