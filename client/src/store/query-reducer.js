@@ -1,8 +1,6 @@
 import constants from './constants.js';
 
 const initialState = {
-  currentId: '',
-  currentRecipe: {},
   allRecipes: [],
   queryInput: '',
   category: '',
@@ -34,10 +32,6 @@ const queryReducer = (state = initialState, action) => {
       });
       return Object.assign({}, state, {
         filteredRecipes: queryFiltered
-      });
-    case constants.CURRENT_RECIPE:
-      return Object.assign({}, state,{
-        currentRecipe: action.currentRecipe
       });
       case constants.REMOVE_FILTERED_RECIPES:
       console.log(state.filteredRecipes);

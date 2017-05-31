@@ -5,7 +5,7 @@ import { Link, withRouter } from 'react-router-dom';
 import NavMenu from './NavMenu.js';
 import ListCreator from './ListCreator.js';
 import SearchBar from './SearchBar.js';
-import UserData from '../UserData.js';
+// import UserData from '../UserData.js';
 
 class AllRecipes extends React.Component {
   constructor(){

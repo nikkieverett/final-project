@@ -25,7 +25,7 @@ class AddRecipe extends React.Component{
   render(){
     return(
       <div>
-        <RecipeForm {...this.state} onSave={(data) => this.handleSaveClick(data)} />
+        <RecipeForm {...this.state.recipe.formValues} onSave={(data) => this.handleSaveClick(data)} />
       </div>
     )
   }

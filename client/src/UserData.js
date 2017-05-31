@@ -39,6 +39,7 @@ let UserData = {
     .done((data) => {
       const action = Object.assign({}, actions.CURRENT_RECIPE, {currentRecipe: data});
       store.dispatch(action);
+      
     })
   },
   editRecipe(recipeId, cb){

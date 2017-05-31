@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import { store, actions } from './../store/store.js';
 import UserData from './../UserData.js';
 
@@ -29,7 +29,7 @@ class RecipeCard extends React.Component {
   }
   render(){
     let id = this.props.match.params.recipeId;
-    let current = this.state.query.currentRecipe;
+    let current = this.state.recipe.currentRecipe;
     return(
       <div className="recipe-card">
         <div className="back-button" onClick={() => this.props.history.goBack()}></div>

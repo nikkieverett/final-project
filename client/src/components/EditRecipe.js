@@ -11,7 +11,7 @@ class EditRecipe extends React.Component{
   }
   componentDidMount(){
     this.unsub = store.subscribe(() => this.setState(store.getState()));
-    store.dispatch()
+    store.dispatch(actions.SET_EDIT_RECIPE_INPUT);
   }
   componentWillUnmount(){
     this.unsub();
@@ -25,9 +25,11 @@ class EditRecipe extends React.Component{
     UserData.editRecipe(id, cb);
   }
   render(){
+
+    console.log(this.state);
     return(
       <div>
-        <RecipeForm {...this.state} onSave={(data) => this.handleSaveClick(data)} />
+        <RecipeForm {...this.state.recipe.formValues} onSave={(data) => this.handleSaveClick(data)} />
       </div>
     )
   }

@@ -1,5 +1,4 @@
 import React from 'react';
-import UserData from 'react';
 import { withRouter } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { store, actions } from '../store/store.js';
