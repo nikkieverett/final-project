@@ -19,15 +19,16 @@ class AllRecipes extends React.Component {
     this.unsub();
   }
   render(){
-    console.log('rendering');
+    console.log('filtered recipes state',this.state.query.filteredRecipes.length);
     let recipesToLoad = [];
-    if(this.state.query.filteredRecipes === []){
-      recipesToLoad = this.state.query.allRecipes;
+    if(this.state.query.filteredRecipes.length <= 0){
       console.log('loading all recipes', this.state.query)
+      recipesToLoad = this.state.query.allRecipes;
     } else {
-      recipesToLoad = this.state.query.filteredRecipes;
       console.log('loading filtered recipes', this.state.query)
+      recipesToLoad = this.state.query.filteredRecipes;
     }
+    console.log(recipesToLoad)
     return(
       <div className="list-container">
         <div className="page-header">
