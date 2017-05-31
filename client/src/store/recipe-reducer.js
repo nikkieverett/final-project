@@ -17,7 +17,7 @@ const initialState = {
     directions:'',
     notes: '',
     servings:'',
-    tried: false,
+    tried: '',
   }
 }
 
@@ -28,6 +28,7 @@ const recipeReducer = (state = initialState, action) => {
         currentRecipe: action.currentRecipe
       });
     case constants.ONCHANGE_RECIPE_INPUT:
+    console.log(state.formValues);
       const newFormValues = Object.assign({}, state.formValues, { [action.data.key]: action.data.value} )
       return Object.assign({}, state, { formValues: newFormValues });
     case constants.SET_EDIT_RECIPE_INPUT:

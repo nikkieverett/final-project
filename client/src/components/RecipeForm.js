@@ -12,8 +12,7 @@ class RecipeForm extends React.Component {
       key: field,
       value: evt.target.value.toUpperCase()
     };
-    let action = Object.assign({},
-      actions.ONCHANGE_RECIPE_INPUT, { data });
+    let action = Object.assign({}, actions.ONCHANGE_RECIPE_INPUT, { data });
     store.dispatch(action);
   }
   handleSave(evt){
@@ -85,11 +84,11 @@ class RecipeForm extends React.Component {
               type="text"
               value={this.props.category}
               onChange={(evt) => this.setValue('category', evt)}>
-              <option>Breakfast</option>
-              <option>Main Course</option>
-              <option>Dessert</option>
-              <option>Side Dish</option>
-              <option>Appetizer</option>
+              <option value="BREAKFAST">Breakfast</option>
+              <option value="MAIN COURSE">Main Course</option>
+              <option value="DESSERT">Dessert</option>
+              <option value="SIDE DISH">Side Dish</option>
+              <option value="APPETIZER">Appetizer</option>
             </select>
             <h1>Difficulty:</h1>
             <select

@@ -10,7 +10,6 @@ class AddRecipe extends React.Component{
   }
   componentDidMount(){
     this.unsub = store.subscribe(() => this.setState(store.getState()));
-    store.dispatch()
   }
   componentWillUnmount(){
     this.unsub();

@@ -27,8 +27,6 @@ class EditRecipe extends React.Component{
     UserData.editRecipe(id, input, cb);
   }
   render(){
-
-    console.log(this.state);
     return(
       <div>
         <RecipeForm {...this.state.recipe.formValues} onSave={(data) => this.handleSaveClick(data)} />
