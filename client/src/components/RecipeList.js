@@ -5,7 +5,6 @@ import { Link, withRouter } from 'react-router-dom';
 import NavMenu from './NavMenu.js';
 import ListCreator from './ListCreator.js';
 import SearchBar from './SearchBar.js';
-// import UserData from '../UserData.js';
 
 class RecipeList extends React.Component {
   constructor(){
@@ -29,7 +28,8 @@ class RecipeList extends React.Component {
       <div className="list-container">
         <div className="page-header">
           <SearchBar className="list-search"/>
-          <div className="add"><Link to="/create-new">+<span>add new</span></Link></div>
+          <div className="categoryName">{this.state.query.category}</div>
+          <div className="add"><Link to="/create-new">+<span> add new</span></Link></div>
         </div>
         <NavMenu />
         <div className="recipes">

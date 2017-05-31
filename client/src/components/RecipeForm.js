@@ -24,9 +24,7 @@ class RecipeForm extends React.Component {
     return(
       <div className="form-container">
         <NavMenu />
-        <form
-          className="recipe-form"
-          onSubmit={(evt) => this.handleSave(evt)}>
+        <form className="recipe-form">
           <div className="left-entry">
             <input
               id="name"
@@ -77,44 +75,38 @@ class RecipeForm extends React.Component {
           </div>
 
           <div className="right-entry">
-            <h1>Category</h1>
             <select
               id="category"
               className="input"
               type="text"
               value={this.props.category}
               onChange={(evt) => this.setValue('category', evt)}>
+              <option default value="">Select a Category</option>
               <option value="BREAKFAST">Breakfast</option>
               <option value="MAIN COURSE">Main Course</option>
               <option value="DESSERT">Dessert</option>
               <option value="SIDE DISH">Side Dish</option>
               <option value="APPETIZER">Appetizer</option>
             </select>
-            <h1>Difficulty:</h1>
             <select
               id="difficulty"
               className="input"
               type="text"
               value={this.props.ease}
               onChange={(evt) => this.setValue('ease', evt)}>
+              <option default value="">Select a Level of Difficulty</option>
               <option value="EASY">Easy</option>
               <option value="INTERMEDIATE">Intermediate</option>
               <option value="DIFFICULT">Difficult</option>
               <option value="TIME CONSUMING">Time Consuming</option>
             </select>
-            <h1>Tried yet:</h1>
-            <input
-              id="tried"
-              className="input"
-              type="checkbox"
-              value={this.props.tried}
-              onChange={(evt) => this.setValue('tried', evt)}/>
-            <h1>Rating:</h1>
             <select
+              placeholder="Rating"
               id="rating"
               className="input"
               value={this.props.rating}
               onChange={(evt) => this.setValue('rating', evt)}>
+              <option default value="">Select a Rating</option>
               <option>1</option>
               <option>2</option>
               <option>3</option>
@@ -124,12 +116,12 @@ class RecipeForm extends React.Component {
           </div>
 
           <div className="main-entry">
-            <h1>Ingredients:</h1>
+            <h1>Ingredients</h1>
             <textarea
               className="input"
               value={this.props.ingredients}
               onChange={(evt) => this.setValue('ingredients', evt)}/>
-            <h1>Directions:</h1>
+            <h1>Directions</h1>
             <textarea
               className="input"
               value={this.props.directions}
@@ -137,16 +129,16 @@ class RecipeForm extends React.Component {
           </div>
 
           <div className="sub-entry">
-            <h1>Notes:</h1>
+            <h1>Notes</h1>
             <textarea
               className="input"
               value={this.props.notes}
               onChange={(evt) => this.setValue('notes', evt)} />
           </div>
-
-          <input className="input" type="submit" />
-
+          <div className="submit" onClick={(evt) => this.handleSave(evt)}>Submit</div>
+          <div className="cancel" onClick={() => this.props.history.goBack()}>Cancel</div>
         </form>
+
       </div>
     )
   }

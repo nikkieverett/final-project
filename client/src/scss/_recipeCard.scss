@@ -5,13 +5,14 @@
   height: 100%;
   color: $focus-font-color;
   position: relative;
+  padding: 20px;
 
   .buttons{
     right: 10px;
     top: 10px;
     overflow: auto;
     position: absolute;
-
+    transition: ease all 3s;
     .delete, .edit{
       background-repeat: none;
       width: 25px;
@@ -31,10 +32,10 @@
   .back-button{
     background-image: url(../public/ic_keyboard_backspace_white_24px.svg);
     background-repeat: none;
-    margin-left: 10px;
     width: 24px;
     height:24px;
-    top: 20px;
+    position: absolute;
+    top: 10px;
     left: 20px;
   }
   h1{

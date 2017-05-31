@@ -1,23 +1,25 @@
 @import './variables.scss';
 
+
 .recipe-form{
-  width: 80%;
+  width: 76%;
   position: absolute;
   top: 0;
   right: 0;
+  padding: 2%;
 }
 .input{
   display: inline-block;
-  margin: 10px;
   border: none;
-  background-color: $primary-color;
+  background-color: $tertiary-color;
   border-bottom: $secondary-font-color 2px solid;
   color: $focus-font-color;
-
+  padding-left: 10px;
+  border-radius: 5px;
+  text-transform: lowercase;
 }
 .left-entry, .right-entry {
   float: left;
-  width: 46%;
   margin: 2%;
   input{
     height: 30px;
@@ -28,43 +30,66 @@
     outline: none;
   }
 }
-#name, #link {
-  width: 100%;
-}
-#prep, #cook, #total{
-  font-size: 12px;
-  float: left;
-  width: 10.333%;
-}
-#servings {
-  font-size: 12px;
-  clear: both;
+.left-entry{
+  width: 68%;
+  #name, #link {
+    width: 100%;
+  }
+  #prep, #cook, #total{
+    font-size: 12px;
+    float: left;
+    width: 10.333%;
+  }
+  #servings {
+    font-size: 12px;
+    clear: both;
+  }
 }
 .right-entry{
-  h1{
-    font-size: 18px;
-    display: inline;
+  width: 20%;
+  .input{
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
-}
-#category, {
-  width: 100%;
-}
-#tried, #rating, #difficulty{
-  display: inline;
+  #category, {
+    width: 100%;
+  }
+  #tried, #rating, #difficulty{
+    display: block;
+  }
 }
 .main-entry, .sub-entry{
-  width: 90%;
   margin: 0 auto;
+  width: 95%;
+  clear: both;
+
   textarea{
-    width: 100%;
+    width: 95%;
     background-color: $tertiary-color;
     height: 100px;
+    margin-bottom: 10px;
+    text-transform: lowercase;
+    padding: 10px;
+  }
+  h1{
+    margin-bottom: 10px;
+    color: $secondary-font-color;
   }
 }
+.submit, .cancel{
+  display: inline-block;
+  background-color: $secondary-font-color;
+  border: $secondary-font-color 2px solid;
+  color: $primary-font-color;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 20px;
 
-.main-entry{
-  clear: both;
 }
-.sub-entry{
-  clear: both;
+.submit{
+  margin-left: 40px;
+
+}
+.cancel{
+  margin-left: 20px;
 }
