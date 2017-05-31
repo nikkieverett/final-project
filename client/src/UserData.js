@@ -18,6 +18,7 @@ let UserData = {
       data: input
     })
     .done(() => {
+      this.loadRecipes();
       cb();
     });
   },
@@ -27,10 +28,19 @@ let UserData = {
       method: 'DELETE'
     })
     .done(() => {
+      this.loadRecipes();
       cb();
     })
   },
   viewRecipe(recipeId, cb){
+    $.ajax({
+      url: `/api/recipes/${recipeId}`
+    })
+    .done((data) => {
+      cb(data);
+    })
+  },
+  editRecipe(recipeId, cb){
     $.ajax({
       url: `/api/recipes/${recipeId}`
     })

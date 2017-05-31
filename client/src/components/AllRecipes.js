@@ -5,6 +5,7 @@ import { Link, withRouter } from 'react-router-dom';
 import NavMenu from './NavMenu.js';
 import ListCreator from './ListCreator.js';
 import SearchBar from './SearchBar.js';
+import UserData from '../UserData.js';
 
 class AllRecipes extends React.Component {
   constructor(){
@@ -18,6 +19,15 @@ class AllRecipes extends React.Component {
     this.unsub();
   }
   render(){
+    console.log('rendering');
+    let recipesToLoad = [];
+    if(this.state.query.filteredRecipes === []){
+      recipesToLoad = this.state.query.allRecipes;
+      console.log('loading all recipes', this.state.query)
+    } else {
+      recipesToLoad = this.state.query.filteredRecipes;
+      console.log('loading filtered recipes', this.state.query)
+    }
     return(
       <div className="list-container">
         <div className="page-header">
@@ -26,7 +36,7 @@ class AllRecipes extends React.Component {
         </div>
         <NavMenu />
         <div className="recipes">
-          <ListCreator recipes={this.state.query.allRecipes}/>
+          <ListCreator recipes={recipesToLoad}/>
         </div>
       </div>
     )

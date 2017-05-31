@@ -21,7 +21,7 @@ class SearchBar extends React.Component {
     if(evt.keyCode === 13){
       evt.target.value = ''
       store.dispatch(actions.FILTER_RECIPES);
-      this.props.history.push('./filtered-list')
+      this.props.history.push('./all-recipes')
     }
   }
   render(){

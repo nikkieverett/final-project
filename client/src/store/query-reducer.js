@@ -39,6 +39,12 @@ const queryReducer = (state = initialState, action) => {
       return Object.assign({}, state,{
         currentRecipe: action.currentRecipe
       });
+      case constants.REMOVE_FILTERED_RECIPES:
+      console.log(state.filteredRecipes);
+      return Object.assign({}, state, {
+        filteredRecipes: [],
+        category: ''
+      })
     default:
       return(state);
   }

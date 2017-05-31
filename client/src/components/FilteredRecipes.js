@@ -13,9 +13,7 @@ class FilteredRecipes extends React.Component {
     this.state = store.getState();
   }
   componentDidMount(){
-    console.log('filter component did mount')
     this.unsub = store.subscribe(() => {
-      console.log('changing state!', store.getState());
       this.setState(store.getState())
     });
   }
@@ -23,7 +21,6 @@ class FilteredRecipes extends React.Component {
     this.unsub();
   }
   render(){
-    console.log('hello');
     return(
       <div className="list-container">
         <div className="page-header">

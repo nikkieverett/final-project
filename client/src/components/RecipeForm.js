@@ -17,9 +17,10 @@ class RecipeForm extends React.Component {
   }
   handleSubmit(evt){
     evt.preventDefault();
-    alert('Recipe created successfully!');
     const cb = () => this.props.history.push('/all-recipes');
-    UserData.createRecipe(this.state.recipe.formValues, cb);
+    let data = this.state.recipe.formValues;
+    UserData.createRecipe(data, cb);
+    alert('Recipe created successfully!');
   }
   setValue(field, evt){
     let data = {
@@ -47,12 +48,14 @@ class RecipeForm extends React.Component {
               placeholder="Recipe Name"
               className="input"
               type="text"
+              value={this.state.recipe.formValues.title}
               onChange={(evt) => this.setValue('title', evt)}/>
             <input
               id="link"
               placeholder="Source (optional)"
               className="input"
               type="text"
+              value={this.state.recipe.formValues.href}
               onChange={(evt) => this.setValue('href', evt)}/>
 
             <div className="time">
@@ -61,18 +64,21 @@ class RecipeForm extends React.Component {
                 placeholder="Prep"
                 className="input"
                 type="text"
+                value={this.state.recipe.formValues.prepTime}
                 onChange={(evt) => this.setValue('prepTime', evt)}/>
               <input
                 placeholder="Cook"
                 className="input"
                 id="cook"
                 type="text"
+                value={this.state.recipe.formValues.cookTime}
                 onChange={(evt) => this.setValue('cookTime', evt)}/>
               <input
                 placeholder="Total"
                 className="input"
                 id="total"
                 type="text"
+                value={this.state.recipe.formValues.totalTime}
                 onChange={(evt) => this.setValue('totalTime', evt)}/>
             </div>
 
@@ -81,6 +87,7 @@ class RecipeForm extends React.Component {
               placeholder="Number of Servings"
               className="input"
               type="text"
+              value={this.state.recipe.formValues.servings}
               onChange={(evt) => this.setValue('servings', evt)}/>
           </div>
 
@@ -90,6 +97,7 @@ class RecipeForm extends React.Component {
               id="category"
               className="input"
               type="text"
+              value={this.state.recipe.formValues.category}
               onChange={(evt) => this.setValue('category', evt)}>
               <option>Breakfast</option>
               <option>Main Course</option>
@@ -102,6 +110,7 @@ class RecipeForm extends React.Component {
               id="difficulty"
               className="input"
               type="text"
+              value={this.state.recipe.formValues.ease}
               onChange={(evt) => this.setValue('ease', evt)}>
               <option>Easy</option>
               <option>Intermediate</option>
@@ -113,11 +122,13 @@ class RecipeForm extends React.Component {
               id="tried"
               className="input"
               type="checkbox"
+              value={this.state.recipe.formValues.tried}
               onChange={(evt) => this.setValue('tried', evt)}/>
             <h1>Rating:</h1>
             <select
               id="rating"
               className="input"
+              value={this.state.recipe.formValues.rating}
               onChange={(evt) => this.setValue('rating', evt)}>
               <option>1</option>
               <option>2</option>
@@ -131,10 +142,12 @@ class RecipeForm extends React.Component {
             <h1>Ingredients:</h1>
             <textarea
               className="input"
+              value={this.state.recipe.formValues.ingredients}
               onChange={(evt) => this.setValue('ingredients', evt)}/>
             <h1>Directions:</h1>
             <textarea
               className="input"
+              value={this.state.recipe.formValues.directions}
               onChange={(evt) => this.setValue('directions', evt)}/>
           </div>
 
@@ -142,6 +155,7 @@ class RecipeForm extends React.Component {
             <h1>Notes:</h1>
             <textarea
               className="input"
+              value={this.state.recipe.formValues.notes}
               onChange={(evt) => this.setValue('notes', evt)} />
           </div>
 

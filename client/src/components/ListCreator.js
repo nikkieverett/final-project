@@ -6,32 +6,35 @@ import { withRouter } from 'react-router-dom';
 class ListCreator extends React.Component {
   handleDelete(id){
     const cb = () => {
-      alert("Recipe has been successfully deleted!")
-      this.props.history.goBack();
+      store.dispatch(actions.REMOVE_FILTERED_RECIPES);
+      this.props.history.push('/all-recipes');
+
+      alert("Recipe has been successfully deleted!");
     }
     UserData.deleteRecipe(id, cb);
   }
-  handleClick(id){
-    const cb = (data) => {
-      store.dispatch(Object.assign({}, actions.CURRENT_RECIPE,{
-        currentRecipe: data
-      }));
-      this.props.history.push(`/recipes/${id}`);
+  handleEdit(id){
+    const cb = (data)=> {
+      console.log('got the data', data);
+      this.props.history.push(`/edit/${id}`);
     }
-    UserData.viewRecipe(id, cb);
+    UserData.editRecipe(id, cb);
+  }
+  handleClick(id){
+    this.props.history.push(`/recipes/${id}`);
   }
   render(){
     let recipes = this.props.recipes.map((recipe) => {
       return(
-        <div onClick={() => this.handleClick(recipe._id)} className="list-items" key={recipe._id}>
-          <h1>{recipe.title}</h1>
+        <div className="list-items" key={recipe._id}>
+          <h1 onClick={() => this.handleClick( recipe._id)}>{recipe.title}</h1>
           <h2>{recipe.category}: {recipe.ease}</h2>
           <div className="buttons">
             <div onClick={() => this.handleDelete(recipe._id)}
               className="delete"></div>
-            <div onClick={() => this.handleEdit()}
+            <div onClick={() => this.handleEdit(recipe._id)}
               className="edit"></div>
-            <div onClick={(evt) => this.handleFave(evt)}
+            <div onClick={() => this.handleFave()}
               className="not-favorite"></div>
           </div>
         </div>

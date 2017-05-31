@@ -2,6 +2,8 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+/* line 5, src/scss/_reset.scss */
+/* line 6, src/index.css */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -23,32 +25,48 @@ time, mark, audio, video {
   vertical-align: baseline; }
 
 /* HTML5 display-role reset for older browsers */
+/* line 26, src/scss/_reset.scss */
+/* line 28, src/index.css */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block; }
 
+/* line 30, src/scss/_reset.scss */
+/* line 33, src/index.css */
 body {
   line-height: 1; }
 
+/* line 33, src/scss/_reset.scss */
+/* line 37, src/index.css */
 ol, ul {
   list-style: none; }
 
+/* line 36, src/scss/_reset.scss */
+/* line 41, src/index.css */
 blockquote, q {
   quotes: none; }
 
+/* line 39, src/scss/_reset.scss */
+/* line 45, src/index.css */
 blockquote:before, blockquote:after,
 q:before, q:after {
   content: '';
   content: none; }
 
+/* line 44, src/scss/_reset.scss */
+/* line 51, src/index.css */
 table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+/* line 3, src/scss/_pageHeader.scss */
+/* line 56, src/index.css */
 .list-search {
   display: inline-block;
   margin: 20px 0 20px 100px; }
 
+/* line 7, src/scss/_pageHeader.scss */
+/* line 60, src/index.css */
 .list-search input {
   width: 200px;
   height: 40px;
@@ -58,9 +76,13 @@ table {
   color: #333333;
   padding-left: 20px; }
 
+/* line 16, src/scss/_pageHeader.scss */
+/* line 69, src/index.css */
 .list-search input:focus {
   border: none; }
 
+/* line 21, src/scss/_pageHeader.scss */
+/* line 73, src/index.css */
 .add {
   width: 50px;
   height: 50px;
@@ -76,23 +98,35 @@ table {
   color: #fff0f0;
   transition: all ease 1s; }
 
+/* line 35, src/scss/_pageHeader.scss */
+/* line 88, src/index.css */
 .add span {
   display: none; }
 
+/* line 38, src/scss/_pageHeader.scss */
+/* line 91, src/index.css */
 .add a {
   color: #fff0f0;
   text-decoration: none; }
 
+/* line 43, src/scss/_pageHeader.scss */
+/* line 96, src/index.css */
 .add:hover {
   width: 200px; }
 
+/* line 44, src/scss/_pageHeader.scss */
+/* line 99, src/index.css */
 .add:hover span {
   display: inline; }
 
+/* line 3, src/scss/_home.scss */
+/* line 103, src/index.css */
 .home-container {
   width: 960px;
   margin: 0 auto; }
 
+/* line 9, src/scss/_home.scss */
+/* line 108, src/index.css */
 .add-button, .view-all {
   width: 50px;
   height: 50px;
@@ -107,31 +141,47 @@ table {
   transition: all ease 1s;
   right: 30px; }
 
+/* line 22, src/scss/_home.scss */
+/* line 122, src/index.css */
 .add-button span, .view-all span {
   display: none; }
 
+/* line 25, src/scss/_home.scss */
+/* line 125, src/index.css */
 .add-button a, .view-all a {
   color: #fff0f0;
   text-decoration: none; }
 
+/* line 30, src/scss/_home.scss */
+/* line 130, src/index.css */
 .add-button {
   top: 10px; }
 
+/* line 33, src/scss/_home.scss */
+/* line 134, src/index.css */
 .view-all {
   top: 70px; }
 
+/* line 36, src/scss/_home.scss */
+/* line 138, src/index.css */
 .add-button:hover, .view-all:hover {
   width: 200px; }
 
+/* line 37, src/scss/_home.scss */
+/* line 141, src/index.css */
 .add-button:hover span, .view-all:hover span {
   display: inline; }
 
+/* line 43, src/scss/_home.scss */
+/* line 145, src/index.css */
 .main-header {
   font-size: 3em;
   margin-top: 150px;
   text-align: center;
   color: #fff0f0; }
 
+/* line 50, src/scss/_home.scss */
+/* line 152, src/index.css */
 .home-search input {
   display: block;
   margin: 20px auto;
@@ -145,13 +195,19 @@ table {
   color: #b2473f;
   transition: all ease 1s; }
 
+/* line 63, src/scss/_home.scss */
+/* line 166, src/index.css */
 .home-search input:focus {
   outline: none;
   width: 300px; }
 
+/* line 67, src/scss/_home.scss */
+/* line 171, src/index.css */
 .home-search input::placeholder {
   color: #b2473f; }
 
+/* line 71, src/scss/_home.scss */
+/* line 175, src/index.css */
 .category {
   background-color: #73c3bd;
   color: #fff0f0;
@@ -167,9 +223,13 @@ table {
   line-height: 100px;
   transition: all 0.3s ease; }
 
+/* line 86, src/scss/_home.scss */
+/* line 191, src/index.css */
 .category:hover {
   background-color: #69b1a9; }
 
+/* line 3, src/scss/_navMenu.scss */
+/* line 195, src/index.css */
 .nav-menu {
   color: #fff0f0;
   height: 100%;
@@ -181,6 +241,8 @@ table {
   background-color: #73c3bd;
   transition: all ease .5s; }
 
+/* line 13, src/scss/_navMenu.scss */
+/* line 206, src/index.css */
 .nav-menu .link {
   color: #fff0f0;
   font-size: 30px;
@@ -190,20 +252,30 @@ table {
   padding: 10px;
   transition: all ease 1s; }
 
+/* line 21, src/scss/_navMenu.scss */
+/* line 215, src/index.css */
 .nav-menu .link a {
   text-decoration: none;
   color: #fff0f0; }
 
+/* line 27, src/scss/_navMenu.scss */
+/* line 220, src/index.css */
 .link:hover {
   background-color: #69b1a9; }
 
+/* line 30, src/scss/_navMenu.scss */
+/* line 224, src/index.css */
 .sub-menu-hide {
   display: none; }
 
+/* line 33, src/scss/_navMenu.scss */
+/* line 228, src/index.css */
 .sub-menu-visible {
   display: inline-block;
   margin-left: 10px; }
 
+/* line 36, src/scss/_navMenu.scss */
+/* line 232, src/index.css */
 .sub-menu-visible .sub-cat {
   padding: 5px;
   font-size: 20px;
@@ -211,9 +283,13 @@ table {
   color: #333333;
   transition: all ease 1s; }
 
+/* line 43, src/scss/_navMenu.scss */
+/* line 239, src/index.css */
 .sub-menu-visible .sub-cat:hover {
   color: #eb6c62; }
 
+/* line 3, src/scss/_recipes.scss */
+/* line 243, src/index.css */
 .list-container {
   width: 80%;
   margin: 0 auto;
@@ -221,9 +297,13 @@ table {
   right: 0;
   top: 0; }
 
+/* line 10, src/scss/_recipes.scss */
+/* line 251, src/index.css */
 .recipes {
   overflow: none; }
 
+/* line 12, src/scss/_recipes.scss */
+/* line 254, src/index.css */
 .recipes .list-items {
   background-color: #f2a8a3;
   color: #fff0f0;
@@ -234,24 +314,35 @@ table {
   padding: 10px;
   position: relative; }
 
+/* line 21, src/scss/_recipes.scss */
+/* line 264, src/index.css */
 .recipes .list-items h1 {
   font-size: 3em;
-  padding-bottom: 10px; }
+  padding-bottom: 10px;
+  display: inline-block; }
 
+/* line 26, src/scss/_recipes.scss */
+/* line 269, src/index.css */
 .recipes .list-items h2 {
   font-size: 1em;
   text-transform: uppercase;
   color: #b2473f; }
 
+/* line 31, src/scss/_recipes.scss */
+/* line 274, src/index.css */
 .recipes .list-items h1:hover {
   color: #333333; }
 
+/* line 35, src/scss/_recipes.scss */
+/* line 277, src/index.css */
 .recipes .buttons {
   right: 10px;
   top: 10px;
   overflow: auto;
   position: absolute; }
 
+/* line 41, src/scss/_recipes.scss */
+/* line 283, src/index.css */
 .recipes .buttons .delete, .recipes .buttons .edit, .recipes .buttons .favorite, .recipes .buttons .not-favorite {
   background-repeat: none;
   width: 25px;
@@ -261,26 +352,38 @@ table {
   border-radius: 5px;
   border: 1px solid #69b1a9; }
 
+/* line 50, src/scss/_recipes.scss */
+/* line 292, src/index.css */
 .recipes .buttons .delete {
   background-image: url(../public/ic_delete_white_24px.svg);
   margin-right: 10px; }
 
+/* line 54, src/scss/_recipes.scss */
+/* line 296, src/index.css */
 .recipes .buttons .edit {
   background-image: url(../public/ic_edit_white_24px.svg);
   margin-right: 10px; }
 
+/* line 58, src/scss/_recipes.scss */
+/* line 300, src/index.css */
 .recipes .buttons .favorite {
   background-image: url(../public/ic_star_white_24px.svg); }
 
+/* line 61, src/scss/_recipes.scss */
+/* line 303, src/index.css */
 .recipes .buttons .not-favorite {
   background-image: url(../public/ic_star_border_white_24px.svg); }
 
+/* line 3, src/scss/_form.scss */
+/* line 307, src/index.css */
 .recipe-form {
   width: 80%;
   position: absolute;
   top: 0;
   right: 0; }
 
+/* line 9, src/scss/_form.scss */
+/* line 314, src/index.css */
 .input {
   display: inline-block;
   margin: 10px;
@@ -289,56 +392,153 @@ table {
   border-bottom: #b2473f 2px solid;
   color: #333333; }
 
+/* line 18, src/scss/_form.scss */
+/* line 323, src/index.css */
 .left-entry, .right-entry {
   float: left;
   width: 46%;
   margin: 2%; }
 
+/* line 22, src/scss/_form.scss */
+/* line 328, src/index.css */
 .left-entry input, .right-entry input {
   height: 30px;
   margin: 10px;
   font-size: 18px; }
 
+/* line 27, src/scss/_form.scss */
+/* line 333, src/index.css */
 .left-entry input:focus, .right-entry input:focus {
   outline: none; }
 
+/* line 31, src/scss/_form.scss */
+/* line 337, src/index.css */
 #name, #link {
   width: 100%; }
 
+/* line 34, src/scss/_form.scss */
+/* line 341, src/index.css */
 #prep, #cook, #total {
   font-size: 12px;
   float: left;
   width: 10.333%; }
 
+/* line 39, src/scss/_form.scss */
+/* line 347, src/index.css */
 #servings {
   font-size: 12px;
   clear: both; }
 
+/* line 44, src/scss/_form.scss */
+/* line 352, src/index.css */
 .right-entry h1 {
   font-size: 18px;
   display: inline; }
 
+/* line 49, src/scss/_form.scss */
+/* line 357, src/index.css */
 #category {
   width: 100%; }
 
+/* line 52, src/scss/_form.scss */
+/* line 361, src/index.css */
 #tried, #rating, #difficulty {
   display: inline; }
 
+/* line 55, src/scss/_form.scss */
+/* line 365, src/index.css */
 .main-entry, .sub-entry {
   width: 90%;
   margin: 0 auto; }
 
+/* line 58, src/scss/_form.scss */
+/* line 369, src/index.css */
 .main-entry textarea, .sub-entry textarea {
   width: 100%;
   background-color: #f2a8a3;
   height: 100px; }
 
+/* line 65, src/scss/_form.scss */
+/* line 375, src/index.css */
 .main-entry {
   clear: both; }
 
+/* line 68, src/scss/_form.scss */
+/* line 379, src/index.css */
 .sub-entry {
   clear: both; }
 
+/* line 1, src/scss/_recipeCard.scss */
+/* line 383, src/index.css */
+.recipe-card {
+  width: 960px;
+  margin: 0 auto;
+  background-color: #f2a8a3;
+  height: 100%;
+  color: #333333; }
+
+/* line 8, src/scss/_recipeCard.scss */
+/* line 390, src/index.css */
+.recipe-card .back-button {
+  background-image: url(../public/ic_keyboard_backspace_white_24px.svg);
+  background-repeat: none;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 20px;
+  left: 20px;
+  transition: all ease 3s; }
+
+/* line 19, src/scss/_recipeCard.scss */
+/* line 400, src/index.css */
+.recipe-card h1 {
+  font-size: 2em;
+  margin: 30px; }
+
+/* line 23, src/scss/_recipeCard.scss */
+/* line 404, src/index.css */
+.recipe-card .details {
+  border-bottom: 2px solid #69b1a9;
+  overflow: auto;
+  width: 95%;
+  margin: 0 auto;
+  text-transform: lowercase; }
+
+/* line 29, src/scss/_recipeCard.scss */
+/* line 411, src/index.css */
+.recipe-card .details .detail {
+  float: left;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  font-size: .8em; }
+
+/* line 34, src/scss/_recipeCard.scss */
+/* line 417, src/index.css */
+.recipe-card .details .detail span {
+  text-transform: uppercase;
+  font-weight: bold; }
+
+/* line 40, src/scss/_recipeCard.scss */
+/* line 421, src/index.css */
+.recipe-card h2 {
+  font-size: 1em;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-left: 30px;
+  margin-top: 10px; }
+
+/* line 48, src/scss/_recipeCard.scss */
+/* line 428, src/index.css */
+.recipe-card p {
+  border-bottom: 2px solid #69b1a9;
+  width: 95%;
+  margin: 0 auto;
+  text-transform: lowercase;
+  margin-bottom: 10px;
+  padding: 10px; }
+
+/* line 10, src/index.scss */
+/* line 437, src/index.css */
 body {
   margin: 0;
   padding: 0;

@@ -1,0 +1,56 @@
+.recipe-card{
+  width: 960px;
+  margin: 0 auto;
+  background-color: $tertiary-color;
+  height: 100%;
+  color: $focus-font-color;
+
+  .back-button{
+    background-image: url(../public/ic_keyboard_backspace_white_24px.svg);
+    background-repeat: none;
+    position: absolute;
+    width: 24px;
+    height:24px;
+    top: 20px;
+    left: 20px;
+    transition: all ease 3s;
+
+  }
+  h1{
+    font-size: 2em;
+    margin: 30px;
+  }
+  .details{
+    border-bottom: 2px solid $tertiary-color2;
+    overflow: auto;
+    width: 95%;
+    margin: 0 auto;
+    text-transform: lowercase;
+    .detail{
+      float: left;
+      margin-left: 10px;
+      margin-bottom: 10px;
+      font-size: .8em;
+      span{
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+    }
+  }
+  h2{
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-left: 30px;
+    margin-top: 10px;
+
+  }
+  p{
+    border-bottom: 2px solid $tertiary-color2;
+    width: 95%;
+    margin: 0 auto;
+    text-transform: lowercase;
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+}
