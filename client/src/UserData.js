@@ -11,20 +11,20 @@ let UserData = {
       store.dispatch(action);
     });
   },
-  createRecipe(data, cb) {
+  createRecipe(input, cb) {
     $.ajax({
       url: `/api/recipes`,
       method: 'POST',
-      data: data
+      data: input
     })
     .done(() => {
       this.loadRecipes();
       cb();
     });
   },
-  deleteRecipe(recipeId, cb){
+  deleteRecipe(id, cb){
     $.ajax({
-      url: `/api/recipes/${recipeId}`,
+      url: `/api/recipes/${id}`,
       method: 'DELETE'
     })
     .done(() => {
@@ -32,23 +32,24 @@ let UserData = {
       cb();
     })
   },
-  viewRecipe(recipeId, cb){
+  viewRecipe(id, cb){
     $.ajax({
-      url: `/api/recipes/${recipeId}`
+      url: `/api/recipes/${id}`
     })
     .done((data) => {
       const action = Object.assign({}, actions.CURRENT_RECIPE, {currentRecipe: data});
       store.dispatch(action);
-      
+
     })
   },
-  editRecipe(recipeId, cb){
+  editRecipe(id, input, cb){
     $.ajax({
-      url: `/api/recipes/${recipeId}`,
-      method: 'PUT'
+      url: `/api/recipes/${id}`,
+      method: 'PUT',
+      data: input
     })
-    .done((data) => {
-      cb(data);
+    .done(() => {
+      cb();
     })
   }
 };

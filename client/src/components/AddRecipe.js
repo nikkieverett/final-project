@@ -15,12 +15,13 @@ class AddRecipe extends React.Component{
   componentWillUnmount(){
     this.unsub();
   }
-  handleSaveClick(data){
-    const cb = (data)=> {
+  handleSaveClick(){
+    const cb = ()=> {
       this.props.history.goBack();
       alert('Recipe saved successfully!');
     }
-    UserData.createRecipe(data, cb);
+    let input = this.state.recipe.formValues;
+    UserData.createRecipe(input, cb);
   }
   render(){
     return(

@@ -17,12 +17,14 @@ class EditRecipe extends React.Component{
     this.unsub();
   }
   handleSaveClick(data){
-    let id = this.props.match.params.recipeId;
-    const cb = (data)=> {
+    const cb = () => {
       this.props.history.goBack();
       alert('Recipe updated successfully!');
     }
-    UserData.editRecipe(id, cb);
+
+    let id = this.props.match.params.recipeId;
+    let input = this.state.recipe.formValues;
+    UserData.editRecipe(id, input, cb);
   }
   render(){
 

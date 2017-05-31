@@ -1,6 +1,7 @@
 import constants from './constants.js';
 
 const initialState = {
+  categories: [],
   currentRecipe:{},
   formValues: {
     title:'',

@@ -16,6 +16,10 @@ class RecipeForm extends React.Component {
       actions.ONCHANGE_RECIPE_INPUT, { data });
     store.dispatch(action);
   }
+  handleSave(evt){
+    evt.preventDefault();
+    this.props.onSave();
+  }
 
   render(){
     return(
@@ -23,7 +27,7 @@ class RecipeForm extends React.Component {
         <NavMenu />
         <form
           className="recipe-form"
-          onSubmit={(evt) => this.props.onSave(evt)}>
+          onSubmit={(evt) => this.handleSave(evt)}>
           <div className="left-entry">
             <input
               id="name"
@@ -94,10 +98,10 @@ class RecipeForm extends React.Component {
               type="text"
               value={this.props.ease}
               onChange={(evt) => this.setValue('ease', evt)}>
-              <option>Easy</option>
-              <option>Intermediate</option>
-              <option>Difficult</option>
-              <option>Time Consuming</option>
+              <option value="EASY">Easy</option>
+              <option value="INTERMEDIATE">Intermediate</option>
+              <option value="DIFFICULT">Difficult</option>
+              <option value="TIME CONSUMING">Time Consuming</option>
             </select>
             <h1>Tried yet:</h1>
             <input
