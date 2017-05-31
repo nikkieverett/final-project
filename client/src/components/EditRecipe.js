@@ -17,6 +17,7 @@ class EditRecipe extends React.Component{
     this.unsub();
   }
   handleSaveClick(data){
+    let id = this.props.match.params.recipeId;
     const cb = (data)=> {
       this.props.history.goBack();
       alert('Recipe updated successfully!');

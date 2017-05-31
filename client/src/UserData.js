@@ -11,11 +11,11 @@ let UserData = {
       store.dispatch(action);
     });
   },
-  createRecipe(input, cb) {
+  createRecipe(data, cb) {
     $.ajax({
       url: `/api/recipes`,
       method: 'POST',
-      data: input
+      data: data
     })
     .done(() => {
       this.loadRecipes();
@@ -37,7 +37,7 @@ let UserData = {
       url: `/api/recipes/${recipeId}`
     })
     .done((data) => {
-      const action = Object.assign({}, actions.CURRENT_RECIPE, {currentRecipe: data});    
+      const action = Object.assign({}, actions.CURRENT_RECIPE, {currentRecipe: data});
       store.dispatch(action);
     })
   },

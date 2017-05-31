@@ -20,7 +20,7 @@ class AddRecipe extends React.Component{
       this.props.history.goBack();
       alert('Recipe saved successfully!');
     }
-    UserData.editRecipe(id, cb);
+    UserData.createRecipe(data, cb);
   }
   render(){
     return(
@@ -31,4 +31,4 @@ class AddRecipe extends React.Component{
   }
 }
 
-module.exports = EditRecipe;
+module.exports = AddRecipe;

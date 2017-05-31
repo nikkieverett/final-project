@@ -20,13 +20,6 @@ class RecipeForm extends React.Component {
   componentWillUnmount(){
     this.unsub();
   }
-  handleSubmit(evt){
-    evt.preventDefault();
-    const cb = () => this.props.history.push('/all-recipes');
-    let data = this.state.recipe.formValues;
-    UserData.createRecipe(data, cb);
-    alert('Recipe created successfully!');
-  }
   setValue(field, evt){
     let data = {
       key: field,
@@ -43,10 +36,7 @@ class RecipeForm extends React.Component {
         <NavMenu />
         <form
           className="recipe-form"
-          onSubmit={(evt) => this.handleSubmit(evt)}>
-
-          <div className="page-title">Create a new recipe</div>
-
+          onSubmit={(evt) => this.props.onSave(evt)}>
           <div className="left-entry">
             <input
               id="name"
