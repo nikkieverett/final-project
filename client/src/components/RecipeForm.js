@@ -1,8 +1,13 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+
 import UserData from './../UserData.js';
 import { store, actions } from './../store/store.js';
+
 import NavMenu from './NavMenu.js';
+import EditRecipe from './EditRecipe.js';
+import AddRecipe from './AddRecipe.js';
+
 
 class RecipeForm extends React.Component {
   constructor(){

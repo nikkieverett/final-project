@@ -10,19 +10,11 @@ class RecipeCard extends React.Component {
   }
   componentDidMount(){
     this.unsub = store.subscribe(() => this.setState(store.getState()));
-    this.getRecipe();
+    let id = this.props.match.params.recipeId;
+    UserData.viewRecipe(id);
   }
   componentWillUnmount(){
     this.unsub();
-  }
-  getRecipe(){
-    let id = this.props.match.params.recipeId;
-    const cb = (data) => {
-      store.dispatch(Object.assign({}, actions.CURRENT_RECIPE, {
-        currentRecipe: data
-      }));
-    }
-    UserData.viewRecipe(id, cb);
   }
   handleDelete(id){
     const cb = () => {
@@ -33,11 +25,7 @@ class RecipeCard extends React.Component {
     UserData.deleteRecipe(id, cb);
   }
   handleEdit(id){
-    const cb = (data)=> {
-      console.log('got the data', data);
-      this.props.history.push(`/edit/${id}`);
-    }
-    UserData.editRecipe(id, cb);
+    this.props.history.push(`/edit/${id}`);
   }
   render(){
     let id = this.props.match.params.recipeId;
@@ -45,7 +33,7 @@ class RecipeCard extends React.Component {
     return(
       <div className="recipe-card">
         <div className="back-button" onClick={() => this.props.history.goBack()}></div>
-        
+
         <div className="buttons">
           <div className="delete" onClick={() => this.handleDelete(id)}></div>
           <div className="edit" onClick={() => this.handleEdit(id)}></div>

@@ -37,12 +37,14 @@ let UserData = {
       url: `/api/recipes/${recipeId}`
     })
     .done((data) => {
-      cb(data);
+      const action = Object.assign({}, actions.CURRENT_RECIPE, {currentRecipe: data});    
+      store.dispatch(action);
     })
   },
   editRecipe(recipeId, cb){
     $.ajax({
-      url: `/api/recipes/${recipeId}`
+      url: `/api/recipes/${recipeId}`,
+      method: 'PUT'
     })
     .done((data) => {
       cb(data);

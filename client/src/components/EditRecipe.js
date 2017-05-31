@@ -1,5 +1,6 @@
 import React from 'react';
 import RecipeForm from './RecipeForm.js';
+import { withRouter } from 'react-router-dom';
 import { store, actions } from '../store/store.js';
 import UserData from '../UserData.js';
 
@@ -10,12 +11,17 @@ class EditRecipe extends React.Component{
   }
   componentDidMount(){
     this.unsub = store.subscribe(() => this.setState(store.getState()));
+    store.dispatch()
   }
   componentWillUnmount(){
     this.unsub();
   }
-  handleSaveClick(){
-    UserData.editRecipe();
+  handleSaveClick(data){
+    const cb = (data)=> {
+      this.props.history.goBack();
+      alert('Recipe updated successfully!');
+    }
+    UserData.editRecipe(id, cb);
   }
   render(){
     return(
@@ -26,4 +32,4 @@ class EditRecipe extends React.Component{
   }
 }
 
-module.exports = EditRecipe;
+module.exports = withRouter(EditRecipe);
