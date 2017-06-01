@@ -15,7 +15,6 @@ const recipeSchema = Schema({
   directions: { type: String },
   notes: { type: String },
   servings: { type: String },
-  tried: { type: String }
 });
 
 const Recipe = mongoose.model('Recipe', recipeSchema);

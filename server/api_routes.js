@@ -31,7 +31,6 @@ router.post('/api/recipes', (req, res) => {
   recipe.directions = req.body.directions,
   recipe.notes = req.body.notes,
   recipe.servings = req.body.servings,
-  recipe.tried = req.body.tried,
   recipe.save(cb);
 });
 
@@ -63,7 +62,6 @@ router.put('/api/recipes/:recipeId', (req, res) => {
       directions: req.body.directions,
       notes: req.body.notes,
       servings: req.body.servings,
-      tried: req.body.tried,
     }
   }, cb);
 });
