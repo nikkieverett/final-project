@@ -13,7 +13,7 @@ class RecipeList extends React.Component {
   }
   componentDidMount(){
     this.unsub = store.subscribe(() => this.setState(store.getState()));
-    store.dispatch(actions.SORT_BY_ALPHA);
+    console.log('component did mount')
   }
   componentWillUnmount(){
     this.unsub();

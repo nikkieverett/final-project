@@ -16,7 +16,8 @@ class NavMenu extends React.Component {
     this.unsub();
   }
   viewAll(){
-    store.dispatch(actions.REMOVE_FILTERED_RECIPES)
+    store.dispatch(actions.REMOVE_FILTERED_RECIPES);
+    store.dispatch(actions.SORT_BY_ALPHA);
     this.props.history.push('/recipes');
   }
   dropDownCategories(){

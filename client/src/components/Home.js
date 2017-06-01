@@ -21,6 +21,7 @@ class Home extends React.Component {
   }
   viewAll(){
     store.dispatch(actions.REMOVE_FILTERED_RECIPES)
+    store.dispatch(actions.SORT_BY_ALPHA);
     this.props.history.push('/recipes');
   }
   render(){

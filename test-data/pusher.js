@@ -8,8 +8,8 @@ for(let i = 1; i < lines.length -1; i ++){
   const line = lines[i];
   const pieces = line.split(',');
 
-  request.post('http://localhost:5003/api/recipes', {
-    
+  request.post('http://radiant-citadel-61153.herokuapp.com/api/recipes', {
+
     form: {
       title: pieces[0].toLowerCase(),
       prepTime: '',

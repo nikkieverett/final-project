@@ -21,20 +21,32 @@ const queryReducer = (state = initialState, action) => {
       });
     case constants.SORT_BY_CATEGORY:
       let catFiltered = state.allRecipes.filter((recipe) => {
-        return recipe.category === action.category.toLowerCase()
+        return recipe.category === action.category;
       });
       return Object.assign({}, state, {
         category: action.category,
         filteredRecipes: catFiltered
       });
     case constants.FILTER_RECIPES:
-    console.log(state.allRecipes);
       let queryFiltered = state.allRecipes.filter((recipe) => {
-        return recipe.title.includes(state.queryInput);
+         return(recipe.title.includes(state.queryInput));
       });
       return Object.assign({}, state, {
         category: '',
         filteredRecipes: queryFiltered
+      });
+    case constants.SORT_BY_ALPHA:
+      state.allRecipes.sort(function(a, b){
+        return (a.title[0] > b.title[0]);
+      });
+      if(state.filteredRecipes !== []){
+        state.filteredRecipes.sort(function(a, b){
+          return (a.title[0] > b.title[0]);
+        }
+      )};
+      return Object.assign({}, state, {
+        allRecipes: state.allRecipes,
+        filteredRecipes: state.filteredRecipes
       });
     case constants.REMOVE_FILTERED_RECIPES:
       return Object.assign({}, state, {
