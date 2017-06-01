@@ -17,15 +17,13 @@ class EditRecipe extends React.Component{
   componentWillUnmount(){
     this.unsub();
   }
-  handleSaveClick(data){
+  handleSaveClick(){
     const cb = () => {
       this.props.history.goBack();
       alert('Recipe updated successfully!');
     }
-
     let id = this.props.match.params.recipeId;
     let input = this.state.recipe.formValues;
-    console.log('edit recipe input being sent through ajax call', input)
     UserData.editRecipe(id, input, cb);
   }
   render(){

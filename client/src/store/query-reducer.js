@@ -9,6 +9,7 @@ const initialState = {
 };
 
 const queryReducer = (state = initialState, action) => {
+  console.log(action.type);
   switch(action.type){
     case constants.LOAD_ALL_RECIPES:
       return Object.assign({}, state, {
@@ -36,14 +37,21 @@ const queryReducer = (state = initialState, action) => {
         filteredRecipes: queryFiltered
       });
     case constants.SORT_BY_ALPHA:
-      state.allRecipes.sort(function(a, b){
-        return (a.title[0] > b.title[0]);
-      });
+      let sortFunc = (arr) => {
+        arr.sort(function(a, b){
+          if (a.title > b.title) {
+            return 1;
+          }
+          else {
+            return -1;
+          }
+        });
+      };
+
+      sortFunc(state.allRecipes);
       if(state.filteredRecipes !== []){
-        state.filteredRecipes.sort(function(a, b){
-          return (a.title[0] > b.title[0]);
-        }
-      )};
+        sortFunc(state.filteredRecipes);
+      };
       return Object.assign({}, state, {
         allRecipes: state.allRecipes,
         filteredRecipes: state.filteredRecipes

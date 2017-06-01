@@ -10,7 +10,8 @@ class ListCreator extends React.Component {
       return(
         <div className="list-items" key={recipe._id}>
           <h1 onClick={() => this.handleClick(recipe._id)}>{recipe.title}</h1>
-          <h2>{recipe.category}: {recipe.ease}</h2>
+          <h2>Category: {recipe.category}</h2>
+          <h2>Difficulty: {recipe.ease}</h2>
           <div className="buttons">
             <div onClick={() => this.handleFave()}
               className="not-favorite"></div>

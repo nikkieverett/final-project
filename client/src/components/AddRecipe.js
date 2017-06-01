@@ -18,7 +18,7 @@ class AddRecipe extends React.Component{
   handleSaveClick(){
     const cb = ()=> {
       this.props.history.goBack();
-      alert('Recipe saved successfully!');
+      alert('Recipe was saved successfully!');
     }
     let input = this.state.recipe.formValues;
     UserData.createRecipe(input, cb);

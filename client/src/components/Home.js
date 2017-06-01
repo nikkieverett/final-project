@@ -2,8 +2,6 @@ import React from 'react';
 import { withRouter, Link } from 'react-router-dom';
 import { store, actions } from './../store/store.js';
 import UserData from '../UserData.js';
-
-//components
 import Categories from './Categories.js';
 import SearchBar from './SearchBar.js';
 

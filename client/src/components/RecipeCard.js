@@ -30,16 +30,18 @@ class RecipeCard extends React.Component {
   render(){
     const id = this.props.match.params.recipeId;
     const current = this.state.recipe.currentRecipe;
+    let ingredients;
+    let directions;
+    let notes;
     if(Object.keys(current).length !== 0){
-      var ingredients = this.state.recipe.currentRecipe.ingredients.replace('\r\n|\r|\n', <br/>);
-      var directions = this.state.recipe.currentRecipe.directions.replace('\r\n|\r|\n', <br/>);
-      var notes = this.state.recipe.currentRecipe.notes.replace('\r\n|\r|\n', <br/>);
+      ingredients = this.state.recipe.currentRecipe.ingredients.replace(/\r\n|\r|\n/g, '<br />');
+      directions = this.state.recipe.currentRecipe.directions.replace(/\r\n|\r|\n/g, '<br />');
+      notes = this.state.recipe.currentRecipe.notes.replace(/\r\n|\r|\n/g, '<br />');
     }
 
     return(
       <div className="recipe-card">
         <div className="back-button" onClick={() => this.props.history.goBack()}></div>
-
         <div className="buttons">
           <div className="delete" onClick={() => this.handleDelete(id)}></div>
           <div className="edit" onClick={() => this.handleEdit(id)}></div>
@@ -52,11 +54,11 @@ class RecipeCard extends React.Component {
           <h3 className="detail"><span>Total Time </span> {current.totalTime}</h3>
         </div>
         <h2>Ingredients</h2>
-        <p>{current.ingredients}</p>
+        <p dangerouslySetInnerHTML={{__html: ingredients}}></p>
         <h2>Instructions</h2>
-        <p>{current.directions}</p>
+        <p dangerouslySetInnerHTML={{__html: directions}}></p>
         <h2>Notes</h2>
-        <p>{current.notes}</p>
+        <p dangerouslySetInnerHTML={{__html: notes}}></p>
       </div>
     )
   }
