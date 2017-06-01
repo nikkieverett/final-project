@@ -18,7 +18,7 @@ class Categories extends React.Component {
       category: category
     });
     store.dispatch(action);
-    this.props.history.push('./recipes');
+    this.props.history.push('/recipes');
   }
   render(){
     return(

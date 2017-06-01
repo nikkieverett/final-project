@@ -19,7 +19,7 @@ class RecipeCard extends React.Component {
   handleDelete(id){
     const cb = () => {
       store.dispatch(actions.REMOVE_FILTERED_RECIPES);
-      this.props.history.push('/all-recipes');
+      this.props.history.push('/recipes');
       alert("Recipe has been successfully deleted!");
     }
     UserData.deleteRecipe(id, cb);
@@ -28,8 +28,14 @@ class RecipeCard extends React.Component {
     this.props.history.push(`/edit/${id}`);
   }
   render(){
-    let id = this.props.match.params.recipeId;
-    let current = this.state.recipe.currentRecipe;
+    const id = this.props.match.params.recipeId;
+    const current = this.state.recipe.currentRecipe;
+    if(Object.keys(current).length !== 0){
+      var ingredients = this.state.recipe.currentRecipe.ingredients.replace('\r\n|\r|\n', <br/>);
+      var directions = this.state.recipe.currentRecipe.directions.replace('\r\n|\r|\n', <br/>);
+      var notes = this.state.recipe.currentRecipe.notes.replace('\r\n|\r|\n', <br/>);
+    }
+
     return(
       <div className="recipe-card">
         <div className="back-button" onClick={() => this.props.history.goBack()}></div>
@@ -40,10 +46,10 @@ class RecipeCard extends React.Component {
         </div>
         <h1>{current.title}</h1>
         <div className="details">
-          <h3 className="detail"><span>Yield </span>{current.servings}</h3>
-          <h3 className="detail"><span>Prep Time </span>{current.prepTime}</h3>
-          <h3 className="detail"><span>Cook Time </span>{current.cookTime}</h3>
-          <h3 className="detail"><span>Total Time </span>{current.totalTime}</h3>
+          <h3 className="detail"><span>Serves </span> {current.servings}</h3>
+          <h3 className="detail"><span>Prep Time </span> {current.prepTime}</h3>
+          <h3 className="detail"><span>Cook Time </span> {current.cookTime}</h3>
+          <h3 className="detail"><span>Total Time </span> {current.totalTime}</h3>
         </div>
         <h2>Ingredients</h2>
         <p>{current.ingredients}</p>

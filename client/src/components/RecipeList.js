@@ -1,5 +1,5 @@
 import React from 'react';
-import { store } from './../store/store.js';
+import { store, actions } from './../store/store.js';
 import { Link, withRouter } from 'react-router-dom';
 //components
 import NavMenu from './NavMenu.js';
@@ -13,6 +13,7 @@ class RecipeList extends React.Component {
   }
   componentDidMount(){
     this.unsub = store.subscribe(() => this.setState(store.getState()));
+    store.dispatch(actions.SORT_BY_ALPHA);
   }
   componentWillUnmount(){
     this.unsub();

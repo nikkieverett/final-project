@@ -10,7 +10,7 @@ class RecipeForm extends React.Component {
   setValue(field, evt){
     let data = {
       key: field,
-      value: evt.target.value.toUpperCase()
+      value: evt.target.value.toLowerCase()
     };
     let action = Object.assign({}, actions.ONCHANGE_RECIPE_INPUT, { data });
     store.dispatch(action);
@@ -82,11 +82,11 @@ class RecipeForm extends React.Component {
               value={this.props.category}
               onChange={(evt) => this.setValue('category', evt)}>
               <option default value="">Select a Category</option>
-              <option value="BREAKFAST">Breakfast</option>
-              <option value="MAIN COURSE">Main Course</option>
-              <option value="DESSERT">Dessert</option>
-              <option value="SIDE DISH">Side Dish</option>
-              <option value="APPETIZER">Appetizer</option>
+              <option value="breakfast">Breakfast</option>
+              <option value="main course">Main Course</option>
+              <option value="dessert">Dessert</option>
+              <option value="side dish">Side Dish</option>
+              <option value="appetizer">Appetizer</option>
             </select>
             <select
               id="difficulty"
@@ -95,10 +95,10 @@ class RecipeForm extends React.Component {
               value={this.props.ease}
               onChange={(evt) => this.setValue('ease', evt)}>
               <option default value="">Select a Level of Difficulty</option>
-              <option value="EASY">Easy</option>
-              <option value="INTERMEDIATE">Intermediate</option>
-              <option value="DIFFICULT">Difficult</option>
-              <option value="TIME CONSUMING">Time Consuming</option>
+              <option value="easy">Easy</option>
+              <option value="intermediate">Intermediate</option>
+              <option value="difficult">Difficult</option>
+              <option value="time consuming">Time Consuming</option>
             </select>
             <select
               placeholder="Rating"

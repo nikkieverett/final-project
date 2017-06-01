@@ -13,8 +13,8 @@ const initialState = {
     img:'',
     ease:'',
     rating: 0,
-    ingredients:'',
-    directions:'',
+    ingredients: '',
+    directions: '',
     notes: '',
     servings:'',
     tried: '',
@@ -28,9 +28,11 @@ const recipeReducer = (state = initialState, action) => {
         currentRecipe: action.currentRecipe
       });
     case constants.ONCHANGE_RECIPE_INPUT:
+      console.log('changing recipe input');
       const newFormValues = Object.assign({}, state.formValues, { [action.data.key]: action.data.value} )
       return Object.assign({}, state, { formValues: newFormValues });
     case constants.SET_EDIT_RECIPE_INPUT:
+      console.log('edit recipe input', state);
       const copyFormValues = Object.assign({}, state.formValues);
       const copyCurrentRecipe = Object.assign({}, state.currentRecipe);
       for(let propName in state.formValues){
@@ -38,9 +40,11 @@ const recipeReducer = (state = initialState, action) => {
           copyFormValues[propName] = copyCurrentRecipe[propName];
         }
       };
+      console.log(copyFormValues);
       return Object.assign({}, state, { formValues: copyFormValues });
     case constants.CLEAR_RECIPE_INPUT:
-      return Object.assign({}, state, { state: initialState })
+      console.log('clear all recipe input', state);
+      return Object.assign({}, state, { formValues: initialState.formValues })
     default:
       return(state);
   }

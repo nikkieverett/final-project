@@ -1,6 +1,6 @@
 import React from 'react';
 import { withRouter, Link } from 'react-router-dom';
-import { store } from './../store/store.js';
+import { store, actions } from './../store/store.js';
 import UserData from '../UserData.js';
 
 //components
@@ -19,11 +19,15 @@ class Home extends React.Component {
   componentWillUnmount(){
     this.unsub();
   }
+  viewAll(){
+    store.dispatch(actions.REMOVE_FILTERED_RECIPES)
+    this.props.history.push('/recipes');
+  }
   render(){
     return(
       <div className="home-container">
         <div className="add-button"><Link to="/create-new">+<span>add new</span></Link></div>
-        <div className="view-all"><Link to="/all-recipes">all <span>recipes</span></Link></div>
+        <div className="view-all" onClick={() => this.viewAll()}>all <span>recipes</span></div>
         <div className="main-header">What would you like to make?</div>
         <SearchBar className="home-search"/>
         <Categories className="category"/>

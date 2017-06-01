@@ -1,6 +1,7 @@
 module.exports = {
   //loading recipes
   LOAD_ALL_RECIPES: 'LOAD_ALL_RECIPES',
+  SORT_BY_ALPHA: 'SORT_BY_ALPHA',
   SORT_BY_CATEGORY: 'SORT_BY_CATEGORY',
   FILTER_RECIPES: 'FILTER_RECIPES',
   //filtering recipes
