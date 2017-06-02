@@ -1,6 +1,13 @@
-.recipe-card{
-  width: 960px;
+.right-side{
+  width: 80%;
   margin: 0 auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.recipe-card{
+  width: 80%;
+  margin: 20px auto;
   background-color: $tertiary-color;
   height: 100%;
   color: $focus-font-color;
@@ -29,15 +36,7 @@
       margin-right: 10px;
     }
   }
-  .back-button{
-    background-image: url(../public/ic_keyboard_backspace_white_24px.svg);
-    background-repeat: none;
-    width: 24px;
-    height:24px;
-    position: absolute;
-    top: 10px;
-    left: 20px;
-  }
+
   h1{
     font-size: 2em;
     margin: 30px;

@@ -2,6 +2,7 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { store, actions } from './../store/store.js';
 import UserData from './../UserData.js';
+import NavMenu from './NavMenu.js';
 
 class RecipeCard extends React.Component {
   constructor(){
@@ -40,25 +41,31 @@ class RecipeCard extends React.Component {
     }
 
     return(
-      <div className="recipe-card">
-        <div className="back-button" onClick={() => this.props.history.goBack()}></div>
-        <div className="buttons">
-          <div className="delete" onClick={() => this.handleDelete(id)}></div>
-          <div className="edit" onClick={() => this.handleEdit(id)}></div>
+      <div>
+        <div className="navMenu">
+          <NavMenu />
         </div>
-        <h1>{current.title}</h1>
-        <div className="details">
-          <h3 className="detail"><span>Serves </span> {current.servings}</h3>
-          <h3 className="detail"><span>Prep Time </span> {current.prepTime}</h3>
-          <h3 className="detail"><span>Cook Time </span> {current.cookTime}</h3>
-          <h3 className="detail"><span>Total Time </span> {current.totalTime}</h3>
+        <div className="right-side">
+          <div className="recipe-card">
+            <div className="buttons">
+              <div className="delete" onClick={() => this.handleDelete(id)}></div>
+              <div className="edit" onClick={() => this.handleEdit(id)}></div>
+            </div>
+            <h1>{current.title}</h1>
+            <div className="details">
+              <h3 className="detail"><span>Serves </span> {current.servings}</h3>
+              <h3 className="detail"><span>Prep Time </span> {current.prepTime}</h3>
+              <h3 className="detail"><span>Cook Time </span> {current.cookTime}</h3>
+              <h3 className="detail"><span>Total Time </span> {current.totalTime}</h3>
+            </div>
+            <h2>Ingredients</h2>
+            <p dangerouslySetInnerHTML={{__html: ingredients}}></p>
+            <h2>Instructions</h2>
+            <p dangerouslySetInnerHTML={{__html: directions}}></p>
+            <h2>Notes</h2>
+            <p dangerouslySetInnerHTML={{__html: notes}}></p>
+          </div>
         </div>
-        <h2>Ingredients</h2>
-        <p dangerouslySetInnerHTML={{__html: ingredients}}></p>
-        <h2>Instructions</h2>
-        <p dangerouslySetInnerHTML={{__html: directions}}></p>
-        <h2>Notes</h2>
-        <p dangerouslySetInnerHTML={{__html: notes}}></p>
       </div>
     )
   }

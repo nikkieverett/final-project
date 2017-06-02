@@ -26,10 +26,11 @@ class Home extends React.Component {
     return(
       <div className="home-container">
         <div className="add-button"><Link to="/create-new">+<span>add new</span></Link></div>
-        <div className="view-all" onClick={() => this.viewAll()}>all <span>recipes</span></div>
         <div className="main-header">What would you like to make?</div>
         <SearchBar className="home-search"/>
         <Categories className="category"/>
+        <div className="view-all" onClick={() => this.viewAll()}>all <span>recipes</span></div>
+
       </div>
     )
   }
