@@ -563,14 +563,19 @@ table {
   background-image: url(../public/ic_edit_white_24px.svg);
   margin-right: 10px; }
 
-/* line 40, src/scss/_recipeCard.scss */
+/* line 38, src/scss/_recipeCard.scss */
 /* line 457, src/index.css */
+.recipe-card .buttons .line-break {
+  outline: red 2px solid; }
+
+/* line 43, src/scss/_recipeCard.scss */
+/* line 460, src/index.css */
 .recipe-card h1 {
   font-size: 2em;
   margin: 30px; }
 
-/* line 44, src/scss/_recipeCard.scss */
-/* line 461, src/index.css */
+/* line 47, src/scss/_recipeCard.scss */
+/* line 464, src/index.css */
 .recipe-card .details {
   border-bottom: 2px solid #69b1a9;
   overflow: auto;
@@ -578,41 +583,44 @@ table {
   margin: 0 auto;
   text-transform: lowercase; }
 
-/* line 50, src/scss/_recipeCard.scss */
-/* line 468, src/index.css */
+/* line 53, src/scss/_recipeCard.scss */
+/* line 471, src/index.css */
 .recipe-card .details .detail {
   float: left;
   margin-left: 10px;
   margin-bottom: 10px;
   font-size: .8em; }
 
-/* line 55, src/scss/_recipeCard.scss */
-/* line 474, src/index.css */
+/* line 58, src/scss/_recipeCard.scss */
+/* line 477, src/index.css */
 .recipe-card .details .detail span {
   text-transform: uppercase;
   font-weight: bold; }
 
-/* line 61, src/scss/_recipeCard.scss */
-/* line 478, src/index.css */
+/* line 64, src/scss/_recipeCard.scss */
+/* line 481, src/index.css */
 .recipe-card h2 {
   font-size: 1em;
   text-transform: uppercase;
   font-weight: bold;
   margin-left: 30px;
-  margin-top: 10px; }
+  margin-top: 20px;
+  margin-bottom: 10px; }
 
-/* line 68, src/scss/_recipeCard.scss */
-/* line 485, src/index.css */
+/* line 72, src/scss/_recipeCard.scss */
+/* line 489, src/index.css */
 .recipe-card p {
   border-bottom: 2px solid #69b1a9;
   width: 95%;
-  margin: 0 auto;
+  margin-bottom: 20px;
+  margin-left: 30px;
   text-transform: lowercase;
   margin-bottom: 10px;
-  padding: 10px; }
+  line-height: 30px;
+  padding-bottom: 20px; }
 
 /* line 10, src/index.scss */
-/* line 494, src/index.css */
+/* line 500, src/index.css */
 body {
   margin: 0;
   padding: 0;

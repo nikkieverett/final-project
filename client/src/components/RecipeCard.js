@@ -35,7 +35,7 @@ class RecipeCard extends React.Component {
     let directions;
     let notes;
     if(Object.keys(current).length !== 0){
-      ingredients = this.state.recipe.currentRecipe.ingredients.replace(/\r\n|\r|\n/g, '<br />');
+      ingredients = this.state.recipe.currentRecipe.ingredients.replace(/\r\n|\r|\n/g, '<br className="line-break"/>');
       directions = this.state.recipe.currentRecipe.directions.replace(/\r\n|\r|\n/g, '<br />');
       notes = this.state.recipe.currentRecipe.notes.replace(/\r\n|\r|\n/g, '<br />');
     }
