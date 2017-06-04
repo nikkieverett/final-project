@@ -29,8 +29,7 @@ class Home extends React.Component {
         <div className="main-header">What would you like to make?</div>
         <SearchBar className="home-search"/>
         <Categories className="category"/>
-        <div className="view-all" onClick={() => this.viewAll()}>all <span>recipes</span></div>
-
+        <div className="view-all" onClick={() => this.viewAll()}>all recipes</div>
       </div>
     )
   }
