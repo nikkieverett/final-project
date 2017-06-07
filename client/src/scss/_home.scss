@@ -1,7 +1,7 @@
 @import './variables.scss';
 
 .home-container{
-  width: 960px;
+  width: 80%;
   margin: 0 auto;
 }
 
@@ -95,4 +95,14 @@
 }
 .category:hover{
   background-color: $tertiary-color2;
+}
+@media (max-width:960px){
+  .category{
+    width: 97%;
+  }
+}
+@media (max-width:490px){
+  .view-all{
+    font-size: 1em;
+  }
 }

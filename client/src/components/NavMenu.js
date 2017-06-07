@@ -28,8 +28,8 @@ class NavMenu extends React.Component {
     return(
       <div >
         <ul className="nav-menu">
-          <li className="link"><Link to="/">Home</Link></li>
-          <li className="link" onClick={() => this.viewAll()}>View All Recipes</li>
+          <li className="link" id="home"><Link to="/">Home</Link></li>
+          <li className="link" id="view-all" onClick={() => this.viewAll()}>View All Recipes</li>
           <li className="link" onClick={() => this.dropDownCategories()}>Categories</li>
           <ul className={showHide}>
             <Categories className="sub-cat" />

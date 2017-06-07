@@ -13,10 +13,6 @@ class ListCreator extends React.Component {
           <h2>Category: {recipe.category}</h2>
           <h2>Difficulty: {recipe.ease}</h2>
           <h2>Total Time: {recipe.totalTime}</h2>
-          <div className="buttons">
-            <div onClick={() => this.handleFave()}
-              className="not-favorite"></div>
-          </div>
         </div>
       )
     });

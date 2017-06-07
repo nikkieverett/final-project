@@ -9,16 +9,18 @@
 }
 .recipes{
   overflow: none;
+
   .list-items{
     background-color: $tertiary-color;
     color: $primary-font-color;
     height: 100%;
     margin: 10px 20px 10px 100px;
-    width: 840px;
+    width: 80%;
     text-transform: lowercase;;
-    padding: 10px;
     position: relative;
-    h1 {
+    padding: 10px;
+    
+    h1{
       font-size: 3em;
       padding-bottom: 10px;
       display: inline-block;
@@ -32,6 +34,7 @@
       color: $focus-font-color;
     }
   }
+
   .buttons{
     right: 10px;
     top: 10px;
@@ -52,6 +55,22 @@
     }
     .not-favorite {
       background-image: url(../public/ic_star_border_white_24px.svg);
+    }
+  }
+}
+
+@media (max-width: 1020px){
+  .recipes .list-items{
+    margin-left: 50px;
+  }
+}
+@media (max-width: 800px){
+  .list-container{
+    left: 0;
+  }
+  .recipes .list-items{
+    h1{
+      font-size: 2em;
     }
   }
 }
