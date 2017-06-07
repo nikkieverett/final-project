@@ -438,60 +438,41 @@ table {
 .recipes .list-items h2 {
   font-size: 1em;
   text-transform: uppercase;
-  color: #b2473f; }
+  color: #b2473f;
+  padding: 5px;
+  letter-spacing: 2px; }
 
-/* line 33, src/scss/_recipes.scss */
-/* line 364, src/index.css */
+/* line 36, src/scss/_recipes.scss */
+/* line 366, src/index.css */
+.recipes .list-items span {
+  text-transform: lowercase;
+  color: #333333;
+  letter-spacing: 6px;
+  padding-left: 10px; }
+
+/* line 42, src/scss/_recipes.scss */
+/* line 372, src/index.css */
 .recipes .list-items h1:hover {
   color: #333333; }
 
-/* line 38, src/scss/_recipes.scss */
-/* line 367, src/index.css */
-.recipes .buttons {
-  right: 10px;
-  top: 10px;
-  overflow: auto;
-  position: absolute; }
-
-/* line 44, src/scss/_recipes.scss */
-/* line 373, src/index.css */
-.recipes .buttons .favorite, .recipes .buttons .not-favorite {
-  background-repeat: none;
-  width: 25px;
-  height: 25px;
-  background-color: #73c3bd;
-  float: left;
-  border-radius: 5px;
-  border: 1px solid #69b1a9; }
-
-/* line 53, src/scss/_recipes.scss */
-/* line 382, src/index.css */
-.recipes .buttons .favorite {
-  background-image: url(../public/ic_star_white_24px.svg); }
-
-/* line 56, src/scss/_recipes.scss */
-/* line 385, src/index.css */
-.recipes .buttons .not-favorite {
-  background-image: url(../public/ic_star_border_white_24px.svg); }
-
 @media (max-width: 1020px) {
-  /* line 63, src/scss/_recipes.scss */
-  /* line 390, src/index.css */
+  /* line 50, src/scss/_recipes.scss */
+  /* line 377, src/index.css */
   .recipes .list-items {
     margin-left: 50px; } }
 
 @media (max-width: 800px) {
-  /* line 68, src/scss/_recipes.scss */
-  /* line 395, src/index.css */
+  /* line 55, src/scss/_recipes.scss */
+  /* line 382, src/index.css */
   .list-container {
     left: 0; }
-  /* line 72, src/scss/_recipes.scss */
-  /* line 398, src/index.css */
+  /* line 59, src/scss/_recipes.scss */
+  /* line 385, src/index.css */
   .recipes .list-items h1 {
     font-size: 2em; } }
 
 /* line 4, src/scss/_form.scss */
-/* line 402, src/index.css */
+/* line 389, src/index.css */
 .recipe-form {
   width: 76%;
   position: absolute;
@@ -500,7 +481,7 @@ table {
   padding: 2%; }
 
 /* line 11, src/scss/_form.scss */
-/* line 410, src/index.css */
+/* line 397, src/index.css */
 .input {
   display: inline-block;
   border: none;
@@ -512,76 +493,76 @@ table {
   text-transform: lowercase; }
 
 /* line 21, src/scss/_form.scss */
-/* line 421, src/index.css */
+/* line 408, src/index.css */
 .left-entry, .right-entry {
   float: left;
   margin: 2%; }
 
 /* line 24, src/scss/_form.scss */
-/* line 425, src/index.css */
+/* line 412, src/index.css */
 .left-entry input, .right-entry input {
   height: 30px;
   margin: 10px;
   font-size: 18px; }
 
 /* line 29, src/scss/_form.scss */
-/* line 430, src/index.css */
+/* line 417, src/index.css */
 .left-entry input:focus, .right-entry input:focus {
   outline: none; }
 
 /* line 33, src/scss/_form.scss */
-/* line 434, src/index.css */
+/* line 421, src/index.css */
 .left-entry {
   width: 68%; }
 
 /* line 35, src/scss/_form.scss */
-/* line 437, src/index.css */
+/* line 424, src/index.css */
 .left-entry #name, .left-entry #link {
   width: 100%; }
 
 /* line 38, src/scss/_form.scss */
-/* line 440, src/index.css */
+/* line 427, src/index.css */
 .left-entry #prep, .left-entry #cook, .left-entry #total {
   font-size: 12px;
   float: left;
   width: 10.333%; }
 
 /* line 43, src/scss/_form.scss */
-/* line 445, src/index.css */
+/* line 432, src/index.css */
 .left-entry #servings {
   font-size: 12px;
   clear: both; }
 
 /* line 48, src/scss/_form.scss */
-/* line 450, src/index.css */
+/* line 437, src/index.css */
 .right-entry {
   width: 20%; }
 
 /* line 50, src/scss/_form.scss */
-/* line 453, src/index.css */
+/* line 440, src/index.css */
 .right-entry .input {
   margin-top: 10px;
   margin-bottom: 10px; }
 
 /* line 54, src/scss/_form.scss */
-/* line 457, src/index.css */
+/* line 444, src/index.css */
 .right-entry #category {
   width: 100%; }
 
 /* line 57, src/scss/_form.scss */
-/* line 460, src/index.css */
+/* line 447, src/index.css */
 .right-entry #tried, .right-entry #rating, .right-entry #difficulty {
   display: block; }
 
 /* line 61, src/scss/_form.scss */
-/* line 464, src/index.css */
+/* line 451, src/index.css */
 .main-entry, .sub-entry {
   margin: 0 auto;
   width: 95%;
   clear: both; }
 
 /* line 66, src/scss/_form.scss */
-/* line 469, src/index.css */
+/* line 456, src/index.css */
 .main-entry textarea, .sub-entry textarea {
   width: 95%;
   background-color: #f2a8a3;
@@ -591,13 +572,13 @@ table {
   padding: 10px; }
 
 /* line 74, src/scss/_form.scss */
-/* line 477, src/index.css */
+/* line 464, src/index.css */
 .main-entry h1, .sub-entry h1 {
   margin-bottom: 10px;
   color: #b2473f; }
 
 /* line 79, src/scss/_form.scss */
-/* line 482, src/index.css */
+/* line 469, src/index.css */
 .submit, .cancel {
   display: inline-block;
   background-color: #b2473f;
@@ -608,17 +589,17 @@ table {
   margin-top: 20px; }
 
 /* line 89, src/scss/_form.scss */
-/* line 492, src/index.css */
+/* line 479, src/index.css */
 .submit {
   margin-left: 40px; }
 
 /* line 93, src/scss/_form.scss */
-/* line 496, src/index.css */
+/* line 483, src/index.css */
 .cancel {
   margin-left: 20px; }
 
 /* line 1, src/scss/_recipeCard.scss */
-/* line 500, src/index.css */
+/* line 487, src/index.css */
 .right-side {
   width: 80%;
   margin: 0 auto;
@@ -627,7 +608,7 @@ table {
   right: 0; }
 
 /* line 8, src/scss/_recipeCard.scss */
-/* line 508, src/index.css */
+/* line 495, src/index.css */
 .recipe-card {
   width: 80%;
   margin: 20px auto;
@@ -638,7 +619,7 @@ table {
   padding: 20px; }
 
 /* line 17, src/scss/_recipeCard.scss */
-/* line 517, src/index.css */
+/* line 504, src/index.css */
 .recipe-card .buttons {
   right: 10px;
   top: 10px;
@@ -647,7 +628,7 @@ table {
   transition: ease all 3s; }
 
 /* line 23, src/scss/_recipeCard.scss */
-/* line 524, src/index.css */
+/* line 511, src/index.css */
 .recipe-card .buttons .delete, .recipe-card .buttons .edit {
   background-repeat: none;
   width: 25px;
@@ -656,30 +637,30 @@ table {
   float: left; }
 
 /* line 30, src/scss/_recipeCard.scss */
-/* line 531, src/index.css */
+/* line 518, src/index.css */
 .recipe-card .buttons .delete {
   background-image: url(../public/ic_delete_white_24px.svg);
   margin-right: 10px; }
 
 /* line 34, src/scss/_recipeCard.scss */
-/* line 535, src/index.css */
+/* line 522, src/index.css */
 .recipe-card .buttons .edit {
   background-image: url(../public/ic_edit_white_24px.svg);
   margin-right: 10px; }
 
 /* line 38, src/scss/_recipeCard.scss */
-/* line 539, src/index.css */
+/* line 526, src/index.css */
 .recipe-card .buttons .line-break {
   outline: red 2px solid; }
 
 /* line 43, src/scss/_recipeCard.scss */
-/* line 542, src/index.css */
+/* line 529, src/index.css */
 .recipe-card h1 {
   font-size: 2em;
   margin: 30px; }
 
 /* line 47, src/scss/_recipeCard.scss */
-/* line 546, src/index.css */
+/* line 533, src/index.css */
 .recipe-card .details {
   border-bottom: 2px solid #69b1a9;
   overflow: auto;
@@ -688,7 +669,7 @@ table {
   text-transform: lowercase; }
 
 /* line 53, src/scss/_recipeCard.scss */
-/* line 553, src/index.css */
+/* line 540, src/index.css */
 .recipe-card .details .detail {
   float: left;
   margin-left: 10px;
@@ -696,13 +677,13 @@ table {
   font-size: .8em; }
 
 /* line 58, src/scss/_recipeCard.scss */
-/* line 559, src/index.css */
+/* line 546, src/index.css */
 .recipe-card .details .detail span {
   text-transform: uppercase;
   font-weight: bold; }
 
 /* line 64, src/scss/_recipeCard.scss */
-/* line 563, src/index.css */
+/* line 550, src/index.css */
 .recipe-card h2 {
   font-size: 1em;
   text-transform: uppercase;
@@ -712,7 +693,7 @@ table {
   margin-bottom: 10px; }
 
 /* line 72, src/scss/_recipeCard.scss */
-/* line 571, src/index.css */
+/* line 558, src/index.css */
 .recipe-card p {
   border-bottom: 2px solid #69b1a9;
   width: 95%;
@@ -724,7 +705,7 @@ table {
   padding-bottom: 20px; }
 
 /* line 10, src/index.scss */
-/* line 582, src/index.css */
+/* line 569, src/index.css */
 body {
   margin: 0;
   padding: 0;

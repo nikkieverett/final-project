@@ -19,7 +19,7 @@
     text-transform: lowercase;;
     position: relative;
     padding: 10px;
-    
+
     h1{
       font-size: 3em;
       padding-bottom: 10px;
@@ -29,34 +29,21 @@
       font-size: 1em;
       text-transform: uppercase;
       color: $secondary-font-color;
+      padding: 5px;
+      letter-spacing: 2px;
+
+    }
+    span{
+      text-transform: lowercase;
+      color: $focus-font-color;
+      letter-spacing: 6px;
+      padding-left: 10px;
     }
     h1:hover{
       color: $focus-font-color;
     }
   }
 
-  .buttons{
-    right: 10px;
-    top: 10px;
-    overflow: auto;
-    position: absolute;
-
-    .favorite, .not-favorite {
-      background-repeat: none;
-      width: 25px;
-      height: 25px;
-      background-color: $secondary-color;
-      float: left;
-      border-radius: 5px;
-      border: 1px solid $tertiary-color2;
-    }
-    .favorite {
-      background-image: url(../public/ic_star_white_24px.svg);
-    }
-    .not-favorite {
-      background-image: url(../public/ic_star_border_white_24px.svg);
-    }
-  }
 }
 
 @media (max-width: 1020px){
