@@ -492,77 +492,69 @@ table {
   border-radius: 5px;
   text-transform: lowercase; }
 
-/* line 21, src/scss/_form.scss */
+/* line 22, src/scss/_form.scss */
 /* line 408, src/index.css */
-.left-entry, .right-entry {
-  float: left;
-  margin: 2%; }
-
-/* line 24, src/scss/_form.scss */
-/* line 412, src/index.css */
-.left-entry input, .right-entry input {
+.left-entry input {
   height: 30px;
-  margin: 10px;
+  margin-left: 20px;
+  margin-bottom: 10px;
   font-size: 18px; }
 
-/* line 29, src/scss/_form.scss */
-/* line 417, src/index.css */
-.left-entry input:focus, .right-entry input:focus {
+/* line 28, src/scss/_form.scss */
+/* line 415, src/index.css */
+.left-entry input:focus {
   outline: none; }
 
-/* line 33, src/scss/_form.scss */
-/* line 421, src/index.css */
+/* line 32, src/scss/_form.scss */
+/* line 419, src/index.css */
 .left-entry {
   width: 68%; }
 
-/* line 35, src/scss/_form.scss */
-/* line 424, src/index.css */
+/* line 34, src/scss/_form.scss */
+/* line 422, src/index.css */
 .left-entry #name, .left-entry #link {
   width: 100%; }
 
-/* line 38, src/scss/_form.scss */
-/* line 427, src/index.css */
+/* line 37, src/scss/_form.scss */
+/* line 425, src/index.css */
 .left-entry #prep, .left-entry #cook, .left-entry #total {
   font-size: 12px;
   float: left;
   width: 10.333%; }
 
-/* line 43, src/scss/_form.scss */
-/* line 432, src/index.css */
+/* line 42, src/scss/_form.scss */
+/* line 430, src/index.css */
 .left-entry #servings {
   font-size: 12px;
   clear: both; }
 
-/* line 48, src/scss/_form.scss */
-/* line 437, src/index.css */
+/* line 47, src/scss/_form.scss */
+/* line 435, src/index.css */
 .right-entry {
-  width: 20%; }
+  width: 90%;
+  margin: 0 auto; }
 
 /* line 50, src/scss/_form.scss */
-/* line 440, src/index.css */
+/* line 439, src/index.css */
 .right-entry .input {
-  margin-top: 10px;
-  margin-bottom: 10px; }
+  width: 30%;
+  margin: 10px auto;
+  height: 30px; }
 
-/* line 54, src/scss/_form.scss */
+/* line 55, src/scss/_form.scss */
 /* line 444, src/index.css */
-.right-entry #category {
-  width: 100%; }
-
-/* line 57, src/scss/_form.scss */
-/* line 447, src/index.css */
-.right-entry #tried, .right-entry #rating, .right-entry #difficulty {
+.right-entry #category, .right-entry #tried, .right-entry #rating, .right-entry #difficulty {
   display: block; }
 
-/* line 61, src/scss/_form.scss */
-/* line 451, src/index.css */
+/* line 59, src/scss/_form.scss */
+/* line 448, src/index.css */
 .main-entry, .sub-entry {
   margin: 0 auto;
   width: 95%;
   clear: both; }
 
-/* line 66, src/scss/_form.scss */
-/* line 456, src/index.css */
+/* line 64, src/scss/_form.scss */
+/* line 453, src/index.css */
 .main-entry textarea, .sub-entry textarea {
   width: 95%;
   background-color: #f2a8a3;
@@ -571,14 +563,21 @@ table {
   text-transform: lowercase;
   padding: 10px; }
 
-/* line 74, src/scss/_form.scss */
-/* line 464, src/index.css */
+/* line 72, src/scss/_form.scss */
+/* line 461, src/index.css */
 .main-entry h1, .sub-entry h1 {
   margin-bottom: 10px;
   color: #b2473f; }
 
-/* line 79, src/scss/_form.scss */
-/* line 469, src/index.css */
+/* line 77, src/scss/_form.scss */
+/* line 466, src/index.css */
+.buttons {
+  width: 20%;
+  margin: 0 auto;
+  overflow: auto; }
+
+/* line 82, src/scss/_form.scss */
+/* line 472, src/index.css */
 .submit, .cancel {
   display: inline-block;
   background-color: #b2473f;
@@ -586,20 +585,11 @@ table {
   color: #fff0f0;
   border-radius: 5px;
   padding: 10px;
-  margin-top: 20px; }
-
-/* line 89, src/scss/_form.scss */
-/* line 479, src/index.css */
-.submit {
-  margin-left: 40px; }
-
-/* line 93, src/scss/_form.scss */
-/* line 483, src/index.css */
-.cancel {
-  margin-left: 20px; }
+  margin-top: 10px;
+  margin-left: 15px; }
 
 /* line 1, src/scss/_recipeCard.scss */
-/* line 487, src/index.css */
+/* line 483, src/index.css */
 .right-side {
   width: 80%;
   margin: 0 auto;
@@ -608,7 +598,7 @@ table {
   right: 0; }
 
 /* line 8, src/scss/_recipeCard.scss */
-/* line 495, src/index.css */
+/* line 491, src/index.css */
 .recipe-card {
   width: 80%;
   margin: 20px auto;
@@ -619,7 +609,7 @@ table {
   padding: 20px; }
 
 /* line 17, src/scss/_recipeCard.scss */
-/* line 504, src/index.css */
+/* line 500, src/index.css */
 .recipe-card .buttons {
   right: 10px;
   top: 10px;
@@ -628,7 +618,7 @@ table {
   transition: ease all 3s; }
 
 /* line 23, src/scss/_recipeCard.scss */
-/* line 511, src/index.css */
+/* line 507, src/index.css */
 .recipe-card .buttons .delete, .recipe-card .buttons .edit {
   background-repeat: none;
   width: 25px;
@@ -637,30 +627,30 @@ table {
   float: left; }
 
 /* line 30, src/scss/_recipeCard.scss */
-/* line 518, src/index.css */
+/* line 514, src/index.css */
 .recipe-card .buttons .delete {
   background-image: url(../public/ic_delete_white_24px.svg);
   margin-right: 10px; }
 
 /* line 34, src/scss/_recipeCard.scss */
-/* line 522, src/index.css */
+/* line 518, src/index.css */
 .recipe-card .buttons .edit {
   background-image: url(../public/ic_edit_white_24px.svg);
   margin-right: 10px; }
 
 /* line 38, src/scss/_recipeCard.scss */
-/* line 526, src/index.css */
+/* line 522, src/index.css */
 .recipe-card .buttons .line-break {
   outline: red 2px solid; }
 
 /* line 43, src/scss/_recipeCard.scss */
-/* line 529, src/index.css */
+/* line 525, src/index.css */
 .recipe-card h1 {
   font-size: 2em;
   margin: 30px; }
 
 /* line 47, src/scss/_recipeCard.scss */
-/* line 533, src/index.css */
+/* line 529, src/index.css */
 .recipe-card .details {
   border-bottom: 2px solid #69b1a9;
   overflow: auto;
@@ -669,7 +659,7 @@ table {
   text-transform: lowercase; }
 
 /* line 53, src/scss/_recipeCard.scss */
-/* line 540, src/index.css */
+/* line 536, src/index.css */
 .recipe-card .details .detail {
   float: left;
   margin-left: 10px;
@@ -677,13 +667,13 @@ table {
   font-size: .8em; }
 
 /* line 58, src/scss/_recipeCard.scss */
-/* line 546, src/index.css */
+/* line 542, src/index.css */
 .recipe-card .details .detail span {
   text-transform: uppercase;
   font-weight: bold; }
 
 /* line 64, src/scss/_recipeCard.scss */
-/* line 550, src/index.css */
+/* line 546, src/index.css */
 .recipe-card h2 {
   font-size: 1em;
   text-transform: uppercase;
@@ -693,7 +683,7 @@ table {
   margin-bottom: 10px; }
 
 /* line 72, src/scss/_recipeCard.scss */
-/* line 558, src/index.css */
+/* line 554, src/index.css */
 .recipe-card p {
   border-bottom: 2px solid #69b1a9;
   width: 95%;
@@ -705,7 +695,7 @@ table {
   padding-bottom: 20px; }
 
 /* line 10, src/index.scss */
-/* line 569, src/index.css */
+/* line 565, src/index.css */
 body {
   margin: 0;
   padding: 0;

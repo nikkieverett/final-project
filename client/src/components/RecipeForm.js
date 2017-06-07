@@ -74,6 +74,27 @@ class RecipeForm extends React.Component {
               onChange={(evt) => this.setValue('servings', evt)}/>
           </div>
 
+          <div className="main-entry">
+            <h1>Ingredients</h1>
+            <textarea
+              className="input"
+              value={this.props.ingredients}
+              onChange={(evt) => this.setValue('ingredients', evt)}/>
+            <h1>Directions</h1>
+            <textarea
+              className="input"
+              value={this.props.directions}
+              onChange={(evt) => this.setValue('directions', evt)}/>
+          </div>
+
+          <div className="sub-entry">
+            <h1>Notes</h1>
+            <textarea
+              className="input"
+              value={this.props.notes}
+              onChange={(evt) => this.setValue('notes', evt)} />
+          </div>
+
           <div className="right-entry">
             <select
               id="category"
@@ -101,7 +122,6 @@ class RecipeForm extends React.Component {
               <option value="time consuming">Time Consuming</option>
             </select>
             <select
-              placeholder="Rating"
               id="rating"
               className="input"
               value={this.props.rating}
@@ -114,29 +134,11 @@ class RecipeForm extends React.Component {
               <option>5</option>
             </select>
           </div>
-
-          <div className="main-entry">
-            <h1>Ingredients</h1>
-            <textarea
-              className="input"
-              value={this.props.ingredients}
-              onChange={(evt) => this.setValue('ingredients', evt)}/>
-            <h1>Directions</h1>
-            <textarea
-              className="input"
-              value={this.props.directions}
-              onChange={(evt) => this.setValue('directions', evt)}/>
+          <div className="buttons">
+            <div className="submit" onClick={(evt) => this.handleSave(evt)}>Submit</div>
+            <div className="cancel" onClick={() => this.props.history.goBack()}>Cancel</div>
           </div>
 
-          <div className="sub-entry">
-            <h1>Notes</h1>
-            <textarea
-              className="input"
-              value={this.props.notes}
-              onChange={(evt) => this.setValue('notes', evt)} />
-          </div>
-          <div className="submit" onClick={(evt) => this.handleSave(evt)}>Submit</div>
-          <div className="cancel" onClick={() => this.props.history.goBack()}>Cancel</div>
         </form>
 
       </div>
