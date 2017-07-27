@@ -1,9 +1,42 @@
 const express = require("express");
 const uuid = require('node-uuid');
+const passport = require('passport');
+const flash = require('flash');
+
 const Recipe = require('./models/Recipe.js');
+// const User = require("./models/User.js");
 
 const router = express.Router();
 
+//create user account
+// router.get('/signup', function(req, res) {
+//   res.render('signup');
+// });
+
+// router.post('/signup', function(req, res, next){
+//   var username = req.body.username;
+//   var password = req.body.password;
+
+  // User.findOne({ username: username }, function(err, user){
+//     if(err){
+//       return next(err);
+//     }
+//     if(user){
+//       req.flash("error", "User already exists");
+//       return res.redirect("/signup");
+//     }
+//     const newUser = new User({
+//       username: username,
+//       password: password
+//     });
+//     newUser.save(next);
+//   });
+//
+// }, passport.authenticate("login", {
+//   successRedirect: "/",
+//   failureRedirect: "/signup",
+//   failureFlash: true
+// }));
 //api data for all recipes
 router.get('/api/recipes', (req, res) => {
   Recipe.find({})

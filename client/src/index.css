@@ -2,8 +2,6 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-/* line 5, src/scss/_reset.scss */
-/* line 6, src/index.css */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -25,148 +23,95 @@ time, mark, audio, video {
   vertical-align: baseline; }
 
 /* HTML5 display-role reset for older browsers */
-/* line 26, src/scss/_reset.scss */
-/* line 28, src/index.css */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block; }
 
-/* line 30, src/scss/_reset.scss */
-/* line 33, src/index.css */
 body {
   line-height: 1; }
 
-/* line 33, src/scss/_reset.scss */
-/* line 37, src/index.css */
 ol, ul {
   list-style: none; }
 
-/* line 36, src/scss/_reset.scss */
-/* line 41, src/index.css */
 blockquote, q {
   quotes: none; }
 
-/* line 39, src/scss/_reset.scss */
-/* line 45, src/index.css */
 blockquote:before, blockquote:after,
 q:before, q:after {
   content: '';
   content: none; }
 
-/* line 44, src/scss/_reset.scss */
-/* line 51, src/index.css */
 table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-/* line 3, src/scss/_pageHeader.scss */
-/* line 56, src/index.css */
 .page-header {
   position: relative;
   width: 80%;
   padding: 10px;
   margin: 0 auto; }
-
-/* line 9, src/scss/_pageHeader.scss */
-/* line 62, src/index.css */
-.page-header .list-search {
-  display: inline-block;
-  margin: 20px 0; }
-
-/* line 12, src/scss/_pageHeader.scss */
-/* line 66, src/index.css */
-.page-header .list-search input {
-  width: 200px;
-  height: 30px;
-  border: none;
-  border-radius: 10px;
-  font-size: 12px;
-  color: #333333;
-  padding-left: 20px; }
-
-/* line 21, src/scss/_pageHeader.scss */
-/* line 75, src/index.css */
-.page-header .list-search input:focus {
-  border: none; }
-
-/* line 25, src/scss/_pageHeader.scss */
-/* line 78, src/index.css */
-.page-header .categoryName {
-  display: inline-block;
-  margin-left: 20px;
-  padding: 10px;
-  color: #fff0f0;
-  font-size: 1.5em;
-  text-transform: uppercase; }
-
-/* line 33, src/scss/_pageHeader.scss */
-/* line 86, src/index.css */
-.page-header .add {
-  width: 50px;
-  height: 50px;
-  border-radius: 100px;
-  background-color: #73c3bd;
-  text-align: center;
-  line-height: 50px;
-  font-size: 30px;
-  position: absolute;
-  top: 20px;
-  right: 0;
-  overflow: hidden;
-  color: #fff0f0;
-  transition: ease 1s; }
-
-/* line 47, src/scss/_pageHeader.scss */
-/* line 101, src/index.css */
-.page-header .add span {
-  display: none; }
-
-/* line 50, src/scss/_pageHeader.scss */
-/* line 104, src/index.css */
-.page-header .add a {
-  color: #fff0f0;
-  text-decoration: none; }
-
-/* line 55, src/scss/_pageHeader.scss */
-/* line 108, src/index.css */
-.page-header .add:hover {
-  width: 200px; }
-
-/* line 56, src/scss/_pageHeader.scss */
-/* line 111, src/index.css */
-.page-header .add:hover span {
-  display: inline; }
+  .page-header .list-search {
+    display: inline-block;
+    margin: 20px 0; }
+    .page-header .list-search input {
+      width: 200px;
+      height: 30px;
+      border: none;
+      border-radius: 10px;
+      font-size: 12px;
+      color: #333333;
+      padding-left: 20px; }
+    .page-header .list-search input:focus {
+      border: none; }
+  .page-header .categoryName {
+    display: inline-block;
+    margin-left: 20px;
+    padding: 10px;
+    color: #fff0f0;
+    font-size: 1.5em;
+    text-transform: uppercase; }
+  .page-header .add {
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    background-color: #73c3bd;
+    text-align: center;
+    line-height: 50px;
+    font-size: 30px;
+    position: absolute;
+    top: 20px;
+    right: 0;
+    overflow: hidden;
+    color: #fff0f0;
+    transition: ease 1s; }
+    .page-header .add span {
+      display: none; }
+    .page-header .add a {
+      color: #fff0f0;
+      text-decoration: none; }
+  .page-header .add:hover {
+    width: 200px; }
+    .page-header .add:hover span {
+      display: inline; }
 
 @media (max-width: 1020px) {
-  /* line 64, src/scss/_pageHeader.scss */
-  /* line 116, src/index.css */
   .list-search {
     margin-left: 50px; }
-  /* line 67, src/scss/_pageHeader.scss */
-  /* line 119, src/index.css */
   .categoryName {
     display: block;
     margin-left: 50px; } }
 
 @media (max-width: 800px) {
-  /* line 73, src/scss/_pageHeader.scss */
-  /* line 125, src/index.css */
   .page-header {
     margin-top: 50px;
     width: 80%; }
-  /* line 77, src/scss/_pageHeader.scss */
-  /* line 129, src/index.css */
   .add {
     top: 60px; } }
 
-/* line 3, src/scss/_home.scss */
-/* line 133, src/index.css */
 .home-container {
   width: 80%;
   margin: 0 auto; }
 
-/* line 9, src/scss/_home.scss */
-/* line 138, src/index.css */
 .add-button {
   width: 50px;
   height: 50px;
@@ -180,43 +125,26 @@ table {
   color: #fff0f0;
   transition: all ease 1s;
   right: 30px; }
+  .add-button span {
+    display: none; }
+  .add-button a {
+    color: #fff0f0;
+    text-decoration: none; }
 
-/* line 22, src/scss/_home.scss */
-/* line 152, src/index.css */
-.add-button span {
-  display: none; }
-
-/* line 25, src/scss/_home.scss */
-/* line 155, src/index.css */
-.add-button a {
-  color: #fff0f0;
-  text-decoration: none; }
-
-/* line 30, src/scss/_home.scss */
-/* line 160, src/index.css */
 .add-button {
   top: 10px; }
 
-/* line 33, src/scss/_home.scss */
-/* line 164, src/index.css */
 .add-button:hover {
   width: 200px; }
+  .add-button:hover span {
+    display: inline; }
 
-/* line 34, src/scss/_home.scss */
-/* line 167, src/index.css */
-.add-button:hover span {
-  display: inline; }
-
-/* line 40, src/scss/_home.scss */
-/* line 171, src/index.css */
 .main-header {
   font-size: 3em;
   margin-top: 150px;
   text-align: center;
   color: #fff0f0; }
 
-/* line 47, src/scss/_home.scss */
-/* line 178, src/index.css */
 .home-search input {
   display: block;
   margin: 20px auto;
@@ -230,19 +158,13 @@ table {
   color: #b2473f;
   transition: all ease 1s; }
 
-/* line 60, src/scss/_home.scss */
-/* line 192, src/index.css */
 .home-search input:focus {
   outline: none;
   width: 300px; }
 
-/* line 64, src/scss/_home.scss */
-/* line 197, src/index.css */
 .home-search input::placeholder {
   color: #b2473f; }
 
-/* line 68, src/scss/_home.scss */
-/* line 201, src/index.css */
 .category, .view-all {
   background-color: #73c3bd;
   color: #fff0f0;
@@ -255,15 +177,11 @@ table {
   text-align: center;
   transition: all 0.3s ease; }
 
-/* line 80, src/scss/_home.scss */
-/* line 214, src/index.css */
 .category {
   height: 100px;
   line-height: 100px;
   float: left; }
 
-/* line 85, src/scss/_home.scss */
-/* line 220, src/index.css */
 .view-all {
   background-color: #b2473f;
   height: 50px;
@@ -272,30 +190,20 @@ table {
   line-height: 50px;
   margin: 0 auto; }
 
-/* line 93, src/scss/_home.scss */
-/* line 229, src/index.css */
 .view-all:hover {
   border: #fff0f0 2px solid; }
 
-/* line 96, src/scss/_home.scss */
-/* line 233, src/index.css */
 .category:hover {
   background-color: #69b1a9; }
 
 @media (max-width: 960px) {
-  /* line 100, src/scss/_home.scss */
-  /* line 238, src/index.css */
   .category {
     width: 97%; } }
 
 @media (max-width: 490px) {
-  /* line 105, src/scss/_home.scss */
-  /* line 243, src/index.css */
   .view-all {
     font-size: 1em; } }
 
-/* line 3, src/scss/_navMenu.scss */
-/* line 247, src/index.css */
 .nav-menu {
   color: #fff0f0;
   height: 100%;
@@ -305,103 +213,67 @@ table {
   left: 0;
   top: 0;
   background-color: #73c3bd; }
+  .nav-menu .link {
+    color: #fff0f0;
+    font-size: 2em;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 10px;
+    transition: ease 1s; }
+    .nav-menu .link a {
+      text-decoration: none;
+      color: #fff0f0; }
 
-/* line 12, src/scss/_navMenu.scss */
-/* line 257, src/index.css */
-.nav-menu .link {
-  color: #fff0f0;
-  font-size: 2em;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  font-weight: bold;
-  padding: 10px;
-  transition: ease 1s; }
-
-/* line 20, src/scss/_navMenu.scss */
-/* line 266, src/index.css */
-.nav-menu .link a {
-  text-decoration: none;
-  color: #fff0f0; }
-
-/* line 26, src/scss/_navMenu.scss */
-/* line 271, src/index.css */
 .link:hover {
   background-color: #69b1a9; }
 
-/* line 29, src/scss/_navMenu.scss */
-/* line 275, src/index.css */
 .sub-menu-hide {
   display: none; }
 
-/* line 32, src/scss/_navMenu.scss */
-/* line 279, src/index.css */
 .sub-menu-visible {
   display: inline-block;
   margin-left: 10px; }
-
-/* line 35, src/scss/_navMenu.scss */
-/* line 283, src/index.css */
-.sub-menu-visible .sub-cat {
-  padding: 5px;
-  font-size: 20px;
-  text-transform: lowercase;
-  color: #333333;
-  transition: ease 1s; }
-
-/* line 42, src/scss/_navMenu.scss */
-/* line 290, src/index.css */
-.sub-menu-visible .sub-cat:hover {
-  color: #eb6c62; }
+  .sub-menu-visible .sub-cat {
+    padding: 5px;
+    font-size: 20px;
+    text-transform: lowercase;
+    color: #333333;
+    transition: ease 1s; }
+  .sub-menu-visible .sub-cat:hover {
+    color: #eb6c62; }
 
 @media (max-width: 1250px) {
-  /* line 47, src/scss/_navMenu.scss */
-  /* line 295, src/index.css */
   .nav-menu .link {
     font-size: 1.5em; } }
 
 @media (max-width: 1020px) {
-  /* line 52, src/scss/_navMenu.scss */
-  /* line 300, src/index.css */
   .nav-menu .link {
     font-size: 1em; } }
 
 @media (max-width: 800px) {
-  /* line 57, src/scss/_navMenu.scss */
-  /* line 305, src/index.css */
   .nav-menu {
     right: 0;
     height: 50px;
     width: 100%; }
-  /* line 61, src/scss/_navMenu.scss */
-  /* line 310, src/index.css */
-  .nav-menu .link {
-    float: left;
-    margin: 10px; }
-  /* line 65, src/scss/_navMenu.scss */
-  /* line 314, src/index.css */
-  .nav-menu #home {
-    margin-left: 100px; }
-  /* line 68, src/scss/_navMenu.scss */
-  /* line 317, src/index.css */
-  .nav-menu #home, .nav-menu #view-all {
-    border-right: 2px solid #69b1a9; }
-  /* line 71, src/scss/_navMenu.scss */
-  /* line 320, src/index.css */
-  .nav-menu .sub-menu-visible {
-    position: absolute;
-    background-color: #69b1a9;
-    padding: 20px;
-    top: 10;
-    right: 150px; } }
+    .nav-menu .link {
+      float: left;
+      margin: 10px; }
+    .nav-menu #home {
+      margin-left: 100px; }
+    .nav-menu #home, .nav-menu #view-all {
+      border-right: 2px solid #69b1a9; }
+    .nav-menu .sub-menu-visible {
+      position: absolute;
+      background-color: #69b1a9;
+      padding: 20px;
+      top: 10;
+      right: 150px; } }
 
 @media (max-width: 643px) {
-  /* line 82, src/scss/_navMenu.scss */
-  /* line 329, src/index.css */
   .nav-menu .link {
     font-size: .7em; } }
 
-/* line 3, src/scss/_recipes.scss */
-/* line 333, src/index.css */
 .list-container {
   width: 80%;
   margin: 0 auto;
@@ -409,70 +281,45 @@ table {
   right: 0;
   top: 0; }
 
-/* line 10, src/scss/_recipes.scss */
-/* line 341, src/index.css */
 .recipes {
   overflow: none; }
-
-/* line 13, src/scss/_recipes.scss */
-/* line 344, src/index.css */
-.recipes .list-items {
-  background-color: #f2a8a3;
-  color: #fff0f0;
-  height: 100%;
-  margin: 10px 20px 10px 100px;
-  width: 80%;
-  text-transform: lowercase;
-  position: relative;
-  padding: 10px; }
-
-/* line 23, src/scss/_recipes.scss */
-/* line 354, src/index.css */
-.recipes .list-items h1 {
-  font-size: 3em;
-  padding-bottom: 10px;
-  display: inline-block; }
-
-/* line 28, src/scss/_recipes.scss */
-/* line 359, src/index.css */
-.recipes .list-items h2 {
-  font-size: 1em;
-  text-transform: uppercase;
-  color: #b2473f;
-  padding: 5px;
-  letter-spacing: 2px; }
-
-/* line 36, src/scss/_recipes.scss */
-/* line 366, src/index.css */
-.recipes .list-items span {
-  text-transform: lowercase;
-  color: #333333;
-  letter-spacing: 4px;
-  padding-left: 10px; }
-
-/* line 42, src/scss/_recipes.scss */
-/* line 372, src/index.css */
-.recipes .list-items h1:hover {
-  color: #333333; }
+  .recipes .list-items {
+    background-color: #f2a8a3;
+    color: #fff0f0;
+    height: 100%;
+    margin: 10px 20px 10px 100px;
+    width: 80%;
+    text-transform: lowercase;
+    position: relative;
+    padding: 10px; }
+    .recipes .list-items h1 {
+      font-size: 3em;
+      padding-bottom: 10px;
+      display: inline-block; }
+    .recipes .list-items h2 {
+      font-size: 1em;
+      text-transform: uppercase;
+      color: #b2473f;
+      padding: 5px;
+      letter-spacing: 2px; }
+    .recipes .list-items span {
+      text-transform: lowercase;
+      color: #333333;
+      letter-spacing: 4px;
+      padding-left: 10px; }
+    .recipes .list-items h1:hover {
+      color: #333333; }
 
 @media (max-width: 1020px) {
-  /* line 50, src/scss/_recipes.scss */
-  /* line 377, src/index.css */
   .recipes .list-items {
     margin-left: 50px; } }
 
 @media (max-width: 800px) {
-  /* line 55, src/scss/_recipes.scss */
-  /* line 382, src/index.css */
   .list-container {
     left: 0; }
-  /* line 59, src/scss/_recipes.scss */
-  /* line 385, src/index.css */
   .recipes .list-items h1 {
     font-size: 2em; } }
 
-/* line 4, src/scss/_form.scss */
-/* line 389, src/index.css */
 .recipe-form {
   width: 76%;
   position: absolute;
@@ -480,8 +327,6 @@ table {
   right: 0;
   padding: 2%; }
 
-/* line 11, src/scss/_form.scss */
-/* line 397, src/index.css */
 .input {
   display: inline-block;
   border: none;
@@ -492,92 +337,57 @@ table {
   border-radius: 5px;
   text-transform: lowercase; }
 
-/* line 22, src/scss/_form.scss */
-/* line 408, src/index.css */
 .left-entry input {
   height: 30px;
   margin-left: 20px;
   margin-bottom: 10px;
   font-size: 18px; }
 
-/* line 28, src/scss/_form.scss */
-/* line 415, src/index.css */
 .left-entry input:focus {
   outline: none; }
 
-/* line 32, src/scss/_form.scss */
-/* line 419, src/index.css */
 .left-entry {
   width: 68%; }
+  .left-entry #name, .left-entry #link {
+    width: 100%; }
+  .left-entry #prep, .left-entry #cook, .left-entry #total {
+    font-size: 12px;
+    float: left;
+    width: 10.333%; }
+  .left-entry #servings {
+    font-size: 12px;
+    clear: both; }
 
-/* line 34, src/scss/_form.scss */
-/* line 422, src/index.css */
-.left-entry #name, .left-entry #link {
-  width: 100%; }
-
-/* line 37, src/scss/_form.scss */
-/* line 425, src/index.css */
-.left-entry #prep, .left-entry #cook, .left-entry #total {
-  font-size: 12px;
-  float: left;
-  width: 10.333%; }
-
-/* line 42, src/scss/_form.scss */
-/* line 430, src/index.css */
-.left-entry #servings {
-  font-size: 12px;
-  clear: both; }
-
-/* line 47, src/scss/_form.scss */
-/* line 435, src/index.css */
 .right-entry {
   width: 90%;
   margin: 0 auto; }
+  .right-entry .input {
+    width: 30%;
+    margin: 10px auto;
+    height: 30px; }
+  .right-entry #category, .right-entry #tried, .right-entry #rating, .right-entry #difficulty {
+    display: block; }
 
-/* line 50, src/scss/_form.scss */
-/* line 439, src/index.css */
-.right-entry .input {
-  width: 30%;
-  margin: 10px auto;
-  height: 30px; }
-
-/* line 55, src/scss/_form.scss */
-/* line 444, src/index.css */
-.right-entry #category, .right-entry #tried, .right-entry #rating, .right-entry #difficulty {
-  display: block; }
-
-/* line 59, src/scss/_form.scss */
-/* line 448, src/index.css */
 .main-entry, .sub-entry {
   margin: 0 auto;
   width: 95%;
   clear: both; }
+  .main-entry textarea, .sub-entry textarea {
+    width: 95%;
+    background-color: #f2a8a3;
+    height: 100px;
+    margin-bottom: 10px;
+    text-transform: lowercase;
+    padding: 10px; }
+  .main-entry h1, .sub-entry h1 {
+    margin-bottom: 10px;
+    color: #b2473f; }
 
-/* line 64, src/scss/_form.scss */
-/* line 453, src/index.css */
-.main-entry textarea, .sub-entry textarea {
-  width: 95%;
-  background-color: #f2a8a3;
-  height: 100px;
-  margin-bottom: 10px;
-  text-transform: lowercase;
-  padding: 10px; }
-
-/* line 72, src/scss/_form.scss */
-/* line 461, src/index.css */
-.main-entry h1, .sub-entry h1 {
-  margin-bottom: 10px;
-  color: #b2473f; }
-
-/* line 77, src/scss/_form.scss */
-/* line 466, src/index.css */
 .buttons {
   width: 20%;
   margin: 0 auto;
   overflow: auto; }
 
-/* line 82, src/scss/_form.scss */
-/* line 472, src/index.css */
 .submit, .cancel {
   display: inline-block;
   background-color: #b2473f;
@@ -588,8 +398,6 @@ table {
   margin-top: 10px;
   margin-left: 15px; }
 
-/* line 1, src/scss/_recipeCard.scss */
-/* line 483, src/index.css */
 .right-side {
   width: 80%;
   margin: 0 auto;
@@ -597,8 +405,6 @@ table {
   top: 0;
   right: 0; }
 
-/* line 8, src/scss/_recipeCard.scss */
-/* line 491, src/index.css */
 .recipe-card {
   width: 80%;
   margin: 20px auto;
@@ -607,95 +413,60 @@ table {
   color: #333333;
   position: relative;
   padding: 20px; }
+  .recipe-card .buttons {
+    right: 10px;
+    top: 10px;
+    overflow: auto;
+    position: absolute;
+    transition: ease all 3s; }
+    .recipe-card .buttons .delete, .recipe-card .buttons .edit {
+      background-repeat: none;
+      width: 25px;
+      height: 25px;
+      border-radius: 5px;
+      float: left; }
+    .recipe-card .buttons .delete {
+      background-image: url(../public/ic_delete_white_24px.svg);
+      margin-right: 10px; }
+    .recipe-card .buttons .edit {
+      background-image: url(../public/ic_edit_white_24px.svg);
+      margin-right: 10px; }
+    .recipe-card .buttons .line-break {
+      outline: red 2px solid; }
+  .recipe-card h1 {
+    font-size: 2em;
+    margin: 30px; }
+  .recipe-card .details {
+    border-bottom: 2px solid #69b1a9;
+    overflow: auto;
+    width: 95%;
+    margin: 0 auto;
+    text-transform: lowercase; }
+    .recipe-card .details .detail {
+      float: left;
+      margin-left: 10px;
+      margin-bottom: 10px;
+      font-size: .8em; }
+      .recipe-card .details .detail span {
+        text-transform: uppercase;
+        font-weight: bold; }
+  .recipe-card h2 {
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-left: 30px;
+    margin-top: 20px;
+    margin-bottom: 10px; }
+  .recipe-card p {
+    border-bottom: 2px solid #69b1a9;
+    width: 95%;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    text-transform: lowercase;
+    margin-bottom: 10px;
+    line-height: 30px;
+    padding-bottom: 20px; }
 
-/* line 17, src/scss/_recipeCard.scss */
-/* line 500, src/index.css */
-.recipe-card .buttons {
-  right: 10px;
-  top: 10px;
-  overflow: auto;
-  position: absolute;
-  transition: ease all 3s; }
-
-/* line 23, src/scss/_recipeCard.scss */
-/* line 507, src/index.css */
-.recipe-card .buttons .delete, .recipe-card .buttons .edit {
-  background-repeat: none;
-  width: 25px;
-  height: 25px;
-  border-radius: 5px;
-  float: left; }
-
-/* line 30, src/scss/_recipeCard.scss */
-/* line 514, src/index.css */
-.recipe-card .buttons .delete {
-  background-image: url(../public/ic_delete_white_24px.svg);
-  margin-right: 10px; }
-
-/* line 34, src/scss/_recipeCard.scss */
-/* line 518, src/index.css */
-.recipe-card .buttons .edit {
-  background-image: url(../public/ic_edit_white_24px.svg);
-  margin-right: 10px; }
-
-/* line 38, src/scss/_recipeCard.scss */
-/* line 522, src/index.css */
-.recipe-card .buttons .line-break {
-  outline: red 2px solid; }
-
-/* line 43, src/scss/_recipeCard.scss */
-/* line 525, src/index.css */
-.recipe-card h1 {
-  font-size: 2em;
-  margin: 30px; }
-
-/* line 47, src/scss/_recipeCard.scss */
-/* line 529, src/index.css */
-.recipe-card .details {
-  border-bottom: 2px solid #69b1a9;
-  overflow: auto;
-  width: 95%;
-  margin: 0 auto;
-  text-transform: lowercase; }
-
-/* line 53, src/scss/_recipeCard.scss */
-/* line 536, src/index.css */
-.recipe-card .details .detail {
-  float: left;
-  margin-left: 10px;
-  margin-bottom: 10px;
-  font-size: .8em; }
-
-/* line 58, src/scss/_recipeCard.scss */
-/* line 542, src/index.css */
-.recipe-card .details .detail span {
-  text-transform: uppercase;
-  font-weight: bold; }
-
-/* line 64, src/scss/_recipeCard.scss */
-/* line 546, src/index.css */
-.recipe-card h2 {
-  font-size: 1em;
-  text-transform: uppercase;
-  font-weight: bold;
-  margin-left: 30px;
-  margin-top: 20px;
-  margin-bottom: 10px; }
-
-/* line 72, src/scss/_recipeCard.scss */
-/* line 554, src/index.css */
-.recipe-card p {
-  border-bottom: 2px solid #69b1a9;
-  width: 95%;
-  margin-bottom: 20px;
-  margin-left: 30px;
-  text-transform: lowercase;
-  margin-bottom: 10px;
-  line-height: 30px;
-  padding-bottom: 20px; }
-
-/* line 10, src/index.scss */
-/* line 565, src/index.css */
 body {
   margin: 0;
   padding: 0;
