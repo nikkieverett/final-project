@@ -26,17 +26,22 @@ class RecipeList extends React.Component {
       recipesToLoad = this.state.query.filteredRecipes;
     }
     return(
-      <div className="list-container">
-        <div className="page-header">
-          <SearchBar className="list-search"/>
-          <div className="categoryName">{this.state.query.category}</div>
-          <div className="add"><Link to="/create-new">+<span> add new</span></Link></div>
-        </div>
+      <div>
         <NavMenu />
-        <div className="recipes">
-          <ListCreator recipes={recipesToLoad}/>
+
+        <div className="list-container">
+
+          <div className="page-header">
+            <SearchBar className="list-search"/>
+            <div className="categoryName">{this.state.query.category}</div>
+            <div className="add"><Link to="/create-new">+<span> add new</span></Link></div>
+          </div>
+          <div className="recipes">
+            <ListCreator recipes={recipesToLoad}/>
+          </div>
         </div>
       </div>
+
     )
   }
 }

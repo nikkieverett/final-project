@@ -1,14 +1,13 @@
 @import 'variables.scss';
 
 .page-header{
-  position: relative;
   width: 80%;
+  position: relative;
   padding: 10px;
-  margin: 0 auto;
 
   .list-search {
     display: inline-block;
-    margin: 20px 0;
+    margin: 20px 10px;
     input{
       width: 200px;
       height: 30px;

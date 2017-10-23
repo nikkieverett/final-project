@@ -46,13 +46,12 @@ table {
   border-spacing: 0; }
 
 .page-header {
-  position: relative;
   width: 80%;
-  padding: 10px;
-  margin: 0 auto; }
+  position: relative;
+  padding: 10px; }
   .page-header .list-search {
     display: inline-block;
-    margin: 20px 0; }
+    margin: 20px 10px; }
     .page-header .list-search input {
       width: 200px;
       height: 30px;
@@ -276,10 +275,7 @@ table {
 
 .list-container {
   width: 80%;
-  margin: 0 auto;
-  position: absolute;
-  right: 0;
-  top: 0; }
+  margin: 0 0 0 20%; }
 
 .recipes {
   overflow: none; }
@@ -287,7 +283,7 @@ table {
     background-color: #f2a8a3;
     color: #fff0f0;
     height: 100%;
-    margin: 10px 20px 10px 100px;
+    margin: 10px 20px 10px 20px;
     width: 80%;
     text-transform: lowercase;
     position: relative;
@@ -310,13 +306,11 @@ table {
     .recipes .list-items h1:hover {
       color: #333333; }
 
-@media (max-width: 1020px) {
-  .recipes .list-items {
-    margin-left: 50px; } }
-
 @media (max-width: 800px) {
   .list-container {
-    left: 0; }
+    left: 0;
+    width: 100%;
+    margin-left: 10px; }
   .recipes .list-items h1 {
     font-size: 2em; } }
 

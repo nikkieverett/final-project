@@ -26,7 +26,7 @@ class NavMenu extends React.Component {
   render(){
     let showHide = this.state.style.catDropDownVisible ? "sub-menu-visible" : "sub-menu-hide";
     return(
-      <div >
+      <div className="nav-container">
         <ul className="nav-menu">
           <li className="link" id="home"><Link to="/">Home</Link></li>
           <li className="link" id="view-all" onClick={() => this.viewAll()}>View All Recipes</li>
