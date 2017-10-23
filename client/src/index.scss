@@ -8,9 +8,17 @@
 @import './scss/recipeCard.scss';
 
 body {
+  width: 100vw;
+  overflow-x: hidden;
   margin: 0;
   padding: 0;
   font-family: $main-font;
   font-weight: 300;
   background-color: $primary-color;
+}
+#root {
+  width: 100vw;
+}
+.main-content {
+  width: 100vw;
 }

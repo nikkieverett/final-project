@@ -89,3 +89,11 @@
   margin-top: 10px;
   margin-left: 15px
 }
+@media (max-width: 800px){
+  .recipe-form {
+    width: 90%;
+    top: 50px;
+    right: 10px;
+    margin: 0 auto;
+  }
+}

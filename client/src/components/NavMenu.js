@@ -26,16 +26,14 @@ class NavMenu extends React.Component {
   render(){
     let showHide = this.state.style.catDropDownVisible ? "sub-menu-visible" : "sub-menu-hide";
     return(
-      <div className="nav-container">
-        <ul className="nav-menu">
-          <li className="link" id="home"><Link to="/">Home</Link></li>
-          <li className="link" id="view-all" onClick={() => this.viewAll()}>View All</li>
-          <li className="link" onClick={() => this.dropDownCategories()}>Categories</li>
-          <ul className={showHide}>
-            <Categories className="sub-cat" />
-          </ul>
+      <ul className="nav-menu">
+        <li className="link" id="home"><Link to="/">Home</Link></li>
+        <li className="link" id="view-all" onClick={() => this.viewAll()}>View All</li>
+        <li className="link" onClick={() => this.dropDownCategories()}>Categories</li>
+        <ul className={showHide}>
+          <Categories className="sub-cat" />
         </ul>
-      </div>
+      </ul>
     )
   }
 }

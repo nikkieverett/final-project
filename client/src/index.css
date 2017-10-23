@@ -94,16 +94,15 @@ table {
       display: inline; }
 
 @media (max-width: 1020px) {
-  .list-search {
-    margin-left: 50px; }
   .categoryName {
-    display: block;
-    margin-left: 50px; } }
+    display: block; } }
 
 @media (max-width: 800px) {
   .page-header {
     margin-top: 50px;
-    width: 80%; }
+    width: 90%; }
+    .page-header .categoryName {
+      margin-left: 10px; }
   .add {
     top: 60px; } }
 
@@ -212,7 +211,8 @@ table {
   left: 0;
   top: 0;
   background-color: #73c3bd;
-  z-index: 10; }
+  z-index: 10;
+  overflow: auto; }
   .nav-menu .link {
     color: #fff0f0;
     font-size: 2em;
@@ -264,15 +264,17 @@ table {
     .nav-menu #home, .nav-menu #view-all {
       border-right: 2px solid #69b1a9; }
     .nav-menu .sub-menu-visible {
-      position: absolute;
+      position: fixed;
       background-color: #69b1a9;
       padding: 20px;
-      top: 10;
-      right: 150px; } }
+      top: 40px;
+      right: 70px;
+      z-index: 20; } }
 
 @media (max-width: 643px) {
   .nav-menu .link {
-    font-size: .7em; } }
+    font-size: .7em;
+    margin-left: 10px; } }
 
 .list-container {
   width: 80%;
@@ -313,7 +315,7 @@ table {
     width: 100%;
     margin-left: 0px; }
   .recipes .list-items {
-    margin-left: 15px; }
+    width: 85%; }
     .recipes .list-items h1 {
       font-size: 2em; } }
 
@@ -395,12 +397,16 @@ table {
   margin-top: 10px;
   margin-left: 15px; }
 
+@media (max-width: 800px) {
+  .recipe-form {
+    width: 90%;
+    top: 50px;
+    right: 10px;
+    margin: 0 auto; } }
+
 .right-side {
   width: 80%;
-  margin: 0 auto;
-  position: absolute;
-  top: 0;
-  right: 0; }
+  margin-left: 17%; }
 
 .recipe-card {
   width: 80%;
@@ -464,9 +470,36 @@ table {
     line-height: 30px;
     padding-bottom: 20px; }
 
+@media (max-width: 800px) {
+  .right-side {
+    width: 100vw;
+    margin: 0 auto; }
+  .recipe-card {
+    margin: 60px auto; }
+    .recipe-card h1 {
+      margin-left: 0;
+      font-size: 1.7em; }
+    .recipe-card .details .detail {
+      margin-left: 5px; }
+    .recipe-card p {
+      margin-left: 0px; }
+    .recipe-card h2 {
+      margin-left: 0px; }
+    .recipe-card .buttons {
+      width: 25%;
+      right: 0; } }
+
 body {
+  width: 100vw;
+  overflow-x: hidden;
   margin: 0;
   padding: 0;
   font-family: "Lato", sans-serif;
   font-weight: 300;
   background-color: #eb6c62; }
+
+#root {
+  width: 100vw; }
+
+.main-content {
+  width: 100vw; }

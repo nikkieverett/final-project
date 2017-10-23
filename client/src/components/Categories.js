@@ -18,6 +18,7 @@ class Categories extends React.Component {
       category: category
     });
     store.dispatch(action);
+    store.dispatch(actions.SHOW_HIDE_DROPDOWN);
     store.dispatch(actions.SORT_BY_ALPHA);
     this.props.history.push('/recipes');
   }
