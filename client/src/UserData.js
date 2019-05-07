@@ -1,10 +1,12 @@
 import $ from 'jquery';
 import { store, actions } from './store/store.js';
 
+const path = 'http://not-yo-mamas-recipes.herokuapp.com';
+
 let UserData = {
   loadRecipes(){
     $.ajax ({
-      url: `/api/recipes`
+      url: path + `/api/recipes`
     })
     .done((data) => {
       const action = Object.assign({}, actions.LOAD_ALL_RECIPES, {allRecipes: data});
@@ -13,7 +15,7 @@ let UserData = {
   },
   createRecipe(input, cb) {
     $.ajax({
-      url: `/api/recipes`,
+      url: path + `/api/recipes`,
       method: 'POST',
       data: input
     })
@@ -24,7 +26,7 @@ let UserData = {
   },
   deleteRecipe(id, cb){
     $.ajax({
-      url: `/api/recipes/${id}`,
+      url: path + `/api/recipes/${id}`,
       method: 'DELETE'
     })
     .done(() => {
@@ -34,7 +36,7 @@ let UserData = {
   },
   viewRecipe(id, cb){
     $.ajax({
-      url: `/api/recipes/${id}`
+      url: path + `/api/recipes/${id}`
     })
     .done((data) => {
       const action = Object.assign({}, actions.CURRENT_RECIPE, {currentRecipe: data});
@@ -44,7 +46,7 @@ let UserData = {
   },
   editRecipe(id, input, cb){
     $.ajax({
-      url: `/api/recipes/${id}`,
+      url: path + `/api/recipes/${id}`,
       method: 'PUT',
       data: input
     })

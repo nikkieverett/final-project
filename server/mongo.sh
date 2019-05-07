@@ -1,1 +1,1 @@
-~/dev/mongo/bin/mongod --dbpath ~/dev/fp-data/recipes --port27020
+/data/db/ --dbpath ~/Personal/development/data --port27017

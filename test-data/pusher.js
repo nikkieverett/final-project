@@ -8,7 +8,7 @@ for(let i = 1; i < lines.length -1; i ++){
   const line = lines[i];
   const pieces = line.split(',');
 
-  request.post('http://radiant-citadel-61153.herokuapp.com/api/recipes', {
+  request.post('http://not-yo-mamas-recipes.herokuapp.com/api/recipes-test', {
 
     form: {
       title: pieces[0].toLowerCase(),
@@ -25,5 +25,4 @@ for(let i = 1; i < lines.length -1; i ++){
       servings: pieces[6].toLowerCase(),
     }
   });
-
 }

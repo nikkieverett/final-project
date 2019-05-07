@@ -6,10 +6,11 @@ require('dotenv').config();
 
 const app = express();
 const port = process.env.PORT || 5003;
+const dbConnection = process.env.MONGODB_URI || 'mongodb://localhost:27017/myapp';
 
-app.use(express.static(path.resolve(__dirname, '../client/build')));
+app.use(express.static(path.resolve(__dirname, '../client/build', 'index.html')));
 
-mongoose.connect(process.env.MONGODB_URI);
+mongoose.createConnection(dbConnection, { useNewUrlParser: true });
 
 app.use((req,res,next) => {
   res.header('Access-Control-Allow-Origin', '*');
@@ -19,13 +20,6 @@ app.use((req,res,next) => {
 });
 
 app.use(bodyParser.urlencoded({ extended: false }));
-// app.use(cookieParser());
-// app.use(session({
-//  secret: "TKRv0IJs=HYqrvagQ#&!F!%V]Ww/4KiVs$s,<<MX",
-//  resave: true,
-//  saveUninitialized: true
-// }));
-// app.use(flash());
 
 app.use(require("./api_routes.js"));
 

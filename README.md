@@ -3,13 +3,14 @@
 Recipe Storage Database
 
 To start scripts:
--From client folder run: 
+-From client folder run:
   : npm install
-  : npm start 
+  : npm start
   : npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive
-  
--From server folder run:
-  : server.js
+
+-From main app folder run:
+  : ~/Personal/development/mongo/bin/mongod
+  : node server/server.js
 
 This was my final project for The Iron Yard Front End Fundamentals Spring 2017 cohort.
 

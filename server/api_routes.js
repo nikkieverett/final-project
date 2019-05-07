@@ -8,6 +8,8 @@ const Recipe = require('./models/Recipe.js');
 
 const router = express.Router();
 
+const path = 'http://not-yo-mamas-recipes.herokuapp.com';
+
 //create user account
 // router.get('/signup', function(req, res) {
 //   res.render('signup');
@@ -38,7 +40,7 @@ const router = express.Router();
 //   failureFlash: true
 // }));
 //api data for all recipes
-router.get('/api/recipes', (req, res) => {
+router.get(path + '/api/recipes', (req, res) => {
   Recipe.find({})
   .exec(function(err, recipes){
     res.send(recipes);
@@ -46,7 +48,7 @@ router.get('/api/recipes', (req, res) => {
 });
 
 //POST request to add a new recipe
-router.post('/api/recipes', (req, res) => {
+router.post(path + '/api/recipes', (req, res) => {
   var cb = (data) => {
     res.send(data);
   };
@@ -68,7 +70,7 @@ router.post('/api/recipes', (req, res) => {
 });
 
 //READ request for specific recipe
-router.get('/api/recipes/:recipeId', (req, res) => {
+router.get(path + '/api/recipes/:recipeId', (req, res) => {
   var cb = (err, data) => {
     res.send(data);
   }
@@ -76,7 +78,7 @@ router.get('/api/recipes/:recipeId', (req, res) => {
 });
 
 //UPDATE request to update recipes
-router.put('/api/recipes/:recipeId', (req, res) => {
+router.put(path +  '/api/recipes/:recipeId', (req, res) => {
   var cb = (err, data) => {
     res.sendStatus(204);
   }
@@ -100,7 +102,7 @@ router.put('/api/recipes/:recipeId', (req, res) => {
 });
 
 //DELETE request to delete recipes
-router.delete('/api/recipes/:recipeId', (req, res) => {
+router.delete(path + '/api/recipes/:recipeId', (req, res) => {
   var cb = (err, data) => {
     res.sendStatus(204);
   };
