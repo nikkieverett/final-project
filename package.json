@@ -2,25 +2,41 @@
   "name": "server",
   "version": "1.0.0",
   "description": "",
+  "private": true,
+  "proxy": "http://localhost:5003/",
+  "author": "",
+  "license": "ISC",
   "engines": {
     "node": "7.7.4"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server/server.js",
-    "dbserve": "~/Personal/development/mongo/bin/mongod",
-    "heroku-postbuild": "cd client/ npm install --only=dev && npm install && npm run build"
+    "start": "react-scripts start | npm run watch-css | npm run start-server",
+    "start-db": "~/Personal/development/mongo/bin/mongod",
+    "start-server": "node src/server/server.js",
+    "build-css": "node-sass-chokidar src/styles -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar src/styles -o src/ --watch --recursive",
+    "build": "react-scripts build",
+    "heroku-postbuild": "npm install && npm run build",
+    "eject": "react-scripts eject"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.17.1",
+    "bootstrap": "^4.3.1",
     "dotenv": "^4.0.0",
     "express": "^4.15.2",
     "flash": "^1.1.0",
+    "jquery": "^3.2.1",
     "mongoose": "^4.9.9",
+    "node-sass-chokidar": "0.0.1",
     "node-uuid": "^1.4.8",
-    "passport": "^0.3.2"
+    "passport": "^0.3.2",
+    "react": "^15.5.4",
+    "react-bootstrap": "^1.0.0-beta.8",
+    "react-dom": "^15.5.4",
+    "react-router-dom": "^4.1.1",
+    "react-scripts": "0.9.5",
+    "redux": "^3.6.0",
+    "styled-components": "^4.3.2"
   }
 }

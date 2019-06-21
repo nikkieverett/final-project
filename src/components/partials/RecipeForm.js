@@ -1,0 +1,165 @@
+import React from 'react';
+import { store, actions } from '../../store/store.js';
+
+// utils
+import RecipeApiCalls from '../../utils/RecipeApiCalls';
+
+class RecipeForm extends React.Component{
+  constructor(){
+    super();
+    this.state = store.getState();
+  }
+  componentDidMount(){
+    this.unsub = store.subscribe(() => this.setState(store.getState()));
+
+    store.dispatch(actions.CLEAR_RECIPE_INPUT);
+  }
+  componentWillUnmount(){
+    this.unsub();
+  }
+  handleSaveClick(){
+    let input = this.state.recipe.formValues;
+    const recipeSavedCallback = () => {
+      this.props.history.goBack();
+      alert('Recipe was saved successfully!');
+    }
+
+    RecipeApiCalls.createRecipe(input, recipeSavedCallback);
+  }
+  setValue(field, evt) {
+    let data = {
+      key: field,
+      value: evt.target.value.toLowerCase()
+    };
+    let action = Object.assign({}, actions.ONCHANGE_RECIPE_INPUT, { data });
+    store.dispatch(action);
+  }
+  handleSave(evt) {
+    evt.preventDefault();
+    this.props.onSave();
+  }
+  render(){
+    return(
+      <form className="recipe-form">
+        <div className="left-entry">
+          <input
+            id="name"
+            placeholder="Recipe Name"
+            className="input"
+            type="text"
+            value={this.props.title}
+            onChange={(evt) => this.setValue('title', evt)} />
+          <input
+            id="link"
+            placeholder="Source (optional)"
+            className="input"
+            type="text"
+            value={this.props.href}
+            onChange={(evt) => this.setValue('href', evt)} />
+
+          <div className="time">
+            <input
+              id="prep"
+              placeholder="Prep"
+              className="input"
+              type="text"
+              value={this.props.prepTime}
+              onChange={(evt) => this.setValue('prepTime', evt)} />
+            <input
+              placeholder="Cook"
+              className="input"
+              id="cook"
+              type="text"
+              value={this.props.cookTime}
+              onChange={(evt) => this.setValue('cookTime', evt)} />
+            <input
+              placeholder="Total"
+              className="input"
+              id="total"
+              type="text"
+              value={this.props.totalTime}
+              onChange={(evt) => this.setValue('totalTime', evt)} />
+          </div>
+
+          <input
+            id="servings"
+            placeholder="Number of Servings"
+            className="input"
+            type="text"
+            value={this.props.servings}
+            onChange={(evt) => this.setValue('servings', evt)} />
+        </div>
+
+        <div className="main-entry">
+          <div>Ingredients</div>
+          <textarea
+            className="input"
+            value={this.props.ingredients}
+            onChange={(evt) => this.setValue('ingredients', evt)} />
+          <div>Directions</div>
+          <textarea
+            className="input"
+            value={this.props.directions}
+            onChange={(evt) => this.setValue('directions', evt)} />
+        </div>
+
+        <div className="sub-entry">
+          <div>Notes</div>
+          <textarea
+            className="input"
+            value={this.props.notes}
+            onChange={(evt) => this.setValue('notes', evt)} />
+        </div>
+
+        <div className="right-entry">
+          <select
+            id="category"
+            className="input"
+            type="text"
+            value={this.props.category}
+            onChange={(evt) => this.setValue('category', evt)}>
+            <option default value="">Select a Category</option>
+            <option value="breakfast">Breakfast</option>
+            <option value="main course">Main Course</option>
+            <option value="dessert">Dessert</option>
+            <option value="side dish">Side Dish</option>
+            <option value="appetizer">Appetizer</option>
+            <option value="condiment">Condiment</option>
+            <option value="drink">Drink</option>
+          </select>
+          <select
+            id="difficulty"
+            className="input"
+            type="text"
+            value={this.props.ease}
+            onChange={(evt) => this.setValue('ease', evt)}>
+            <option default value="">Select a Level of Difficulty</option>
+            <option value="easy">Easy</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="difficult">Difficult</option>
+            <option value="time consuming">Time Consuming</option>
+          </select>
+          <select
+            id="rating"
+            className="input"
+            value={this.props.rating}
+            onChange={(evt) => this.setValue('rating', evt)}>
+            <option default value="">Select a Rating</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+        </div>
+        <div className="buttons">
+          <div className="submit" onClick={(evt) => this.handleSave(evt)}>Submit</div>
+          <div className="cancel" onClick={() => this.props.history.goBack()}>Cancel</div>
+        </div>
+      </form>
+      // <RecipeForm onSave={(data) => this.handleSaveClick(data)} />
+    )
+  }
+}
+
+module.exports = RecipeForm;

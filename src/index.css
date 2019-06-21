@@ -1,0 +1,153 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #171F5B;
+  background-image: linear-gradient(to right, #EB6C62, #F7F7F3);
+  background-repeat: repeat-y;
+  background-size: 50%; }
+
+html {
+  background-color: #F7F7F3; }
+
+.hidden {
+  display: none; }
+
+.visible {
+  display: block; }
+
+.main-content {
+  background-image: linear-gradient(to right, #F7F7F3, white);
+  border-radius: 20px 0 0 20px;
+  min-height: 100vh;
+  padding: 30px 60px; }
+
+.header {
+  margin-bottom: 30px;
+  height: 20px; }
+  .header__search-bar input {
+    width: 160px;
+    padding: 7px 10px 7px 30px;
+    font-size: 14px;
+    vertical-align: middle;
+    color: #bbb;
+    border: none;
+    background: #fff;
+    border-radius: 4px;
+    -webkit-appearance: none;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 34px; }
+
+.breadcrumbs {
+  text-transform: uppercase; }
+  .breadcrumbs span {
+    margin-right: 5px; }
+    .breadcrumbs span + span {
+      margin-left: 5px; }
+      .breadcrumbs span + span::before {
+        content: '|';
+        margin-right: 10px; }
+
+.sidebar-nav {
+  color: #FDF4F3;
+  padding-right: 40px; }
+  .sidebar-nav__section {
+    border-bottom: 1px solid rgba(23, 31, 91, 0.2);
+    padding: 30px 0; }
+  .sidebar-nav__list {
+    text-transform: uppercase; }
+    .sidebar-nav__list-item {
+      margin-bottom: 15px;
+      cursor: pointer; }
+      .sidebar-nav__list-item .list-item__title {
+        margin-bottom: 15px; }
+  .sidebar-nav__search {
+    text-align: center;
+    width: 100%; }
+    .sidebar-nav__search input {
+      margin: 0 auto;
+      padding: 7px 10px 7px 30px;
+      font-size: 14px;
+      vertical-align: middle;
+      color: #bbb;
+      border: none;
+      background: #fff;
+      border-radius: 4px;
+      -webkit-appearance: none;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      height: 34px;
+      width: 100%; }
+  .sidebar-nav__add a {
+    text-decoration: none;
+    color: #FDF4F3;
+    text-transform: uppercase; }
+
+.subcat {
+  border-top: 1px solid rgba(253, 244, 243, 0.2);
+  border-bottom: 1px solid rgba(253, 244, 243, 0.2);
+  padding: 15px; }
+  .subcat__item {
+    text-transform: none;
+    letter-spacing: .5px; }
+    .subcat__item + .subcat__item {
+      margin-top: 10px; }
+
+.user__avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  background-color: #FDF4F3;
+  margin: 0 auto 10px; }
+
+.user__name {
+  text-align: center; }
+
+.recipe-list__item {
+  border: 1px solid rgba(235, 108, 98, 0.4);
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding: 30px;
+  background-color: #FDF4F3;
+  cursor: pointer; }
+  .recipe-list__item-title {
+    font-size: 28px; }
+  .recipe-list__item-detail {
+    font-size: 14px;
+    display: inline-block;
+    margin-right: 20px; }
+
+.recipe-card__name {
+  font-size: 28px;
+  margin-bottom: 10px; }
+
+.recipe-card__details {
+  margin-bottom: 30px; }
+  .recipe-card__details-detail {
+    display: inline-block;
+    margin-right: 20px; }
+
+.recipe-card__section {
+  border-top: 1px solid rgba(23, 31, 91, 0.4);
+  padding-top: 30px; }
+  .recipe-card__section-title {
+    font-weight: 600;
+    margin-bottom: 10px; }
+  .recipe-card__section--notes {
+    margin-top: 30px; }
+
+@media (max-width: 767px) {
+  body {
+    font-family: "Montserrat", sans-serif;
+    color: #171F5B;
+    background-image: linear-gradient(#EB6C62, #F7F7F3);
+    background-repeat: repeat-y;
+    background-size: 100% 50%; }
+  html {
+    background-color: #F7F7F3; }
+  .main-content {
+    background-image: linear-gradient(#F7F7F3, white);
+    border-radius: 20px 20px 0 0;
+    margin-top: 30px; }
+  .recipe-card__section {
+    margin-bottom: 30px; } }
