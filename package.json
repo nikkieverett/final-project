@@ -11,6 +11,7 @@
   },
   "cacheDirectories": [],
   "scripts": {
+    "start": "react-scripts start",
     "start-qa": "react-scripts start | npm run watch-css | npm run start-server",
     "start-db": "~/Personal/development/mongo/bin/mongod",
     "start-server": "node src/server/server.js",
