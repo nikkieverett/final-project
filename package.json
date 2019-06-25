@@ -11,13 +11,13 @@
   },
   "cacheDirectories": [],
   "scripts": {
-    "start": "react-scripts start | npm run watch-css | npm run start-server",
+    "start-qa": "react-scripts start | npm run watch-css | npm run start-server",
     "start-db": "~/Personal/development/mongo/bin/mongod",
     "start-server": "node src/server/server.js",
     "build-css": "node-sass-chokidar src/styles -o src/",
-    "watch-css": "npm run build-css && node-sass-chokidar src/styles -o src/ --watch --recursive",
+    "watch-css": "npm run build-css && npm run build-css --watch --recursive",
     "build": "react-scripts build",
-    "heroku-postbuild": "npm install && npm run build",
+    "heroku-postbuild": "npm install --only=dev && npm install && npm run build",
     "eject": "react-scripts eject"
   },
   "dependencies": {
