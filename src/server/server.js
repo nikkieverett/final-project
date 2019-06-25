@@ -8,7 +8,7 @@ const app = express();
 const port = process.env.PORT || 5003;
 const dbConnection = process.env.MONGODB_URI || 'mongodb://localhost:27017/myapp';
 
-app.use(express.static(path.resolve(__dirname, '../build')));
+app.use(express.static(path.resolve(__dirname, '../build', 'index.html')));
 
 mongoose.createConnection(dbConnection, { useNewUrlParser: true });
 
@@ -24,7 +24,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(require('./api_routes.js'));
 
 app.get('*', function(request, response) {
-  response.sendFile(path.resolve(__dirname, '../build'));
+  response.sendFile(path.resolve(__dirname, '../build', 'index.html'));
 });
 
 app.listen(port, function(){
