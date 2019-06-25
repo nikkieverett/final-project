@@ -51,6 +51,6 @@ class RecipeCard extends React.Component {
 			</div>
 		)
 	}
-}
+}``
 
 module.exports = RecipeCard;
