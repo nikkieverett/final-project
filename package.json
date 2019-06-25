@@ -9,7 +9,6 @@
   "engines": {
     "node": "7.7.4"
   },
-  "cacheDirectories": [],
   "scripts": {
     "start": "react-scripts start",
     "start-qa": "react-scripts start | npm run watch-css | npm run start-server",
@@ -24,12 +23,13 @@
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.17.1",
+    "bootstrap": "^4.3.1",
     "dotenv": "^4.0.0",
-    "node-sass-chokidar": "0.0.1",
     "express": "^4.15.2",
     "flash": "^1.1.0",
     "jquery": "^3.2.1",
     "mongoose": "^4.9.9",
+    "node-sass-chokidar": "0.0.1",
     "node-uuid": "^1.4.8",
     "passport": "^0.3.2",
     "react": "^15.5.4",
@@ -38,8 +38,5 @@
     "react-scripts": "0.9.5",
     "redux": "^3.6.0",
     "styled-components": "^4.3.2"
-  },
-  "devDependencies": {
-    "eslint": "^6.0.1"
   }
 }
