@@ -9,6 +9,7 @@
   "engines": {
     "node": "7.7.4"
   },
+  "cacheDirectories": [],
   "scripts": {
     "start": "react-scripts start | npm run watch-css | npm run start-server",
     "start-db": "~/Personal/development/mongo/bin/mongod",
